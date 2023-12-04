@@ -120,7 +120,10 @@ export const UserManagement = () => {
             <th className="hand" onClick={sort('email')}>
               <Translate contentKey="userManagement.email">Email</Translate> <FontAwesomeIcon icon={getSortIconByFieldName('email')} />
             </th>
-            <th />
+            <th className="hand" onClick={sort('applicationStatus')}>
+              <Translate contentKey="userManagement.applicationStatus">Application Status</Translate>{' '}
+              <FontAwesomeIcon icon={getSortIconByFieldName('applicationStatus')} />
+            </th>
             <th className="hand" onClick={sort('langKey')}>
               <Translate contentKey="userManagement.langKey">Lang Key</Translate>{' '}
               <FontAwesomeIcon icon={getSortIconByFieldName('langKey')} />
@@ -141,6 +144,7 @@ export const UserManagement = () => {
               <FontAwesomeIcon icon={getSortIconByFieldName('lastModifiedDate')} />
             </th>
             <th />
+            <th />
           </tr>
         </thead>
         <tbody>
@@ -153,17 +157,7 @@ export const UserManagement = () => {
               </td>
               <td>{user.login}</td>
               <td>{user.email}</td>
-              <td>
-                {user.activated ? (
-                  <Button color="success" onClick={toggleActive(user)}>
-                    <Translate contentKey="userManagement.activated">Activated</Translate>
-                  </Button>
-                ) : (
-                  <Button color="danger" onClick={toggleActive(user)}>
-                    <Translate contentKey="userManagement.deactivated">Deactivated</Translate>
-                  </Button>
-                )}
-              </td>
+              <td>{user.applicationStatus}</td>
               <td>{user.langKey}</td>
               <td>
                 {user.authorities
@@ -182,6 +176,17 @@ export const UserManagement = () => {
                 {user.lastModifiedDate ? (
                   <TextFormat value={user.lastModifiedDate} type="date" format={APP_DATE_FORMAT} blankOnInvalid />
                 ) : null}
+              </td>
+              <td>
+                {user.activated ? (
+                  <Button color="success" onClick={toggleActive(user)}>
+                    <Translate contentKey="userManagement.activated">Activated</Translate>
+                  </Button>
+                ) : (
+                  <Button color="danger" onClick={toggleActive(user)}>
+                    <Translate contentKey="userManagement.deactivated">Deactivated</Translate>
+                  </Button>
+                )}
               </td>
               <td className="text-end">
                 <div className="btn-group flex-btn-group-container">

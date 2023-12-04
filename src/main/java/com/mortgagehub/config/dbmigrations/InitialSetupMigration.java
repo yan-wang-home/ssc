@@ -81,6 +81,7 @@ public class InitialSetupMigration {
         adminUser.setFirstName("admin");
         adminUser.setLastName("Administrator");
         adminUser.setEmail("admin@localhost");
+        adminUser.setApplicationStatus(null);
         adminUser.setActivated(true);
         adminUser.setLangKey("en");
         adminUser.setCreatedBy(Constants.SYSTEM);

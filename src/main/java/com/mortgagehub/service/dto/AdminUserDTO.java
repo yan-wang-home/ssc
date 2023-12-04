@@ -1,6 +1,7 @@
 package com.mortgagehub.service.dto;
 
 import com.mortgagehub.config.Constants;
+import com.mortgagehub.domain.ApplicationStatus;
 import com.mortgagehub.domain.Authority;
 import com.mortgagehub.domain.User;
 import jakarta.validation.constraints.*;
@@ -8,6 +9,7 @@ import java.io.Serializable;
 import java.time.Instant;
 import java.util.Set;
 import java.util.stream.Collectors;
+import org.springframework.data.mongodb.core.index.Indexed;
 
 /**
  * A DTO representing a user, with his authorities.
@@ -32,6 +34,9 @@ public class AdminUserDTO implements Serializable {
     @Email
     @Size(min = 5, max = 254)
     private String email;
+
+    @Indexed
+    private ApplicationStatus applicationStatus;
 
     @Size(max = 256)
     private String imageUrl;
@@ -61,6 +66,7 @@ public class AdminUserDTO implements Serializable {
         this.firstName = user.getFirstName();
         this.lastName = user.getLastName();
         this.email = user.getEmail();
+        this.applicationStatus = user.getApplicationStatus();
         this.activated = user.isActivated();
         this.imageUrl = user.getImageUrl();
         this.langKey = user.getLangKey();
@@ -109,6 +115,14 @@ public class AdminUserDTO implements Serializable {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public ApplicationStatus getApplicationStatus() {
+        return applicationStatus;
+    }
+
+    public void setApplicationStatus(ApplicationStatus applicationStatus) {
+        this.applicationStatus = applicationStatus;
     }
 
     public String getImageUrl() {

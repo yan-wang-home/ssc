@@ -23,6 +23,7 @@
     "deactivated": "失效",
     "profiles": "角色",
     "langKey": "语言",
+    "applicationStatus": "申请状态",
     "createdBy": "创建人",
     "createdDate": "创建时间",
     "lastModifiedBy": "最近修改人",

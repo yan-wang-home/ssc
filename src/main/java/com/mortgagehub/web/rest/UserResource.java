@@ -71,6 +71,7 @@ public class UserResource {
             "firstName",
             "lastName",
             "email",
+            "applicationStatus",
             "activated",
             "langKey",
             "createdBy",

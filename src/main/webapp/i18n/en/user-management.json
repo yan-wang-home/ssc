@@ -23,6 +23,7 @@
     "deactivated": "Deactivated",
     "profiles": "Profiles",
     "langKey": "Language",
+    "applicationStatus": "Application Status",
     "createdBy": "Created by",
     "createdDate": "Created date",
     "lastModifiedBy": "Modified by",

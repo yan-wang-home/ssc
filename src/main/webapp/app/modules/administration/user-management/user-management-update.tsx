@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { locales, languages } from 'app/config/translation';
 import { getUser, getRoles, updateUser, createUser, reset } from './user-management.reducer';
-import { useAppDispatch, useAppSelector } from 'app/config/store';
+import { useAppDispatch, useAppSelector, applicationStatuses, applicationStatusList } from 'app/config/store';
 
 export const UserManagementUpdate = () => {
   const dispatch = useAppDispatch();
@@ -151,6 +151,13 @@ export const UserManagementUpdate = () => {
                 {locales.map(locale => (
                   <option value={locale} key={locale}>
                     {languages[locale].name}
+                  </option>
+                ))}
+              </ValidatedField>
+              <ValidatedField type="select" name="applicationStatus" label={translate('userManagement.applicationStatus')}>
+                {applicationStatuses.map(status => (
+                  <option value={status} key={status}>
+                    {applicationStatusList[status].name}
                   </option>
                 ))}
               </ValidatedField>

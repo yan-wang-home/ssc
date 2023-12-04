@@ -12,12 +12,12 @@ export const Home = () => {
 
   return (
     <Row>
-      <Col md="3" className="pad">
+      {/* <Col md="3" className="pad">
         <span className="hipster rounded" />
-      </Col>
-      <Col md="9">
+      </Col> */}
+      <Col md="12">
         <h1 className="display-4">
-          <Translate contentKey="home.title">Welcome, Java Hipster!</Translate>
+          <Translate contentKey="home.title">Welcome To Smart Solutions Capital</Translate>
         </h1>
         <p className="lead">
           <Translate contentKey="home.subtitle">This is your homepage</Translate>
@@ -25,8 +25,11 @@ export const Home = () => {
         {account?.login ? (
           <div>
             <Alert color="success">
-              <Translate contentKey="home.logged.message" interpolate={{ username: account.login }}>
-                You are logged in as user {account.login}.
+              <Translate
+                contentKey="home.logged.message"
+                interpolate={{ username: account.login, applicationStatus: account.applicationStatus }}
+              >
+                You are logged in as user {account.login} and Your Application Status: {account.applicationStatus}.
               </Translate>
             </Alert>
           </div>
@@ -53,11 +56,11 @@ export const Home = () => {
             </Alert>
           </div>
         )}
-        <p>
+        {/* <p>
           <Translate contentKey="home.question">If you have any question on JHipster:</Translate>
-        </p>
+        </p> */}
 
-        <ul>
+        {/* <ul>
           <li>
             <a href="https://www.jhipster.tech/" target="_blank" rel="noopener noreferrer">
               <Translate contentKey="home.link.homepage">JHipster homepage</Translate>
@@ -83,15 +86,15 @@ export const Home = () => {
               <Translate contentKey="home.link.follow">follow @jhipster on Twitter</Translate>
             </a>
           </li>
-        </ul>
-
+        </ul> */}
+        {/* 
         <p>
           <Translate contentKey="home.like">If you like JHipster, do not forget to give us a star on</Translate>{' '}
           <a href="https://github.com/jhipster/generator-jhipster" target="_blank" rel="noopener noreferrer">
             GitHub
           </a>
           !
-        </p>
+        </p> */}
       </Col>
     </Row>
   );

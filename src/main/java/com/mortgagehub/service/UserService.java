@@ -196,6 +196,9 @@ public class UserService {
                 if (userDTO.getEmail() != null) {
                     user.setEmail(userDTO.getEmail().toLowerCase());
                 }
+                if (userDTO.getApplicationStatus() != null) {
+                    user.setApplicationStatus(userDTO.getApplicationStatus());
+                }
                 user.setImageUrl(userDTO.getImageUrl());
                 user.setActivated(userDTO.isActivated());
                 user.setLangKey(userDTO.getLangKey());

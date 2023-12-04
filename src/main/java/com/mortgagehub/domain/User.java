@@ -54,6 +54,9 @@ public class User extends AbstractAuditingEntity<String> implements Serializable
     @Indexed
     private String email;
 
+    @Indexed
+    private ApplicationStatus applicationStatus;
+
     private boolean activated = false;
 
     @Size(min = 2, max = 10)
@@ -127,6 +130,14 @@ public class User extends AbstractAuditingEntity<String> implements Serializable
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public ApplicationStatus getApplicationStatus() {
+        return applicationStatus;
+    }
+
+    public void setApplicationStatus(ApplicationStatus applicationStatus) {
+        this.applicationStatus = applicationStatus;
     }
 
     public String getImageUrl() {
