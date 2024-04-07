@@ -9,6 +9,7 @@ import jakarta.validation.constraints.Size;
 import java.io.Serializable;
 import java.time.Instant;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Locale;
 import java.util.Set;
 import org.apache.commons.lang3.StringUtils;
@@ -56,6 +57,9 @@ public class User extends AbstractAuditingEntity<String> implements Serializable
 
     @Indexed
     private ApplicationStatus applicationStatus;
+
+    @Indexed
+    private List<Application> applications;
 
     private boolean activated = false;
 
@@ -196,6 +200,14 @@ public class User extends AbstractAuditingEntity<String> implements Serializable
         this.authorities = authorities;
     }
 
+    public List<Application> getApplications() {
+        return applications;
+    }
+
+    public void setApplications(List<Application> applications) {
+        this.applications = applications;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -226,5 +238,13 @@ public class User extends AbstractAuditingEntity<String> implements Serializable
             ", langKey='" + langKey + '\'' +
             ", activationKey='" + activationKey + '\'' +
             "}";
+    }
+
+    private class Application {
+
+        String id;
+        ApplicationStatus status;
+        String address;
+        String notes;
     }
 }

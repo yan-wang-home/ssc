@@ -1,0 +1,206 @@
+{
+  "product": {
+    "title": "OUR PRODUCTS",
+    "subTitle": "Whether you are a first-time buyer, a seasoned investor, or simply exploring your financing possibilities, we've got you covered. With a wide range of mortgage products tailor to suit various needs and financial situations, finding the perfect loan to match your dream home has never been easier. Let's dive into the exciting world of home loans and discover the perfect fit for you",
+    "description": "",
+    "points": "Points:",
+    "contactus": "Contact Us",
+    "firsttimehomebuyer": {
+      "title": "First time Homebuyer",
+      "title1": "First-time",
+      "title2": "homebuyer",
+      "description": "Turning Keys into Dreams: Your First Home Journey Starts Here!",
+      "question": "Are you a first-time home buyer?",
+      "answer": "If Yes. Below are some options for you",
+      "points": {
+        "p1": {
+          "title": "1. High Ratio Mortgage",
+          "pa": "a) Min 5% Down Payment",
+          "pb": "b) Max $999,999 purchase price",
+          "pc": "c) Lowest rate in the market"
+        },
+        "p2": {
+          "title": "2. Conventional Mortgage",
+          "pa": "a) Min 20% down payment",
+          "pb": "b) No Max purchase price"
+        },
+        "p3": {
+          "title": "3. Co-Equity Partnership",
+          "pa": "a) Min 5% Down payment",
+          "pb": "b) No credit score requirement",
+          "pc": "c) No Max purchase price"
+        }
+      }
+    },
+    "newtocanada": {
+      "title": "New to Canada & Non-Resident",
+      "title1": "New to Canada",
+      "title2": "& Non-Resident",
+      "description": "Unlock Your Canadian Dreams: New to Canada, New Beginnings, Seamless Mortgages",
+      "question": "Who is qualified to purchase properties in Canada?",
+      "answer": "If you’ve recently become a permanent resident or citizen of Canada and arrived within the last five years",
+      "points": {
+        "p1": "1. Buying your first home as a Permanent resident",
+        "p2": "2. Investing In Canada as a Non-resident",
+        "p3": "3. Mortgage application with overseas income",
+        "p4": "4. Buying your first home as a valid worker permit holder"
+      }
+    },
+    "businessforself": {
+      "title": "Business for Self",
+      "title1": "Business",
+      "title2": "for Self",
+      "description": "Empowering Entrepreneurs, Financing Success: Your Business, Your Mortgage, Your Future",
+      "question": "Is this product for me?",
+      "answer": "If you are a business owner, commission earner, or cash earner",
+      "points": {
+        "p1": "1. Obtain a mortgage while being conscious of the personal tax strategy",
+        "p2": "2. Use your business income to support your mortgage affordability",
+        "p3": "3. Easy mortgage application for cash income earners"
+      }
+    },
+    "refinanceforreno": {
+      "title": "Refinance for Renovation",
+      "title1": "Refinance for",
+      "title2": "Renovation",
+      "description": "Elevate, Renovate, Celebrate: Refinance Your Home, Transform Your Space",
+      "question": "Do you want to increase the value of your property?",
+      "answer": "To achieve asset diversification",
+      "points": {
+        "p1": "1. Withdraw equity from your home for renovation",
+        "p2": "2. Turn your basement into a self-contained suite to obtain cash flow",
+        "p3": "3. Increase your property value"
+      }
+    },
+    "purchaseimprovement": {
+      "title": "Purchase + Improvement",
+      "title1": "Purchase",
+      "title2": "Improvement",
+      "description": "Revamp, Refinance, Rise: Your Home, Your Style, Your Improved Tomorrow",
+      "question": "Is this product for me?",
+      "answer": "If you are looking to finance a renovation and combine it with a mortgage in one payment",
+      "points": {
+        "p1": "1. Buying a property that needs some renovations",
+        "p2": "2. A mortgage with additional funds for you to do the renovation",
+        "p3": "3. Increase your property value"
+      }
+    },
+    "constructionloan": {
+      "title": "Construction Loan",
+      "title1": "Construction",
+      "title2": "Loan",
+      "description": "Building Dreams, One Loan at a Time: Your Blueprint to Construction Financing Success",
+      "question": "Looking to build your Dream house?",
+      "answer": "Here goes the Construction loan",
+      "points": {
+        "p1": "1. Build your dream home",
+        "p2": "2. Increase your property value dramatically",
+        "p3": "3. Obtain extra capital gain"
+      }
+    },
+    "equitytakeout": {
+      "title": "Equity take out",
+      "title1": "Equity",
+      "title2": "Takeout",
+      "description": "Unlock Your Home’s Potential: Equity Takeout, Your Key to Financial Freedom",
+      "question": "Why refinance a portion of your property?",
+      "answer": "To achieve asset diversification",
+      "points": {
+        "p1": "1. Withdraw equity from your existing property",
+        "p2": "2. Obtain your cash flow",
+        "p3": "3. Build up your investment strategy"
+      }
+    },
+    "buyrentalproperty": {
+      "title": "Buy a rental property",
+      "title1": "Buy A",
+      "title2": "Rental Property",
+      "description": "Invest in Tomorrow, Own Income Today: Unlocking Prosperity Through Rental Property Ownership",
+      "question": "Looking to maximize your cash flow?",
+      "answer": "Investing in rental property may be the answer",
+      "points": {
+        "p1": "1. Obtain cash flows from your rental property",
+        "p2": "2. Buy a rental property under the holding company",
+        "p3": "3. Obtain cash flow from multi-unit rental property"
+      }
+    },
+    "debtsconsolidation": {
+      "title": "Debts Consolidation",
+      "title1": "Debts",
+      "title2": "Consolidation",
+      "description": "Debts Unite, Finances Ignite: Consolidate, Liberate, Reclaim Your Financial Freedom",
+      "question": "Are you struggling with your payment?",
+      "answer": "Yes, if you want to optimize your monthly debt payment",
+      "points": {
+        "p1": "1. Consolidate your debts with your home equity",
+        "p2": "2. Build up your credit score",
+        "p3": "3. Release the pressure from your high-interest credit card balance",
+        "p4": "4. Obtain a better cash flow"
+      }
+    },
+    "switchtransfer": {
+      "title": "Switch & Transfer",
+      "title1": "Switch &",
+      "title2": "Transfer",
+      "description": "Switch with Confidence, Transfer with Ease: Your Financial Freedom Awaits the Changes",
+      "question": "Looking for the best rate?",
+      "answer": "We are here to help",
+      "points": {
+        "p1": "1. Get the best rate in the market",
+        "p2": "2. Get a better pre-payment plan",
+        "p3": "3. Provide smooth transition"
+      }
+    },
+    "mortgagerenew": {
+      "title": "Mortgage Renew",
+      "title1": "Mortgage",
+      "title2": "Renew",
+      "description": "Renew, Reimagine, Rejoice: Your Mortgage Renewal, Your Path to Financial Empowerment",
+      "question": "Near Maturity date?",
+      "answer": "We can help you to negotiate a better rate",
+      "points": {
+        "p1": "1. Negotiate the best rate with your current lender"
+      }
+    },
+    "commercialloan": {
+      "title": "Commercial Loan",
+      "title1": "Commercial",
+      "title2": "Loan",
+      "description": "Empowering Commerce, Feeling Growth: Your Business, Our Commercial Loan Solutions",
+      "question": "What are the commercial property?",
+      "answer": "Apartment buildings, office buildings, multi-family residential properties, hotel facilities, nursing homes, etc",
+      "points": {
+        "p1": "1. Build up your investment portfolio",
+        "p2": "2. Help expand the business",
+        "p3": "3. Optimize cash flow and investment returns"
+      }
+    },
+    "reversemortgage": {
+      "title": "Reverse Mortgage",
+      "title1": "Reverse",
+      "title2": "Mortgage",
+      "description": "Unlock the Equity of a Lifetime: Your Future, Your Home, Your Reverse Mortgage Freedom",
+      "question": "Is this product for me?",
+      "answer": "If you are a 55+ homeowner and need supplemental income to have a better lifestyle",
+      "points": {
+        "p1": "1. For a Better retirement life",
+        "p2": "2. Help your children with their down payment",
+        "p3": "3. No mortgage payments"
+      }
+    },
+    "homeequitylineofcredit": {
+      "title": "Home Equity Line of Credit",
+      "title1": "Home Equity",
+      "title2": "Line Of Credit",
+      "description": "Empowering Your Equity, Unleash Possibilities: Your Home, Your Dreams, Your HELOC\nAdvantage",
+      "question": "Why do you need a line of Credit?",
+      "answer": "Able to make a withdrawal whenever you need to",
+      "points": {
+        "p1": "1. Obtain funds for your future emergency purpose",
+        "p2": "2. Easy to withdraw",
+        "p3": "3. Interest payment only",
+        "p4": "4. Save the penalty by breaking your current mortgage"
+      }
+    }
+  }
+}

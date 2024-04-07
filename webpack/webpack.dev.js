@@ -46,6 +46,11 @@ module.exports = async options =>
       ],
     },
     devServer: {
+      setupMiddlewares: (middlewares, devServer) => {
+        // Smth very important
+
+        return middlewares;
+      },
       hot: true,
       static: {
         directory: './build/resources/main/static/',
@@ -99,8 +104,8 @@ module.exports = async options =>
         },
       ),
       new WebpackNotifierPlugin({
-        title: 'Mortgage Hub',
-        contentImage: path.join(__dirname, 'logo-jhipster.png'),
+        title: 'Smart Solutions Capital',
+        contentImage: path.join(__dirname, 'logo.png'),
       }),
     ].filter(Boolean),
   });

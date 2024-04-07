@@ -1,0 +1,206 @@
+{
+  "product": {
+    "title": "OUR PRODUCTS",
+    "subTitle": "Whether you are a first-time buyer, a seasoned investor, or simply exploring your financing possibilities, we've got you covered. With a wide range of mortgage products tailor to suit various needs and financial situations, finding the perfect loan to match your dream home has never been easier. Let's dive into the exciting world of home loans and discover the perfect fit for you",
+    "description": "",
+    "points": "要点:",
+    "contactus": "联系我们",
+    "firsttimehomebuyer": {
+      "title": "初次购房者",
+      "title1": "初次",
+      "title2": "购房者",
+      "description": "Turning Keys into Dreams: Your First Home Journey Starts Here!",
+      "question": "您是首次购房者吗?",
+      "answer": "如果是的话。以下是一些选择",
+      "points": {
+        "p1": {
+          "title": "1. 高比率抵押贷款",
+          "pa": "a) 最低5%的首付",
+          "pb": "b) 最高100万加币的购买价格",
+          "pc": "c) 市场上最低利率"
+        },
+        "p2": {
+          "title": "2. 传统抵押贷款",
+          "pa": "a) 最低20%的首付",
+          "pb": "b) 没有最高购买价格限制"
+        },
+        "p3": {
+          "title": "3. 合伙购买房",
+          "pa": "a) 最低5%的首付",
+          "pb": "b) 没有信用评分要求",
+          "pc": "c) 没有最高购买价格限制"
+        }
+      }
+    },
+    "newtocanada": {
+      "title": "加拿大新移民 & 非居民",
+      "title1": "加拿大新移民",
+      "title2": "& 非居民",
+      "description": "Unlock Your Canadian Dreams: New to Canada, New Beginnings, Seamless Mortgages",
+      "question": "谁有资格购买加拿大的房产?",
+      "answer": "在最近五年内，如果您成为加拿大的永久居民或公民",
+      "points": {
+        "p1": "1. 作为永久居民购买您的第一套房",
+        "p2": "2. 作为非居民投资加拿大",
+        "p3": "3. 使用海外收入申请抵押贷款",
+        "p4": "4. 作为持有有效工作许可证的人购买您的第一套房"
+      }
+    },
+    "businessforself": {
+      "title": "自营业务",
+      "title1": "自营",
+      "title2": "业务",
+      "description": "Empowering Entrepreneurs, Financing Success: Your Business, Your Mortgage, Your Future",
+      "question": "该产品的使用群体有哪些?",
+      "answer": "如果您是企业所有者、佣金收入者或现金收入者，该产品十分适合您",
+      "points": {
+        "p1": "1. 在考虑个人报税策略时获得贷款",
+        "p2": "2. 利用您的自雇收入来支持您的贷款负担能力y",
+        "p3": "3. 对于现金收入者，贷款申请更加简便"
+      }
+    },
+    "refinanceforreno": {
+      "title": "装修贷款",
+      "title1": "装修贷款",
+      "title2": "",
+      "description": "Elevate, Renovate, Celebrate: Refinance Your Home, Transform Your Space",
+      "question": "您想增加房产价值吗?",
+      "answer": "通过装修翻新就可以实现",
+      "points": {
+        "p1": "1. 从您的房产中融资进行装修",
+        "p2": "2. 将地下室改建为独立套房，通过分租获得现金流",
+        "p3": "3. 提高您当前的房产价值"
+      }
+    },
+    "purchaseimprovement": {
+      "title": "购房装修",
+      "title1": "购房装修",
+      "title2": "",
+      "description": "Revamp, Refinance, Rise: Your Home, Your Style, Your Improved Tomorrow",
+      "question": "这个产品适合我吗?",
+      "answer": "如果您想融资翻新并将其与抵押贷款合并支付",
+      "points": {
+        "p1": "1. 购买需要翻新的房产",
+        "p2": "2. 具有额外资金的抵押贷款供您进行翻新",
+        "p3": "3. 增加您的房产价值"
+      }
+    },
+    "constructionloan": {
+      "title": "建设再融资",
+      "title1": "建设再",
+      "title2": "融资",
+      "description": "Building Dreams, One Loan at a Time: Your Blueprint to Construction Financing Success",
+      "question": "想要建造您的梦想之家吗?",
+      "answer": "建筑贷款可以帮助您实现",
+      "points": {
+        "p1": "1. 用于建造您梦想的家园",
+        "p2": "2. 大幅提高您的房产价值",
+        "p3": "3. 获得额外的资本收益"
+      }
+    },
+    "equitytakeout": {
+      "title": "房产净值贷款",
+      "title1": "房产",
+      "title2": "净值贷款",
+      "description": "Unlock Your Home’s Potential: Equity Takeout, Your Key to Financial Freedom",
+      "question": "为什么要提取部分财产的产权?",
+      "answer": "为了实现资产分散化",
+      "points": {
+        "p1": "1. 从您现有的房产中提取净值",
+        "p2": "2. 获得您的现金流",
+        "p3": "3. 制定您的投资策略"
+      }
+    },
+    "buyrentalproperty": {
+      "title": "租赁物业",
+      "title1": "租赁物业",
+      "title2": "",
+      "description": "Invest in Tomorrow, Own Income Today: Unlocking Prosperity Through Rental Property Ownership",
+      "question": "想要最大化您的现金流吗?",
+      "answer": "投资出租物业可能是您的选择",
+      "points": {
+        "p1": "1. 从您的租赁物业获得现金流",
+        "p2": "2. 以控股公司名义购买租赁物业",
+        "p3": "3. 从多单元租赁物业获得现金流"
+      }
+    },
+    "debtsconsolidation": {
+      "title": "债务合并",
+      "title1": "债务合并",
+      "title2": "",
+      "description": "Debts Unite, Finances Ignite: Consolidate, Liberate, Reclaim Your Financial Freedom",
+      "question": "您的付款有困难吗?",
+      "answer": "尝试通过债务合并来最小化每月的债务支付",
+      "points": {
+        "p1": "1. 使用房产净值来合并债务",
+        "p2": "2. 建立信用积分",
+        "p3": "3. 从高息债务余额中解放出来",
+        "p4": "4. 获得更好的现金流"
+      }
+    },
+    "switchtransfer": {
+      "title": "更换贷款",
+      "title1": "更换贷款",
+      "title2": "",
+      "description": "Switch with Confidence, Transfer with Ease: Your Financial Freedom Awaits the Changes",
+      "question": "是否在寻找最佳利率?",
+      "answer": "我们团队可以帮到您",
+      "points": {
+        "p1": "1. 在市场上获得最佳利率",
+        "p2": "2. 获得更好的预付款方案",
+        "p3": "3. 我们团队可以帮到您"
+      }
+    },
+    "mortgagerenew": {
+      "title": "贷款续约",
+      "title1": "贷款续约",
+      "title2": "",
+      "description": "Renew, Reimagine, Rejoice: Your Mortgage Renewal, Your Path to Financial Empowerment",
+      "question": "到期日快到了吗?",
+      "answer": "我们团队可以帮您协商更好的利率",
+      "points": {
+        "p1": "1. 与您当前的贷款方协商最佳利率"
+      }
+    },
+    "commercialloan": {
+      "title": "商业贷款",
+      "title1": "商业贷款",
+      "title2": "",
+      "description": "Empowering Commerce, Feeling Growth: Your Business, Our Commercial Loan Solutions",
+      "question": "什么是商业物业?",
+      "answer": "公寓楼、办公楼、多户住宅楼、酒店设施、养老院等",
+      "points": {
+        "p1": "1. 建立您的投资组合",
+        "p2": "2. 帮助扩展业务",
+        "p3": "3. 优化现金流和投资回报"
+      }
+    },
+    "reversemortgage": {
+      "title": "反向抵押贷款",
+      "title1": "反向",
+      "title2": "抵押贷款",
+      "description": "Unlock the Equity of a Lifetime: Your Future, Your Home, Your Reverse Mortgage Freedom",
+      "question": "这个产品适合我吗?",
+      "answer": "如果您是55岁以上的房主，需要额外的资金来过上更好的生活",
+      "points": {
+        "p1": "1. 为了更好的退休生活",
+        "p2": "2. 帮助您的孩子支付首付",
+        "p3": "3. 不承担月供压力"
+      }
+    },
+    "homeequitylineofcredit": {
+      "title": "房屋信用额度",
+      "title1": "房屋",
+      "title2": "信用额度",
+      "description": "Empowering Your Equity, Unleash Possibilities: Your Home, Your Dreams, Your HELOC\nAdvantage",
+      "question": "为什么需要信用额度?",
+      "answer": "可以随时提取资金",
+      "points": {
+        "p1": "1. 为您未来的紧急情况储备资金",
+        "p2": "2. 方便随时提款",
+        "p3": "3. 仅需要支付提取金额产生的利息",
+        "p4": "4. 不需要支付由于违约产生的罚金"
+      }
+    }
+  }
+}

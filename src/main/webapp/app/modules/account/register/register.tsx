@@ -36,7 +36,7 @@ export const RegisterPage = () => {
   }, [successMessage]);
 
   return (
-    <div>
+    <div className="p-4">
       <Row className="justify-content-center">
         <Col md="8">
           <h1 id="register-title" data-cy="registerTitle">

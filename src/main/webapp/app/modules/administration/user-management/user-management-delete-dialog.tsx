@@ -30,7 +30,7 @@ export const UserManagementDeleteDialog = () => {
   };
 
   return (
-    <Modal isOpen toggle={handleClose}>
+    <Modal className="p-4" isOpen toggle={handleClose}>
       <ModalHeader toggle={handleClose}>
         <Translate contentKey="entity.delete.title">Confirm delete operation</Translate>
       </ModalHeader>

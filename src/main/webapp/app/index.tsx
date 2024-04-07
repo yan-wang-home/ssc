@@ -11,6 +11,11 @@ import ErrorBoundary from 'app/shared/error/error-boundary';
 import AppComponent from 'app/app';
 import { loadIcons } from 'app/config/icon-loader';
 
+import './modules/styles/color.css';
+import './modules/styles/font.css';
+import './modules/styles/index.css';
+import './modules/styles/tailwind.css';
+
 const store = getStore();
 registerLocale(store);
 

@@ -30,6 +30,24 @@
         "database": "Database",
         "jhipster-needle-menu-add-admin-element": "JHipster will add additional menu entries here (do not translate!)"
       },
+      "about": {
+        "main": "About Us"
+      },
+      "search": {
+        "main": "MTG Search"
+      },
+      "products": {
+        "main": "Products"
+      },
+      "whatnew": {
+        "main": "What's New"
+      },
+      "rates": {
+        "main": "Rates"
+      },
+      "events": {
+        "main": "Events"
+      },
       "language": "Language"
     },
     "form": {
@@ -48,7 +66,7 @@
       "info": {
         "authenticated": {
           "prefix": "If you want to ",
-          "link": "sign in",
+          "link": "Login",
           "suffix": ", you can try the default accounts:<br/>- Administrator (login=\"admin\" and password=\"admin\") <br/>- User (login=\"user\" and password=\"user\")."
         },
         "register": {
@@ -143,6 +161,5 @@
       "could.not.extract": "Could not extract file",
       "not.image": "File was expected to be an image but was found to be \"{{ fileType }}\""
     }
-  },
-  "footer": "This is your footer"
+  }
 }

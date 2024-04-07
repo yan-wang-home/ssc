@@ -8,6 +8,7 @@ import io.mongock.api.annotations.ChangeUnit;
 import io.mongock.api.annotations.Execution;
 import io.mongock.api.annotations.RollbackExecution;
 import java.time.Instant;
+import java.util.Collections;
 import org.springframework.data.mongodb.core.MongoTemplate;
 
 /**
@@ -70,6 +71,7 @@ public class InitialSetupMigration {
         userUser.setCreatedBy(Constants.SYSTEM);
         userUser.setCreatedDate(Instant.now());
         userUser.getAuthorities().add(userAuthority);
+        userUser.setApplications(Collections.emptyList());
         return userUser;
     }
 
@@ -82,6 +84,7 @@ public class InitialSetupMigration {
         adminUser.setLastName("Administrator");
         adminUser.setEmail("admin@localhost");
         adminUser.setApplicationStatus(null);
+        adminUser.setApplications(Collections.emptyList());
         adminUser.setActivated(true);
         adminUser.setLangKey("en");
         adminUser.setCreatedBy(Constants.SYSTEM);

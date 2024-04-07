@@ -43,7 +43,7 @@ export const ActivatePage = () => {
   const { activationSuccess, activationFailure } = useAppSelector(state => state.activate);
 
   return (
-    <div>
+    <div className="p-4">
       <Row className="justify-content-center">
         <Col md="8">
           <h1>

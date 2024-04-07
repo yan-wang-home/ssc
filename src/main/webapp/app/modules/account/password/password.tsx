@@ -40,7 +40,7 @@ export const PasswordPage = () => {
   }, [successMessage, errorMessage]);
 
   return (
-    <div>
+    <div className="p-4">
       <Row className="justify-content-center">
         <Col md="8">
           <h2 id="password-title">

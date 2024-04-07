@@ -111,6 +111,12 @@ public class MailService {
     }
 
     @Async
+    public void sendApplicationStatusChangeEmail(User user) {
+        log.debug("Sending application status change email to '{}'", user.getEmail());
+        self.sendEmailFromTemplate(user, "mail/applicationStatusChangeEmail", "email.applicationstatus.title");
+    }
+
+    @Async
     public void sendPasswordResetMail(User user) {
         log.debug("Sending password reset email to '{}'", user.getEmail());
         self.sendEmailFromTemplate(user, "mail/passwordResetEmail", "email.reset.title");

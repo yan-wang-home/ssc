@@ -1,0 +1,38 @@
+{
+  "homepage": {
+    "title1": "SMART SOLUTION CAPITAL",
+    "title2": "has a mortgage just for you",
+    "searchTitle": "Check your order state",
+    "searchPlaceholder": "Enter Application Number",
+    "search": "Search",
+    "stepTitle": "3 EASY STEPS TO GET A MORTGAGE",
+    "stepSubtTitle": "Unlock Your Dream Home With Simple, Streamlined Mortgage Solutions",
+    "step1": "Step 1",
+    "step1Action": "Fill out the form",
+    "step2": "Step 2",
+    "step2Action": "Chat with our mortgage expert",
+    "step3": "Step 3",
+    "step3Action": "Have a coffee and relax",
+    "contactUs": "Contact Us",
+    "contactUsTitle1": "GET IN TOUCH WITH US",
+    "contactUsTitle2": "FOR FACE-TO-FACE",
+    "contactUsTitle3": "DISCUSSIONS",
+    "fillForm": "Fill Form",
+    "fillFormTitle1": "APPLY ANYTIME",
+    "fillFormTitle2": "ANYWHERE",
+    "fillFormModal": {
+      "title": "Smart Solutions Capital",
+      "subTitle": "Let Us Know More About You!",
+      "email": "Email",
+      "emailPlaceHolder": "Enter a valid email address",
+      "subject": "Subject",
+      "subject1": "Purchasing a home",
+      "subject2": "Refinance",
+      "subject3": "Renewal",
+      "message": "Message",
+      "messagePlaceHolder": "Enter your message",
+      "sendMessage": "Send Message",
+      "subscribeMessage": "Stay in the know with our latest news and exclusive offers. Subscribe now for updates straight to your inbox!"
+    }
+  }
+}

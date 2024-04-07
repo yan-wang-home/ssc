@@ -25,6 +25,15 @@ export const getUsers = createAsyncThunk('userManagement/fetch_users', async ({ 
   return axios.get<IUser[]>(requestUrl);
 });
 
+export const getUserByEmail = createAsyncThunk(
+  'userManagement/fetch_user_by_email',
+  async (id: string) => {
+    const requestUrl = `${apiUrl}/${id}`;
+    return axios.get<IUser>(requestUrl);
+  },
+  { serializeError: serializeAxiosError },
+);
+
 export const getUsersAsAdmin = createAsyncThunk('userManagement/fetch_users_as_admin', async ({ page, size, sort }: IQueryParams) => {
   const requestUrl = `${adminUrl}${sort ? `?page=${page}&size=${size}&sort=${sort}` : ''}`;
   return axios.get<IUser[]>(requestUrl);

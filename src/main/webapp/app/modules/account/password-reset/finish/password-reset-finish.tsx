@@ -73,7 +73,7 @@ export const PasswordResetFinishPage = () => {
   }, [successMessage]);
 
   return (
-    <div>
+    <div className="p-4">
       <Row className="justify-content-center">
         <Col md="4">
           <h1>

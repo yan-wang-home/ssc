@@ -13,6 +13,7 @@ import com.mortgagehub.service.dto.UserDTO;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
 import java.util.*;
+import java.util.concurrent.atomic.AtomicBoolean;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Pageable;
@@ -40,16 +41,20 @@ public class UserService {
 
     private final AuthorityRepository authorityRepository;
 
+    private final MailService mailService;
+
     public UserService(
         UserRepository userRepository,
         PasswordEncoder passwordEncoder,
         UserSearchRepository userSearchRepository,
-        AuthorityRepository authorityRepository
+        AuthorityRepository authorityRepository,
+        MailService mailService
     ) {
         this.userRepository = userRepository;
         this.passwordEncoder = passwordEncoder;
         this.userSearchRepository = userSearchRepository;
         this.authorityRepository = authorityRepository;
+        this.mailService = mailService;
     }
 
     public Mono<User> activateRegistration(String key) {
@@ -155,6 +160,9 @@ public class UserService {
         if (userDTO.getEmail() != null) {
             user.setEmail(userDTO.getEmail().toLowerCase());
         }
+        if (userDTO.getApplicationStatus() != null) {
+            user.setApplicationStatus(userDTO.getApplicationStatus());
+        }
         user.setImageUrl(userDTO.getImageUrl());
         if (userDTO.getLangKey() == null) {
             user.setLangKey(Constants.DEFAULT_LANGUAGE); // default language
@@ -187,6 +195,7 @@ public class UserService {
      * @return updated user.
      */
     public Mono<AdminUserDTO> updateUser(AdminUserDTO userDTO) {
+        AtomicBoolean hasStatusChange = new AtomicBoolean(false);
         return userRepository
             .findById(userDTO.getId())
             .flatMap(user -> {
@@ -196,7 +205,8 @@ public class UserService {
                 if (userDTO.getEmail() != null) {
                     user.setEmail(userDTO.getEmail().toLowerCase());
                 }
-                if (userDTO.getApplicationStatus() != null) {
+                if (userDTO.getApplicationStatus() != null && !user.getApplicationStatus().equals(userDTO.getApplicationStatus())) {
+                    hasStatusChange.set(true);
                     user.setApplicationStatus(userDTO.getApplicationStatus());
                 }
                 user.setImageUrl(userDTO.getImageUrl());
@@ -212,6 +222,11 @@ public class UserService {
             })
             .flatMap(this::saveUser)
             .flatMap(user -> userSearchRepository.save(user).thenReturn(user))
+            .doOnSuccess(user -> {
+                if (hasStatusChange.get()) {
+                    mailService.sendApplicationStatusChangeEmail(user);
+                }
+            })
             .doOnNext(user -> log.debug("Changed Information for User: {}", user))
             .map(AdminUserDTO::new);
     }
@@ -304,6 +319,10 @@ public class UserService {
 
     public Mono<User> getUserWithAuthorities() {
         return SecurityUtils.getCurrentUserLogin().flatMap(userRepository::findOneByLogin);
+    }
+
+    public Mono<User> getUserByEmail(String mail) {
+        return userRepository.findOneByEmailIgnoreCase(mail);
     }
 
     /**

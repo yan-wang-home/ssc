@@ -22,10 +22,10 @@ export const Login = () => {
 
   const handleClose = () => {
     setShowModal(false);
-    navigate('/');
+    navigate('/admin');
   };
 
-  const { from } = pageLocation.state || { from: { pathname: '/', search: pageLocation.search } };
+  const { from } = pageLocation.state || { from: { pathname: '/admin', search: pageLocation.search } };
   if (isAuthenticated) {
     return <Navigate to={from} replace />;
   }
