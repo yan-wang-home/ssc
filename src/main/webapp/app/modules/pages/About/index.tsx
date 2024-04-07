@@ -13,7 +13,7 @@ const AboutPage: React.FC = () => {
         <div className="flex flex-col items-center justify-start w-full">
           {/* Top Image */}
           <div className="relative w-full h-60 overflow-hidden">
-            <Img src="https://www.w3schools.com/howto/img_avatar2.png" alt="Avatar" className="object-cover w-full h-full" />
+            <Img src="content/images/aboutus-top.png" alt="Avatar" className="object-cover w-full h-full" />
             <div className="absolute w-full py-2.5 top-1/4 inset-x-0">
               <Text className="text-white lg:text-7xl sm:text-[34px] md:text-[40px] text-center">
                 <Translate contentKey="about.title" />
