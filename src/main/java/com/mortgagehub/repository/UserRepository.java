@@ -13,12 +13,13 @@ import reactor.core.publisher.Mono;
  */
 @Repository
 public interface UserRepository extends ReactiveMongoRepository<User, String> {
+    Mono<User> findOneById(String id);
     Mono<User> findOneByActivationKey(String activationKey);
     Flux<User> findAllByActivatedIsFalseAndActivationKeyIsNotNullAndCreatedDateBefore(Instant dateTime);
     Mono<User> findOneByResetKey(String resetKey);
     Mono<User> findOneByEmailIgnoreCase(String email);
     Mono<User> findOneByLogin(String login);
-
+    Flux<User> findAllByEmail(String email);
     Flux<User> findAllByIdNotNull(Pageable pageable);
 
     Flux<User> findAllByIdNotNullAndActivatedIsTrue(Pageable pageable);

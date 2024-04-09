@@ -17,6 +17,7 @@ const initialState = {
 
 const apiUrl = 'api/users';
 const adminUrl = 'api/admin/users';
+const searchUrl = 'api/users/_search';
 
 // Async Actions
 
@@ -25,11 +26,11 @@ export const getUsers = createAsyncThunk('userManagement/fetch_users', async ({ 
   return axios.get<IUser[]>(requestUrl);
 });
 
-export const getUserByEmail = createAsyncThunk(
-  'userManagement/fetch_user_by_email',
-  async (id: string) => {
-    const requestUrl = `${apiUrl}/${id}`;
-    return axios.get<IUser>(requestUrl);
+export const queryUsers = createAsyncThunk(
+  'userManagement/search users',
+  async (searchQuery: string) => {
+    const requestUrl = `${searchUrl}/${searchQuery}`;
+    return axios.get<IUser[]>(requestUrl);
   },
   { serializeError: serializeAxiosError },
 );
@@ -107,7 +108,7 @@ export const UserManagementSlice = createSlice({
         state.updateSuccess = true;
         state.user = defaultValue;
       })
-      .addMatcher(isFulfilled(getUsers, getUsersAsAdmin), (state, action) => {
+      .addMatcher(isFulfilled(getUsers, getUsersAsAdmin, queryUsers), (state, action) => {
         state.loading = false;
         state.users = action.payload.data;
         state.totalItems = parseInt(action.payload.headers['x-total-count'], 10);
@@ -118,7 +119,7 @@ export const UserManagementSlice = createSlice({
         state.updateSuccess = true;
         state.user = action.payload.data;
       })
-      .addMatcher(isPending(getUsers, getUsersAsAdmin, getUser), state => {
+      .addMatcher(isPending(getUsers, getUsersAsAdmin, getUser, queryUsers), state => {
         state.errorMessage = null;
         state.updateSuccess = false;
         state.loading = true;
@@ -128,12 +129,15 @@ export const UserManagementSlice = createSlice({
         state.updateSuccess = false;
         state.updating = true;
       })
-      .addMatcher(isRejected(getUsers, getUsersAsAdmin, getUser, getRoles, createUser, updateUser, deleteUser), (state, action) => {
-        state.loading = false;
-        state.updating = false;
-        state.updateSuccess = false;
-        state.errorMessage = action.error.message;
-      });
+      .addMatcher(
+        isRejected(getUsers, getUsersAsAdmin, getUser, getRoles, createUser, updateUser, deleteUser, queryUsers),
+        (state, action) => {
+          state.loading = false;
+          state.updating = false;
+          state.updateSuccess = false;
+          state.errorMessage = action.error.message;
+        },
+      );
   },
 });
 

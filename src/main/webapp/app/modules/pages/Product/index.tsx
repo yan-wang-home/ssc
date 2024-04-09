@@ -110,7 +110,7 @@ const ProductsPage: React.FC = () => {
 
           {/* Business for Self / Refinance for Renovation / Purchase + Improvement / Construction Loan */}
           <div className="flex flex-col gap-12 items-center justify-start mx-auto md:px-5 mt-4 w-full">
-            <div className="flex sm:flex-col lg:flex-row md:gap-10 gap-3 items-center justify-between w-full">
+            <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 md:gap-10 gap-3 items-center justify-between w-full">
               <div className="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                 <a href="/products_businessforself">
                   <img className="rounded-t-lg" src="content/images/businessforself.png" alt="" />
@@ -268,7 +268,7 @@ const ProductsPage: React.FC = () => {
 
           {/* Equity take out/ Buy a rental property / Debts Consolidation / Switch & Transfer */}
           <div className="flex flex-col gap-12 items-center justify-start mx-auto md:px-5 mt-4 w-full">
-            <div className="flex sm:flex-col lg:flex-row md:gap-10 gap-3 items-center justify-between w-full">
+            <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 md:gap-10 gap-3 items-center justify-between w-full">
               <div className="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                 <a href="/products_equitytakeout">
                   <img className="rounded-t-lg" src="content/images/equitytakeout.png" alt="" />
@@ -426,7 +426,7 @@ const ProductsPage: React.FC = () => {
 
           {/* Mortgage Renew / Commercial Loan / Reverse Mortgage / Home Equity Line of Credit */}
           <div className="flex flex-col gap-12 items-center justify-start mx-auto md:px-5 mt-4 w-full">
-            <div className="flex sm:flex-col lg:flex-row md:gap-10 gap-3 items-center justify-between w-full">
+            <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 md:gap-10 gap-3 items-center justify-between w-full">
               <div className="bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
                 <a href="/products_mortgagerenew">
                   <img className="rounded-t-lg" src="content/images/mortgagerenew.png" alt="" />

@@ -68,6 +68,7 @@ export const UserManagementUpdate = () => {
                   name="id"
                   required
                   readOnly
+                  disabled
                   label={translate('global.field.id')}
                   validate={{ required: true }}
                 />
@@ -168,6 +169,7 @@ export const UserManagementUpdate = () => {
                   </option>
                 ))}
               </ValidatedField>
+              <ValidatedField name="note" label={translate('userManagement.notes')} type="textarea" />
               <Button tag={Link} to="/admin/user-management" replace color="info">
                 <FontAwesomeIcon icon="arrow-left" />
                 &nbsp;

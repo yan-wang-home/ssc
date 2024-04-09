@@ -1,25 +1,25 @@
 {
   "about": {
-    "title": "About Us",
-    "subTitle": "Exploring Our Story and Values",
+    "title": "关于我们",
+    "subTitle": "我们的故事和价值",
     "section1": {
-      "title": "Who We Are",
-      "subTitle": "About Connie Xie",
-      "content1": "Connie Xie is a mortgage expert with over a decade of experience in the financial services industry in the Greater Toronto Area. She has established herself as a trusted advisor in residential and commercial lending, having successfully helped thousands of clients with diverse backgrounds and complex situations.",
-      "content2": "■ Within Toronto's real estate community, Connie enjoys a strong reputation for professionalism and dedication to helping individuals and families realize their homeownership dreams. Whether her clients are first-time home buyers or seasoned investors, Connie is committed to providing the expertise and guidance needed to secure the right mortgage for their unique needs.",
-      "content3": "■ Connie Xie looks forward to assisting clients on their homeownership journey and helping them make informed financial decisions. Prospective clients are encouraged to contact Connie to explore how she can help them achieve their real estate goals.",
-      "note": "We are a top-tier team comprised of multiple professional loan specialists dedicated to meeting the diverse loan needs of our valued clients. Our core values revolve around providing customers with the best financial solutions, ensuring they can achieve their financial goals."
+      "title": "我们的故事",
+      "subTitle": "关于Connie Xie",
+      "content1": "Connie Xie是一位具有十多年金融服务行业经验的抵押贷款专家，主要服务于大多地区。她已经确立了自己在个人住房贷款领域专业的口碑，在过去的11年在加拿大著名大银行任职贷款专家的职业生涯时间里， 每年平均个人业绩为1.2亿加币， 成功地帮助了成千上万具有不同背景和复杂情况的客户获得贷款的审批.",
+      "content2": "■ 在多伦多房地产社区内，Connie以其专业精神和帮助客户实现购房梦想的承诺中享有良好的声誉。无论客户是首次购房者还是经验丰富的投资者，Connie都致力于通过专业的知识和从业经验，来确保他们为其独特需求获得合适的抵押贷款.",
+      "content3": "■ Connie Xie期待着为您的购房之旅中提供帮助，并帮助您做出明智的财务决策。欢迎有意向的客户与Connie联系，共同探讨如何实现您的房地产目标.",
+      "note": "我们是一个顶尖团队，由多名专业贷款专家组成，致力于满足我们尊贵客户的多样化贷款需求。我们的核心价值观围绕着为客户提供最佳的金融解决方案，确保客户们都能实现自己的财务目标."
     },
     "section2": {
       "subSection1": {
-        "title": "Why Choose Us:",
-        "content1": "■ Diverse Range of Loan Products: We offer a wide array of loan products, including home loans, commercial loans, debt consolidation loans, and more, catering to the unique needs of different clients.",
-        "content2": "■ Excellent Reputation and Standing in the Greater Toronto Area: We have earned a solid reputation in the Greater Toronto Area, delivering services in a professional, transparent, and responsible manner. Clients can trust our expertise and experience."
+        "title": "选择我们的理由:",
+        "content1": "■ 多样化的贷款产品范围：我们为您提供广泛的贷款产品，包括个人住房贷款、商业贷款、债务合并贷款等，满足不同客户的独特需求.",
+        "content2": "■ 在多伦多地区拥有良好的声誉和口碑：我们旨在以专业、透明、负责任的方式为不同客户提供服务."
       },
       "subSection2": {
-        "title": "Our Commitment:",
-        "content1": "■ We commit to providing personalized loan solutions for each client, tailoring loan plans based on their specific situations and objectives. Our goal is to assist clients in achieving their financial aspirations and offer exceptional support and guidance throughout the loan process.",
-        "content2": "■ If you are seeking a reliable loan partner, please get in touch with us. We look forward to working with you to attain financial success together."
+        "title": "我们的承诺:",
+        "content1": "■ 我们承诺为每个客户提供个性化的贷款解决方案，根据他们的具体情况和目标量身定制贷款计划。我们的宗旨就是帮助客户实现其财务愿景，并在整个贷款过程中提供卓越的支持和指导.",
+        "content2": "■ 如果您正在寻找一个可靠的贷款合作伙伴，请与我们联系。我们期待与您合作，为您实现财务成功."
       }
     }
   }

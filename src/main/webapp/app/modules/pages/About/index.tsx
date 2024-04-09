@@ -27,7 +27,7 @@ const AboutPage: React.FC = () => {
           <div className="flex flex-col items-center w-full">
             <div className="flex flex-col gap-0 items-center justify-start mb-3 px-3">
               <Text
-                className="leading-[54.00px] sm:text-[34px] md:text-[40px] text-xl text-center text-blue-900 sm:w-full pt-8"
+                className="leading-[54.00px] sm:text-[34px] md:text-[40px] lg:text-[50px] text-xl text-center text-blue-900 sm:w-full pt-8"
                 size="txtChivoBold44"
               >
                 <Translate contentKey="about.section1.title" />
@@ -58,7 +58,7 @@ const AboutPage: React.FC = () => {
               </Text>
               {/* Section 2 */}
               <div className="flex lg:flex-row md:flex-col sm:flex-col bg-gray-300 w-full lg:gap-2 mt-5">
-                <div className="flex flex-col w-1/3 sm:w-full items-center">
+                <div className="flex flex-col lg:w-1/3 md:w-full sm:w-full items-center">
                   <Img className="w-full" src="content/images/aboutus-img1.png" />
                 </div>
                 <div className="flex flex-col lg:gap-4 sm:gap-2 lg:w-1/3 sm:w-full lg:p-5 sm:p-3">

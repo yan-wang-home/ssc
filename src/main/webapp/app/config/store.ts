@@ -28,13 +28,13 @@ export const useAppDispatch = () => useDispatch<AppDispatch>();
 export type AppThunk<ReturnType = void> = ThunkAction<ReturnType, IRootState, unknown, AnyAction>;
 
 export const applicationStatusList: any = {
-  Preparing: { name: 'Preparing' },
-  Submitted: { name: 'Submitted' },
-  UnderReview: { name: 'UnderReview' },
-  Approved: { name: 'Approved' },
+  Submitted: { name: 'Submit To Lender' },
+  ApprovedWithCondition: { name: 'Approved With Condition' },
+  BrokerComplete: { name: 'Broker Complete' },
+  Funded: { name: 'Funded' },
   // jhipster-needle-i18n-language-key-pipe - JHipster will add/remove languages in this object
 };
 
-export const applicationStatuses = Object.keys(applicationStatusList).sort();
+export const applicationStatuses = Object.keys(applicationStatusList);
 
 export default getStore;

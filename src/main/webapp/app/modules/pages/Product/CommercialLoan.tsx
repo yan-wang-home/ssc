@@ -4,8 +4,11 @@ import { Img, Text } from '../../components';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import { Translate } from 'react-jhipster';
+import { useNavigate } from 'react-router';
 
 const CommercialLoan: React.FC = () => {
+  const navigate = useNavigate();
+
   return (
     <>
       <div className="bg-gray-100 flex flex-col font-chivo sm:gap-10 md:gap-10 gap-[70px] items-center justify-start mx-auto w-full">
@@ -19,6 +22,7 @@ const CommercialLoan: React.FC = () => {
                   <br /> <Translate contentKey="product.commercialloan.title2" />
                 </Text>
                 <button
+                  onClick={() => navigate('/contactus')}
                   className="block w-1/2 sm:w-3/5 ml-10 select-none rounded-lg bg-red-800 sm:mt-0 mt-5 py-3.5 px-7 text-center align-middle font-sans text-lg font-bold uppercase text-white shadow-md shadow-gray-900/10 transition-all hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                   type="button"
                 >

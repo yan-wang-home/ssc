@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
+import { generatePath } from 'react-router-dom';
 
 import { Link, useNavigate } from 'react-router-dom';
 
@@ -10,50 +11,69 @@ import { Translate } from 'react-jhipster';
 
 const HomepagePage: React.FC = () => {
   const navigate = useNavigate();
+
   const [openContactUsModal, setOpenContactUsModal] = useState(false);
   const [openFillFormModal, setOpenFillFormModal] = useState(false);
 
   const [email, setEmail] = useState('');
+  const [searchQuery, setSearchQuery] = useState('');
   const [subscribe, setSubscribe] = useState(false);
+
+  const searchPlaceholder = <Translate contentKey="homepage.searchTitle" />;
 
   function onCloseModal() {
     setOpenFillFormModal(false);
     setEmail('');
   }
 
+  const performSearch = () => {
+    navigate(getArtifactUrlPath(generateQuery(searchQuery)));
+  };
+
+  const getArtifactUrlPath = (query: string): string =>
+    generatePath('/search/:query', {
+      query,
+    });
+
+  const generateQuery = (userInput: string): string => {
+    return userInput.split('.').join('%dot%');
+  };
+
   return (
     <>
       <div className="bg-white-A700 flex flex-col font-chivo gap-[0px] /*items-center*/ justify-start mx-auto w-full">
         <Header className="flex items-center justify-center md:px-0 mx-auto w-full" />
         <div className="flex flex-col items-center justify-start w-full">
-          <Img src="content/images/landing_page.jpeg" alt="Background" className="w-full h-screen object-cover" />
+          <Img src="content/images/landing_page.jpeg" alt="Background" className="w-full h-screen sm:h-[700px] object-cover" />
           {/* Home Page Main Picture */}
           <div className="absolute top-1/2 transform -translate-y-1/2 text-white p-8 w-full">
-            <Text className="text-4xl font-bold text-blue-900 mb-4 lg:text-left sm:text-center">
+            <Text className="text-4xl font-bold text-blue-900 mb-4 lg:text-left sm:text-center sm:backdrop-blur-sm">
               <Translate contentKey="homepage.title1" />
               <br />
               <Translate contentKey="homepage.title2" />
             </Text>
-            <Text className="text-2xl text-blue-900 sm:text-center mt-4">
+            <Text className="text-2xl text-blue-900 sm:text-center mt-4 sm:backdrop-blur-sm">
               <Translate contentKey="homepage.searchTitle" />
             </Text>
             <div className="bg-gray-50 border border-solid border-teal-400 flex sm:flex-col flex-row mt-2 gap-[22px] items-center justify-end p-1.5 rounded-md w-2/5 sm:w-full">
               <Input
                 name="box"
-                placeholder='<Translate contentKey="homepage.searchTitle" />'
+                placeholder="Enter Application Number"
                 className="p-0 placeholder:text-bluegray-200 text-base text-left w-full"
-                wrapClassName="sm:flex-1 sm:mt-0 my-[9px] w-3/5 sm:w-full"
+                wrapClassName="sm:flex-1 sm:mt-0 my-[9px] w-4/5 sm:w-full"
                 type="email"
                 shape="square"
                 color="gray_50"
                 size="sm"
-              ></Input>
+                onChange={setSearchQuery}
+              />
               <Button
                 className="cursor-pointer min-w-[150px] sm:mt-0 my-0.5 text-base text-center"
                 shape="round"
                 color="blue_900"
                 size="xs"
                 variant="fill"
+                onClick={performSearch}
               >
                 <Translate contentKey="homepage.search" />
               </Button>
@@ -63,19 +83,14 @@ const HomepagePage: React.FC = () => {
 
         {/* 3 Steps */}
         <div className="flex flex-col items-center justify-start w-full">
-          <div className="flex flex-col gap-12 items-center justify-start max-w-[1112px] mt-[130px] mx-auto md:px-5 w-full">
+          <div className="flex flex-col gap-12 items-center justify-start max-w-[1112px] mt-[130px] sm:mt-8 mx-auto md:px-5 w-full">
             <div className="flex flex-col gap-0 items-center justify-start max-w-[1112px] w-full">
-              <Text
-                className="leading-[54.00px] sm:text-[34px] md:text-[40px] text-[50px] text-center text-blue-900 w-[80%] sm:w-full"
-                size="txtChivoBold44"
-              >
+              searchQuery: {searchQuery}
+              <Text className="leading-[54.00px] sm:text-[34px] md:text-[40px] text-[50px] text-center text-blue-900 w-[90%]">
                 <Translate contentKey="homepage.stepTitle" />
               </Text>
-              <Text
-                className="leading-[54.00px] text-[20px] text-center text-blue-900 w-[80%] sm:w-full"
-                size="txtChivoRegular18Bluegray600"
-              >
-                <Translate contentKey="homepage.stepSubtTitle" />
+              <Text className="leading-[54.00px] text-[20px] text-center text-blue-900 w-[90%]">
+                <Translate contentKey="homepage.stepSubTitle" />
               </Text>
             </div>
             <div className="hidden lg:flex sm:flex-col lg:flex-row gap-[5px] items-start justify-evenly w-full">
@@ -126,15 +141,15 @@ const HomepagePage: React.FC = () => {
                 </Card>
               </div>
             </div>
-            <div className="lg:hidden mx-auto w-8/12 pb-8 h-[600px] sm:h-100">
+            <div className="lg:hidden mx-auto w-[85%] h-full">
               <Carousel pauseOnHover>
-                <Card className="w-3/4 h-3/4 shadow-2xl rounded-3xl relative">
+                <Card className="w-full shadow-2xl rounded-2xl relative">
                   <h5 className="absolute top-5 left-5 text-2xl font-bold tracking-tight text-gray-600 dark:text-white">
                     <Translate contentKey="homepage.step1" />
                   </h5>
                   <div className="flex items-center justify-center">
                     <Img
-                      className="w-[200px] h-[200px]"
+                      className="w-[200px]"
                       // src="content/images/edit-file-svgrepo-com.svg"
                       src="content/images/edit.svg"
                       alt="call"
@@ -144,23 +159,23 @@ const HomepagePage: React.FC = () => {
                     <Translate contentKey="homepage.step1Action" />
                   </p>
                 </Card>
-                <Card className="w-3/4 h-3/4 shadow-2xl rounded-3xl relative">
+                <Card className="w-full shadow-2xl rounded-2xl relative">
                   <h5 className="absolute top-5 left-5 text-2xl font-bold tracking-tight text-gray-600 dark:text-white">
                     <Translate contentKey="homepage.step2" />
                   </h5>
                   <div className="flex items-center justify-center">
-                    <Img className="w-[200px] h-[200px]" src="content/images/chat.svg" alt="call" />
+                    <Img className="w-[200px]" src="content/images/chat.svg" alt="call" />
                   </div>
                   <p className="font-normal text-gray-700 dark:text-gray-400 text-xl text-center">
                     <Translate contentKey="homepage.step2Action" />
                   </p>
                 </Card>
-                <Card className="w-3/4 h-3/4 shadow-2xl rounded-3xl relative">
+                <Card className="w-full shadow-2xl rounded-2xl relative">
                   <h5 className="absolute top-5 left-5 text-2xl font-bold tracking-tight text-gray-600 dark:text-white">
                     <Translate contentKey="homepage.step3" />
                   </h5>
                   <div className="flex items-center justify-center">
-                    <Img className="w-[200px] h-[200px]" src="content/images/coffee.svg" alt="call" />
+                    <Img className="w-[200px]" src="content/images/coffee.svg" alt="call" />
                   </div>
                   <p className="font-normal text-gray-700 dark:text-gray-400 text-xl text-center">
                     <Translate contentKey="homepage.step3Action" />
@@ -170,18 +185,20 @@ const HomepagePage: React.FC = () => {
             </div>
           </div>
 
+          {/* Get in touch & Fill in form */}
           <div className="flex lg:flex-row sm:flex-col items-center justify-start w-full mt-[130px] mx-auto">
             <div className="flex sm:flex-col lg:flex-row items-center justify-center w-full relative">
               <Img src="content/images/get_in_touch.jpg" alt="Background" className="w-full object-cover" />
               <div className="absolute top-1/2 transform -translate-y-1/2 text-white p-8">
-                <Text className="text-5xl text-center font-bold text-white-A700">
+                <Text className="lg:text-5xl md:text-3xl sm:text-2xl text-center font-bold text-white-A700">
                   <Translate contentKey="homepage.contactUsTitle1" /> <br /> <Translate contentKey="homepage.contactUsTitle2" /> <br />{' '}
                   <Translate contentKey="homepage.contactUsTitle3" />
                 </Text>
               </div>
               <div className="absolute top-1/2 pt-10 items-center">
                 <button
-                  onClick={() => setOpenContactUsModal(true)}
+                  // onClick={() => setOpenContactUsModal(true)}
+                  onClick={() => navigate('/contactus')}
                   className="block w-full select-none rounded-lg bg-red-800 sm:mt-0 mt-5 py-3.5 px-7 text-center align-middle font-sans text-lg font-bold uppercase text-white shadow-md shadow-gray-900/10 transition-all hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                   type="button"
                 >
@@ -192,7 +209,7 @@ const HomepagePage: React.FC = () => {
             <div className="flex sm:flex-col lg:flex-row items-center justify-center w-full relative">
               <Img src="content/images/fill-form.jpg" alt="Background" className="w-full object-cover" />
               <div className="absolute top-1/2 transform -translate-y-1/2 text-white p-8">
-                <Text className="text-5xl text-center font-bold text-white-A700">
+                <Text className="lg:text-5xl md:text-3xl sm:text-2xl text-center font-bold text-white-A700">
                   <Translate contentKey="homepage.fillFormTitle1" /> <br /> <Translate contentKey="homepage.fillFormTitle2" />
                 </Text>
               </div>
@@ -307,14 +324,14 @@ const HomepagePage: React.FC = () => {
             </div>
           </div>
 
-          <div className="flex sm:flex-col flex-row sm:gap-5 items-center justify-start max-w-[1112px] mt-24 mx-auto p-0.5 md:px-5 w-full">
-            <Img className="h-[30px] ml-1 sm:ml-[0] w-[13%]" src="content/images/img_microsoft1.svg" alt="MicrosoftOne" />
-            <Img className="h-[30px] sm:ml-[0] ml-[65px] w-[11%]" src="content/images/img_vector.svg" alt="Vector" />
-            <Img className="h-9 sm:ml-[0] ml-[101px] w-[7%]" src="content/images/img_trash.svg" alt="trash" />
-            <Img className="h-[35px] ml-24 sm:ml-[0] w-[12%]" src="content/images/img_shopify.svg" alt="Shopify" />
-            <Img className="h-[33px] sm:ml-[0] ml-[63px] w-[13%]" src="content/images/img_group.svg" alt="Group" />
-            <Img className="h-[30px] sm:ml-[0] ml-[88px] w-[7%]" src="content/images/img_intel.svg" alt="Intel" />
-          </div>
+          {/* <div className="flex sm:flex-col flex-row sm:gap-5 items-center justify-start max-w-[1112px] mt-24 mx-auto p-0.5 md:px-5 w-full"> */}
+          {/*   <Img className="h-[30px] ml-1 sm:ml-[0] w-[13%]" src="content/images/img_microsoft1.svg" alt="MicrosoftOne" /> */}
+          {/*   <Img className="h-[30px] sm:ml-[0] ml-[65px] w-[11%]" src="content/images/img_vector.svg" alt="Vector" /> */}
+          {/*   <Img className="h-9 sm:ml-[0] ml-[101px] w-[7%]" src="content/images/img_trash.svg" alt="trash" /> */}
+          {/*   <Img className="h-[35px] ml-24 sm:ml-[0] w-[12%]" src="content/images/img_shopify.svg" alt="Shopify" /> */}
+          {/*   <Img className="h-[33px] sm:ml-[0] ml-[63px] w-[13%]" src="content/images/img_group.svg" alt="Group" /> */}
+          {/*   <Img className="h-[30px] sm:ml-[0] ml-[88px] w-[7%]" src="content/images/img_intel.svg" alt="Intel" /> */}
+          {/* </div> */}
           <Footer className="bg-gray-200 flex items-center justify-center mt-[120px] md:px-5 w-full" />
         </div>
       </div>

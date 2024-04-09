@@ -36,6 +36,8 @@ import WhatNew from 'app/modules/pages/WhatNew';
 import AdminView from 'app/modules/home/admin';
 import PrivacyPolicy from 'app/modules/pages/Homepage/PrivacyPolicy';
 import ComingSoon from 'app/modules/pages/Common/ComingSoon';
+import ContactUs from 'app/modules/pages/Common/ContactUs';
+import Partners from 'app/modules/pages/Partner';
 
 const loading = <div>loading ...</div>;
 
@@ -68,9 +70,11 @@ const AppRoutes = () => {
         <Route path="products_commercialloan" element={<Products_CommercialLoan />} />
         <Route path="products_reversemortgage" element={<Products_ReverseMortgage />} />
         <Route path="products_homeequitylineofcredit" element={<Products_HomeEquityLineOfCredit />} />
-        <Route path="search" element={<Search />} />
+        <Route path="search/:searchQuery" element={<Search />} />
         <Route path="rates" element={<Rates />} />
+        <Route path="partners" element={<Partners />} />
         <Route path="about" element={<About />} />
+        <Route path="contactus" element={<ContactUs />} />
         <Route path="privacypolicy" element={<PrivacyPolicy />} />
         <Route path="comingsoon" element={<ComingSoon />} />
         <Route path="whatnew" element={<WhatNew />} />

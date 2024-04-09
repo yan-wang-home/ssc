@@ -209,6 +209,9 @@ public class UserService {
                     hasStatusChange.set(true);
                     user.setApplicationStatus(userDTO.getApplicationStatus());
                 }
+                if (userDTO.getNote() != null) {
+                    user.setNote(userDTO.getNote());
+                }
                 user.setImageUrl(userDTO.getImageUrl());
                 user.setActivated(userDTO.isActivated());
                 user.setLangKey(userDTO.getLangKey());
@@ -321,10 +324,6 @@ public class UserService {
         return SecurityUtils.getCurrentUserLogin().flatMap(userRepository::findOneByLogin);
     }
 
-    public Mono<User> getUserByEmail(String mail) {
-        return userRepository.findOneByEmailIgnoreCase(mail);
-    }
-
     /**
      * Not activated users should be automatically deleted after 3 days.
      * <p>
@@ -341,6 +340,13 @@ public class UserService {
             .flatMap(user -> userRepository.delete(user).thenReturn(user))
             .flatMap(user -> userSearchRepository.delete(user).thenReturn(user))
             .doOnNext(user -> log.debug("Deleted User: {}", user));
+    }
+
+    public Flux<User> findAllByEmailOrAppId(String searchKey) {
+        if (searchKey.contains("@")) {
+            return userRepository.findAllByEmail(searchKey);
+        }
+        return userRepository.findById(searchKey).flux();
     }
 
     /**

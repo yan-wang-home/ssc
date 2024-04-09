@@ -45,13 +45,13 @@ const Header: React.FC<HeaderProps> = props => {
               <a className="text-3xl font-bold leading-none" href="#">
                 <div
                   id="company-logo"
-                  className="h-14 flex flex-row gap-2 items-end lg:justify-items-start md:justify-items-center sm:justify-items-center transform hover:scale-110 hover:border-white transition-transform duration-3000 ease-in-out"
+                  className="h-14 flex flex-row gap-2 items-center lg:justify-items-start md:justify-items-center sm:justify-items-center transform hover:scale-110 hover:border-white transition-transform duration-3000 ease-in-out"
                 >
                   <Link to="/" className="alert-link">
-                    <Img className="h-[60px] w-[60px]" src="content/images/logo.png" alt="Group448" />
+                    <Img className="h-[65px] md:h-[56px] sm:h-[45px]" src="content/images/logo.png" alt="Group448" />
                   </Link>
                   <Link to="/" className="pl-2 alert-link items-center">
-                    <Text className="mb-[12px] text-[25px] text-sky-800" size="txtCinzelDecorativeBold16">
+                    <Text className="lg:text-[25px] md:text-[20px] sm:text-[15px] text-sky-800" size="txtCinzelDecorativeBold16">
                       <Translate contentKey="header.title" />
                     </Text>
                   </Link>
@@ -132,6 +132,30 @@ const Header: React.FC<HeaderProps> = props => {
                 </li>
                 <li>
                   <Link
+                    to="/partners"
+                    className="text-sky-800 text-xl alert-link transform hover:scale-110 hover:border-white transition-transform duration-3000 ease-in-out"
+                  >
+                    <Translate contentKey="header.partners" />
+                  </Link>
+                </li>
+                <li className="text-gray-300">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    stroke="currentColor"
+                    className="w-4 h-4 current-fill"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
+                    />
+                  </svg>
+                </li>
+                <li>
+                  <Link
                     to="/about"
                     className="text-sky-800 text-xl alert-link transform hover:scale-110 hover:border-white transition-transform duration-3000 ease-in-out"
                   >
@@ -139,7 +163,7 @@ const Header: React.FC<HeaderProps> = props => {
                   </Link>
                 </li>
               </ul>
-              <a className="inline-block py-2 px-6">
+              <a className="inline-block py-2">
                 <LocaleMenu currentLocale={currentLocale} onClick={handleLocaleChange} />
               </a>
             </nav>
@@ -153,10 +177,10 @@ const Header: React.FC<HeaderProps> = props => {
                         id="company-logo"
                         className="flex flex-row gap-2 items-end lg:justify-items-start md:justify-items-center sm:justify-items-center"
                       >
-                        <Link to="/" className="alert-link">
+                        <Link to="#" className="alert-link">
                           <Img className="h-[50px] w-[50px]" src="content/images/logo.png" alt="Group448" />
                         </Link>
-                        <Link to="/" className="pl-2 alert-link items-center">
+                        <Link to="#" className="pl-2 alert-link items-center">
                           <Text className="mb-[12px] text-[22px] text-sky-800" size="txtCinzelDecorativeBold16">
                             <Translate contentKey="header.title" />
                           </Text>
@@ -187,7 +211,7 @@ const Header: React.FC<HeaderProps> = props => {
                         </li>
                         <li className="mb-1">
                           <Link
-                            to="/products"
+                            to="/rates"
                             className="block p-4 hover:bg-gray-100 hover:text-blue-600 rounded text-sky-800 text-xl alert-link transform hover:scale-110 hover:border-white transition-transform duration-3000 ease-in-out"
                           >
                             <Translate contentKey="header.rates" />
@@ -195,10 +219,18 @@ const Header: React.FC<HeaderProps> = props => {
                         </li>
                         <li className="mb-1">
                           <Link
-                            to="/products"
+                            to="/comingsoon"
                             className="block p-4 hover:bg-gray-100 hover:text-blue-600 rounded text-sky-800 text-xl alert-link transform hover:scale-110 hover:border-white transition-transform duration-3000 ease-in-out"
                           >
                             <Translate contentKey="header.events" />
+                          </Link>
+                        </li>
+                        <li className="mb-1">
+                          <Link
+                            to="/partners"
+                            className="block p-4 hover:bg-gray-100 hover:text-blue-600 rounded text-sky-800 text-xl alert-link transform hover:scale-110 hover:border-white transition-transform duration-3000 ease-in-out"
+                          >
+                            <Translate contentKey="header.partners" />
                           </Link>
                         </li>
                         <li className="mb-1">

@@ -37,10 +37,16 @@ spring:
   elasticsearch:
     uris: http://localhost:9200
   mail:
-    host: localhost
-    port: 25
-    username:
-    password:
+    host: smtp.gmail.com
+    port: 587
+    username: info@ssc.finance #Replace this field with your Gmail username.
+    password: grvh vmce nuhr ocmp #Replace this field with your Gmail password/App password.
+    protocol: smtp
+    tls: true
+    properties.mail.smtp:
+      auth: true
+      starttls.enable: true
+      ssl.trust: smtp.gmail.com
   thymeleaf:
     cache: true
 

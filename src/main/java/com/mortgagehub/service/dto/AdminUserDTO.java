@@ -38,6 +38,9 @@ public class AdminUserDTO implements Serializable {
     @Indexed
     private ApplicationStatus applicationStatus;
 
+    @Indexed
+    private String note;
+
     @Size(max = 256)
     private String imageUrl;
 
@@ -67,6 +70,7 @@ public class AdminUserDTO implements Serializable {
         this.lastName = user.getLastName();
         this.email = user.getEmail();
         this.applicationStatus = user.getApplicationStatus();
+        this.note = user.getNote();
         this.activated = user.isActivated();
         this.imageUrl = user.getImageUrl();
         this.langKey = user.getLangKey();
@@ -123,6 +127,14 @@ public class AdminUserDTO implements Serializable {
 
     public void setApplicationStatus(ApplicationStatus applicationStatus) {
         this.applicationStatus = applicationStatus;
+    }
+
+    public String getNote() {
+        return note;
+    }
+
+    public void setNote(String note) {
+        this.note = note;
     }
 
     public String getImageUrl() {

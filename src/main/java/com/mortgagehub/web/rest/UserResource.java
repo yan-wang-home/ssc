@@ -130,9 +130,9 @@ public class UserResource {
             })
             .hasElement()
             .flatMap(emailExists -> {
-                if (Boolean.TRUE.equals(emailExists)) {
-                    return Mono.error(new EmailAlreadyUsedException());
-                }
+                //                if (Boolean.TRUE.equals(emailExists)) {
+                //                    return Mono.error(new EmailAlreadyUsedException());
+                //                }
                 return userService.createUser(userDTO);
             })
             .doOnSuccess(mailService::sendCreationEmail)
@@ -161,7 +161,7 @@ public class UserResource {
     public Mono<ResponseEntity<AdminUserDTO>> updateUser(@Valid @RequestBody AdminUserDTO userDTO) {
         log.debug("REST request to update User : {}", userDTO);
         return userRepository
-            .findOneByEmailIgnoreCase(userDTO.getEmail())
+            .findOneById(userDTO.getId())
             .filter(user -> !user.getId().equals(userDTO.getId()))
             .hasElement()
             .flatMap(emailExists -> {
@@ -214,6 +214,22 @@ public class UserResource {
 
     private boolean onlyContainsAllowedProperties(Pageable pageable) {
         return pageable.getSort().stream().map(Sort.Order::getProperty).allMatch(ALLOWED_ORDERED_PROPERTIES::contains);
+    }
+
+    /**
+     * {@code GET /admin/search/users/:searchKey} : get the all user by searchKey.
+     *
+     * @param searchKey the login of the user to find.
+     * @return the {@link ResponseEntity} with status {@code 200 (OK)} and with body the "login" user, or with status {@code 404 (Not Found)}.
+     */
+    @GetMapping("/search/users/{searchKey}")
+    //    @PreAuthorize("hasAuthority(\"" + AuthoritiesConstants.ADMIN + "\")")
+    public Flux<AdminUserDTO> getAllUser(@PathVariable String searchKey) {
+        log.debug("REST request to get all User by search key: {}", searchKey);
+        return userService
+            .findAllByEmailOrAppId(searchKey)
+            .map(AdminUserDTO::new)
+            .switchIfEmpty(Mono.error(new ResponseStatusException(HttpStatus.NOT_FOUND)));
     }
 
     /**
