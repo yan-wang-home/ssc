@@ -1,7 +1,7 @@
 {
   "product": {
-    "title": "OUR PRODUCTS",
-    "subTitle": "Whether you are a first-time buyer, a seasoned investor, or simply exploring your financing possibilities, we've got you covered. With a wide range of mortgage products tailor to suit various needs and financial situations, finding the perfect loan to match your dream home has never been easier. Let's dive into the exciting world of home loans and discover the perfect fit for you",
+    "title": "我们的产品",
+    "subTitle": "无论您是首次购房者、经验丰富的投资者，还是只是在探索您的融资可能性，我们都能为您提供全方位支持。我们提供多种抵押贷款产品，满足不同的需求和财务情况，帮助您轻松找到与梦想家园相匹配的完美贷款。让我们一起探索令人兴奋的房屋贷款世界，发现适合您的完美选择",
     "description": "",
     "points": "要点:",
     "contactus": "联系我们",
@@ -9,7 +9,7 @@
       "title": "初次购房者",
       "title1": "初次",
       "title2": "购房者",
-      "description": "Turning Keys into Dreams: Your First Home Journey Starts Here!",
+      "description": "您的第一套购房之旅从这里开始!",
       "question": "您是首次购房者吗?",
       "answer": "如果是的话。以下是一些选择",
       "points": {
@@ -36,7 +36,7 @@
       "title": "加拿大新移民 & 非居民",
       "title1": "加拿大新移民",
       "title2": "& 非居民",
-      "description": "Unlock Your Canadian Dreams: New to Canada, New Beginnings, Seamless Mortgages",
+      "description": "帮助新移民和非居民客户在加拿大建立梦想之家",
       "question": "谁有资格购买加拿大的房产?",
       "answer": "在最近五年内，如果您成为加拿大的永久居民或公民",
       "points": {
@@ -50,7 +50,7 @@
       "title": "自营业务",
       "title1": "自营",
       "title2": "业务",
-      "description": "Empowering Entrepreneurs, Financing Success: Your Business, Your Mortgage, Your Future",
+      "description": "充分利用您的自雇收入，以增强贷款的可负担性",
       "question": "该产品的使用群体有哪些?",
       "answer": "如果您是企业所有者、佣金收入者或现金收入者，该产品十分适合您",
       "points": {
@@ -63,7 +63,7 @@
       "title": "装修贷款",
       "title1": "装修贷款",
       "title2": "",
-      "description": "Elevate, Renovate, Celebrate: Refinance Your Home, Transform Your Space",
+      "description": "通过装修或翻新现有房产来提高该房产的价值和生活体验",
       "question": "您想增加房产价值吗?",
       "answer": "通过装修翻新就可以实现",
       "points": {
@@ -76,7 +76,7 @@
       "title": "购房装修",
       "title1": "购房装修",
       "title2": "",
-      "description": "Revamp, Refinance, Rise: Your Home, Your Style, Your Improved Tomorrow",
+      "description": "用您喜欢的风格装修您想购买的房屋",
       "question": "这个产品适合我吗?",
       "answer": "如果您想融资翻新并将其与抵押贷款合并支付",
       "points": {
@@ -86,10 +86,10 @@
       }
     },
     "constructionloan": {
-      "title": "建设再融资",
-      "title1": "建设再",
-      "title2": "融资",
-      "description": "Building Dreams, One Loan at a Time: Your Blueprint to Construction Financing Success",
+      "title": "翻建融资",
+      "title1": "翻建融资",
+      "title2": "",
+      "description": "帮助您重新建设您的家园",
       "question": "想要建造您的梦想之家吗?",
       "answer": "建筑贷款可以帮助您实现",
       "points": {
@@ -102,7 +102,7 @@
       "title": "房产净值贷款",
       "title1": "房产",
       "title2": "净值贷款",
-      "description": "Unlock Your Home’s Potential: Equity Takeout, Your Key to Financial Freedom",
+      "description": "资产套现，解锁您的财务自由之钥",
       "question": "为什么要提取部分财产的产权?",
       "answer": "为了实现资产分散化",
       "points": {
@@ -115,7 +115,7 @@
       "title": "租赁物业",
       "title1": "租赁物业",
       "title2": "",
-      "description": "Invest in Tomorrow, Own Income Today: Unlocking Prosperity Through Rental Property Ownership",
+      "description": "通过购买投资租赁物业获得财富",
       "question": "想要最大化您的现金流吗?",
       "answer": "投资出租物业可能是您的选择",
       "points": {
@@ -128,7 +128,7 @@
       "title": "债务合并",
       "title1": "债务合并",
       "title2": "",
-      "description": "Debts Unite, Finances Ignite: Consolidate, Liberate, Reclaim Your Financial Freedom",
+      "description": "通过债务重组实现您的财务自由",
       "question": "您的付款有困难吗?",
       "answer": "尝试通过债务合并来最小化每月的债务支付",
       "points": {
@@ -142,7 +142,7 @@
       "title": "更换贷款",
       "title1": "更换贷款",
       "title2": "",
-      "description": "Switch with Confidence, Transfer with Ease: Your Financial Freedom Awaits the Changes",
+      "description": "更换贷款机构更好的满足您的贷款需求",
       "question": "是否在寻找最佳利率?",
       "answer": "我们团队可以帮到您",
       "points": {
@@ -155,7 +155,7 @@
       "title": "贷款续约",
       "title1": "贷款续约",
       "title2": "",
-      "description": "Renew, Reimagine, Rejoice: Your Mortgage Renewal, Your Path to Financial Empowerment",
+      "description": "从您现在的贷款机构获得更好的贷款条件",
       "question": "到期日快到了吗?",
       "answer": "我们团队可以帮您协商更好的利率",
       "points": {
@@ -166,7 +166,7 @@
       "title": "商业贷款",
       "title1": "商业贷款",
       "title2": "",
-      "description": "Empowering Commerce, Feeling Growth: Your Business, Our Commercial Loan Solutions",
+      "description": "通过商业贷款解决您的商业需求",
       "question": "什么是商业物业?",
       "answer": "公寓楼、办公楼、多户住宅楼、酒店设施、养老院等",
       "points": {
@@ -179,7 +179,7 @@
       "title": "反向抵押贷款",
       "title1": "反向",
       "title2": "抵押贷款",
-      "description": "Unlock the Equity of a Lifetime: Your Future, Your Home, Your Reverse Mortgage Freedom",
+      "description": "通过反向贷款提高您的日常现金流",
       "question": "这个产品适合我吗?",
       "answer": "如果您是55岁以上的房主，需要额外的资金来过上更好的生活",
       "points": {
@@ -192,7 +192,7 @@
       "title": "房屋信用额度",
       "title1": "房屋",
       "title2": "信用额度",
-      "description": "Empowering Your Equity, Unleash Possibilities: Your Home, Your Dreams, Your HELOC\nAdvantage",
+      "description": "一种更加便捷的套现您现有房产价值的方式",
       "question": "为什么需要信用额度?",
       "answer": "可以随时提取资金",
       "points": {

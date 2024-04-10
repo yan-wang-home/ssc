@@ -85,7 +85,6 @@ const HomepagePage: React.FC = () => {
         <div className="flex flex-col items-center justify-start w-full">
           <div className="flex flex-col gap-12 items-center justify-start max-w-[1112px] mt-[130px] sm:mt-8 mx-auto md:px-5 w-full">
             <div className="flex flex-col gap-0 items-center justify-start max-w-[1112px] w-full">
-              searchQuery: {searchQuery}
               <Text className="leading-[54.00px] sm:text-[34px] md:text-[40px] text-[50px] text-center text-blue-900 w-[90%]">
                 <Translate contentKey="homepage.stepTitle" />
               </Text>
