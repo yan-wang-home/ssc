@@ -75,7 +75,8 @@ const SearchResultPage: React.FC = () => {
             </div>
           </div>
         </div>
-        <Footer className="bg-gray-900 flex items-center justify-center mt-[120px] md:px-5 w-full" />
+        {/* Footer */}
+        <Footer className="bg-gray-200 flex items-center justify-center mt-[120px] w-full" />
       </div>
     </>
   );

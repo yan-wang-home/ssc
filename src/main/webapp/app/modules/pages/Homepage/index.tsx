@@ -95,7 +95,7 @@ const HomepagePage: React.FC = () => {
             <div className="hidden lg:flex sm:flex-col lg:flex-row gap-[5px] items-start justify-evenly w-full">
               <div className="flex flex-col gap-3 items-center justify-center">
                 <Card className="w-80 h-80 shadow-2xl rounded-3xl relative">
-                  <h5 className="absolute top-5 left-5 text-2xl font-bold tracking-tight text-gray-600 dark:text-white">
+                  <h5 className="absolute top-5 text-2xl font-bold tracking-tight text-gray-600 dark:text-white">
                     <Translate contentKey="homepage.step1" />
                   </h5>
                   <div className="flex items-center justify-center">
@@ -106,10 +106,12 @@ const HomepagePage: React.FC = () => {
                   </p>
                 </Card>
               </div>
-              <Img className="h-5 md:mt-0 mt-[111px] max-md:hidden" src="content/images/img_directionline.svg" alt="DirectionLine" />
+              <div className="flex flex-col w-32">
+                <Img className="h-5 md:mt-0 mt-[111px] max-md:hidden" src="content/images/img_directionline.svg" alt="DirectionLine" />
+              </div>
               <div className="flex flex-col gap-6 items-center justify-center">
                 <Card className="w-80 h-80 shadow-2xl rounded-3xl relative">
-                  <h5 className="absolute top-5 left-5 text-2xl font-bold tracking-tight text-gray-600 dark:text-white">
+                  <h5 className="absolute top-5 text-2xl font-bold tracking-tight text-gray-600 dark:text-white">
                     <Translate contentKey="homepage.step2" />
                   </h5>
                   <div className="flex items-center justify-center">
@@ -125,10 +127,12 @@ const HomepagePage: React.FC = () => {
                   </p>
                 </Card>
               </div>
-              <Img className="h-5 md:mt-0 mt-[114px] max-md:hidden " src="content/images/img_directionline.svg" alt="DirectionLine One" />
+              <div className="flex flex-col w-32">
+                <Img className="h-5 md:mt-0 mt-[114px] max-md:hidden " src="content/images/img_directionline.svg" alt="DirectionLine One" />
+              </div>
               <div className="flex flex-col gap-6 items-center justify-center">
                 <Card className="w-80 h-80 shadow-2xl rounded-3xl relative">
-                  <h5 className="absolute top-5 left-5 text-2xl font-bold tracking-tight text-gray-600 dark:text-white">
+                  <h5 className="absolute top-5 text-2xl font-bold tracking-tight text-gray-600 dark:text-white">
                     <Translate contentKey="homepage.step3" />
                   </h5>
                   <div className="flex items-center justify-center">
