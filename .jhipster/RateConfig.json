@@ -1,0 +1,85 @@
+{
+  "annotations": {
+    "changelogDate": "20240410025629"
+  },
+  "dto": "no",
+  "fields": [
+    {
+      "fieldName": "oneYearFixedInsured",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "twoYearFixedInsured",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "threeYearFixedInsured",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "fourYearFixedInsured",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "fiveYearFixedInsured",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "oneYearFixedInsurable",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "twoYearFixedInsurable",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "threeYearFixedInsurable",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "fourYearFixedInsurable",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "fiveYearFixedInsurable",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "oneYearFixedConventional",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "twoYearFixedConventional",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "threeYearFixedConventional",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "fourYearFixedConventional",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "fiveYearFixedConventional",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "fiveYearVariableInsured",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "fiveYearVariableInsurable",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "fiveYearVariableConventional",
+      "fieldType": "String"
+    }
+  ],
+  "name": "RateConfig",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass"
+}

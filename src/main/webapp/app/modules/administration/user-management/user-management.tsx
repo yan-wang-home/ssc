@@ -1,21 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Button, Table, Badge } from 'reactstrap';
-import { Translate, TextFormat, JhiPagination, JhiItemCount, getPaginationState } from 'react-jhipster';
+import { Button, Table, Badge, Row, Col, Form, FormGroup, InputGroup } from 'reactstrap';
+import { Translate, TextFormat, JhiPagination, JhiItemCount, getPaginationState, translate } from 'react-jhipster';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSort, faSortUp, faSortDown } from '@fortawesome/free-solid-svg-icons';
 
 import { APP_DATE_FORMAT } from 'app/config/constants';
 import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.constants';
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
-import { getUsersAsAdmin, updateUser } from './user-management.reducer';
+import { getUsersAsAdmin, queryUsers, updateUser } from './user-management.reducer';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
+import { Input } from 'app/modules/components';
 
 export const UserManagement = () => {
   const dispatch = useAppDispatch();
 
   const pageLocation = useLocation();
   const navigate = useNavigate();
+  const [search, setSearch] = useState('');
 
   const [pagination, setPagination] = useState(
     overridePaginationStateWithQueryParams(getPaginationState(pageLocation, ITEMS_PER_PAGE, 'id'), pageLocation.search),
@@ -94,8 +96,22 @@ export const UserManagement = () => {
     }
   };
 
+  const startSearching = e => {
+    if (search !== undefined && search !== '') {
+      dispatch(queryUsers(search));
+    } else {
+      getUsersFromProps();
+    }
+    e.preventDefault();
+  };
+
+  const clear = () => {
+    setSearch('');
+    getUsersFromProps();
+  };
+
   return (
-    <div className="p-4">
+    <div className="pt-8">
       <h2 id="user-management-page-heading" data-cy="userManagementPageHeading">
         <Translate contentKey="userManagement.home.title">Users</Translate>
         <div className="d-flex justify-content-end">
@@ -108,6 +124,34 @@ export const UserManagement = () => {
           </Link>
         </div>
       </h2>
+
+      <Row className="pt-4">
+        <Col sm="25">
+          <Form onSubmit={startSearching}>
+            <FormGroup>
+              <InputGroup>
+                <Input
+                  className="p-0 placeholder:text-bluegray-200 text-base text-left w-screen"
+                  wrapClassName="w-11/12 border"
+                  type="text"
+                  name="search"
+                  defaultValue={search}
+                  onChange={setSearch}
+                  height={5}
+                  color="blue-900"
+                  placeholder={translate('userManagement.home.searchPlaceholder')}
+                />
+                <Button className="input-group-addon">
+                  <FontAwesomeIcon icon="search" />
+                </Button>
+                <Button type="reset" className="input-group-addon" onClick={clear}>
+                  clear
+                </Button>
+              </InputGroup>
+            </FormGroup>
+          </Form>
+        </Col>
+      </Row>
       <Table responsive striped>
         <thead>
           <tr>

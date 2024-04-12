@@ -2,6 +2,7 @@ package com.mortgagehub.config.dbmigrations;
 
 import com.mortgagehub.config.Constants;
 import com.mortgagehub.domain.Authority;
+import com.mortgagehub.domain.RateConfig;
 import com.mortgagehub.domain.User;
 import com.mortgagehub.security.AuthoritiesConstants;
 import io.mongock.api.annotations.ChangeUnit;
@@ -30,6 +31,7 @@ public class InitialSetupMigration {
         Authority adminAuthority = createAdminAuthority();
         adminAuthority = template.save(adminAuthority);
         addUsers(userAuthority, adminAuthority);
+        addDefaultRateConfig();
     }
 
     @RollbackExecution
@@ -56,6 +58,34 @@ public class InitialSetupMigration {
         template.save(user);
         User admin = createAdmin(adminAuthority, userAuthority);
         template.save(admin);
+    }
+
+    private void addDefaultRateConfig() {
+        RateConfig rateConfig = createRateConfig();
+
+        rateConfig.setId("6618b06701ab5e309e20d410");
+
+        rateConfig.setTwoYearFixedInsured("7.14%");
+        rateConfig.setTwoYearFixedInsurable("7.14%");
+        rateConfig.setTwoYearFixedConventional("6.26%");
+
+        rateConfig.setThreeYearFixedInsured("5.45%");
+        rateConfig.setThreeYearFixedInsurable("5.45%");
+        rateConfig.setThreeYearFixedConventional("5.09%");
+
+        rateConfig.setFourYearFixedInsured("5.59%");
+        rateConfig.setFourYearFixedInsurable("5.59%");
+        rateConfig.setFourYearFixedConventional("5.19%");
+
+        rateConfig.setFiveYearFixedInsured("4.99%");
+        rateConfig.setFiveYearFixedInsurable("4.99%");
+        rateConfig.setFiveYearFixedConventional("5.04%");
+
+        rateConfig.setFiveYearVariableInsured("P-0.9%");
+        rateConfig.setFiveYearVariableInsurable("P-0.9%");
+        rateConfig.setFiveYearVariableConventional("P-0.15%");
+
+        template.save(rateConfig);
     }
 
     private User createUser(Authority userAuthority) {
@@ -92,5 +122,29 @@ public class InitialSetupMigration {
         adminUser.getAuthorities().add(adminAuthority);
         adminUser.getAuthorities().add(userAuthority);
         return adminUser;
+    }
+
+    private RateConfig createRateConfig() {
+        RateConfig rateConfig = new RateConfig();
+        rateConfig.setOneYearFixedInsured("");
+        rateConfig.setOneYearFixedInsurable("");
+        rateConfig.setOneYearFixedConventional("");
+        rateConfig.setTwoYearFixedInsured("7.14%");
+        rateConfig.setTwoYearFixedInsurable("7.14%");
+        rateConfig.setThreeYearFixedConventional("6.26%");
+        rateConfig.setThreeYearFixedInsured("5.45%");
+        rateConfig.setThreeYearFixedInsurable("5.45%");
+        rateConfig.setFourYearFixedConventional("5.09%");
+        rateConfig.setFourYearFixedInsured("5.59%");
+        rateConfig.setFourYearFixedInsurable("5.59%");
+        rateConfig.setFiveYearFixedConventional("5.19%");
+        rateConfig.setFiveYearFixedInsured("4.99%");
+        rateConfig.setFiveYearFixedInsurable("4.99%");
+        rateConfig.setFiveYearFixedConventional("5.04%");
+        rateConfig.setFiveYearVariableInsured("P-0.9%");
+        rateConfig.setFiveYearVariableInsurable("P-0.9%");
+        rateConfig.setFiveYearVariableInsurable("P-0.15%");
+
+        return rateConfig;
     }
 }

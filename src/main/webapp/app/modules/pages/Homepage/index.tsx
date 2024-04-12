@@ -7,7 +7,7 @@ import { Button, Img, Input, List, Text } from '../../components';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import { Card, Carousel, Checkbox, FloatingLabel, Label, Modal, TextInput, ToggleSwitch } from 'flowbite-react';
-import { Translate } from 'react-jhipster';
+import { Translate, translate } from 'react-jhipster';
 
 const HomepagePage: React.FC = () => {
   const navigate = useNavigate();
@@ -58,7 +58,7 @@ const HomepagePage: React.FC = () => {
             <div className="bg-gray-50 border border-solid border-teal-400 flex sm:flex-col flex-row mt-2 gap-[22px] items-center justify-end p-1.5 rounded-md w-2/5 sm:w-full">
               <Input
                 name="box"
-                placeholder="Enter Application Number"
+                placeholder={translate('homepage.searchPlaceholder')}
                 className="p-0 placeholder:text-bluegray-200 text-base text-left w-full"
                 wrapClassName="sm:flex-1 sm:mt-0 my-[9px] w-4/5 sm:w-full"
                 type="email"

@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --primary-color: #20a2a2;
+  --primary-color: #2e437b;
 }
 /* Override default focus colors for tailwindcss-forms https://github.com/tailwindlabs/tailwindcss-forms */
 [type='text']:focus,
@@ -23,7 +23,7 @@ select:focus {
 }
 
 .react-datepicker-wrapper .react-datepicker__input-container input {
-  background-color: transparent;
+  background-color: #2e437b;
   border: none;
   width: 100%;
   padding: 0px;

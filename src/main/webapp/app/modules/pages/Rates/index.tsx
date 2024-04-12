@@ -1,11 +1,27 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { Text } from '../../components';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import { Translate } from 'react-jhipster';
+import { useAppDispatch, useAppSelector } from 'app/config/store';
+import rateConfig, { getEntity, searchEntities } from 'app/entities/rate-config/rate-config.reducer';
+import { IRateConfig } from 'app/shared/model/rate-config.model';
 
 const RatesPage: React.FC = () => {
+  const dispatch = useAppDispatch();
+  const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    getRate();
+  }, []);
+
+  const getRate = () => {
+    dispatch(getEntity('6618b06701ab5e309e20d410'));
+  };
+
+  const rate = useAppSelector(state => state.rateConfig.entity) as IRateConfig;
+
   return (
     <>
       <div className="bg-gray-100 flex flex-col font-chivo sm:gap-10 gap-10 items-center justify-start mx-auto w-full">
@@ -57,24 +73,24 @@ const RatesPage: React.FC = () => {
                   </Text>
                 </div>
                 <div className="flex flex-col rounded-lg shadow-2xl bg-[#3756A8] h-full w-full justify-evenly">
-                  <Text className="text-3xl sm:text-lg text-center font-bold text-white-A700">7.14%</Text>
-                  <Text className="text-3xl sm:text-lg text-center font-bold text-white-A700">7.14%</Text>
-                  <Text className="text-3xl sm:text-lg text-center font-bold text-white-A700">6.26%</Text>
+                  <Text className="text-3xl sm:text-lg text-center font-bold text-white-A700">{rate.twoYearFixedInsured}</Text>
+                  <Text className="text-3xl sm:text-lg text-center font-bold text-white-A700">{rate.twoYearFixedInsurable}</Text>
+                  <Text className="text-3xl sm:text-lg text-center font-bold text-white-A700">{rate.twoYearFixedConventional}</Text>
                 </div>
                 <div className="flex flex-col rounded-lg shadow-2xl bg-[#3756A8] h-full w-full justify-evenly">
-                  <Text className="text-3xl sm:text-lg text-center font-bold text-white-A700">5.45%</Text>
-                  <Text className="text-3xl sm:text-lg text-center font-bold text-white-A700">5.45%</Text>
-                  <Text className="text-3xl sm:text-lg text-center font-bold text-white-A700">5.09%</Text>
+                  <Text className="text-3xl sm:text-lg text-center font-bold text-white-A700">{rate.threeYearFixedInsurable}</Text>
+                  <Text className="text-3xl sm:text-lg text-center font-bold text-white-A700">{rate.threeYearFixedInsurable}</Text>
+                  <Text className="text-3xl sm:text-lg text-center font-bold text-white-A700">{rate.threeYearFixedConventional}</Text>
                 </div>
                 <div className="flex flex-col rounded-lg shadow-2xl bg-[#3756A8] h-full w-full justify-evenly">
-                  <Text className="text-3xl sm:text-lg text-center font-bold text-white-A700">5.59%</Text>
-                  <Text className="text-3xl sm:text-lg text-center font-bold text-white-A700">5.59%</Text>
-                  <Text className="text-3xl sm:text-lg text-center font-bold text-white-A700">5.19%</Text>
+                  <Text className="text-3xl sm:text-lg text-center font-bold text-white-A700">{rate.fourYearFixedInsured}</Text>
+                  <Text className="text-3xl sm:text-lg text-center font-bold text-white-A700">{rate.fourYearFixedInsurable}</Text>
+                  <Text className="text-3xl sm:text-lg text-center font-bold text-white-A700">{rate.fourYearFixedConventional}</Text>
                 </div>
                 <div className="flex flex-col rounded-lg shadow-2xl bg-[#3756A8] h-full w-full justify-evenly">
-                  <Text className="text-3xl sm:text-lg text-center font-bold text-white-A700">4.99%</Text>
-                  <Text className="text-3xl sm:text-lg text-center font-bold text-white-A700">4.99%</Text>
-                  <Text className="text-3xl sm:text-lg text-center font-bold text-white-A700">5.04%</Text>
+                  <Text className="text-3xl sm:text-lg text-center font-bold text-white-A700">{rate.fiveYearFixedInsured}</Text>
+                  <Text className="text-3xl sm:text-lg text-center font-bold text-white-A700">{rate.fiveYearFixedInsurable}</Text>
+                  <Text className="text-3xl sm:text-lg text-center font-bold text-white-A700">{rate.fiveYearFixedConventional}</Text>
                 </div>
               </div>
             </div>
@@ -86,7 +102,7 @@ const RatesPage: React.FC = () => {
                   <Text className="text-3xl sm:text-lg text-center font-bold text-white-A700">
                     5 <Translate contentKey="rate.yearVariable" />
                   </Text>
-                  <Text className="text-6xl sm:text-2xl text-center font-bold text-white-A700">P-0.9%</Text>
+                  <Text className="text-6xl sm:text-2xl text-center font-bold text-white-A700">{rate.fiveYearVariableInsured}</Text>
                   <Text className="text-3xl sm:text-lg text-center font-bold text-white-A700">
                     <Translate contentKey="rate.insured" />
                   </Text>
@@ -95,7 +111,7 @@ const RatesPage: React.FC = () => {
                   <Text className="text-3xl sm:text-lg text-center font-bold text-white-A700">
                     5 <Translate contentKey="rate.yearVariable" />
                   </Text>
-                  <Text className="text-6xl sm:text-2xl text-center font-bold text-white-A700">P-0.9%</Text>
+                  <Text className="text-6xl sm:text-2xl text-center font-bold text-white-A700">{rate.fiveYearVariableInsurable}</Text>
                   <Text className="text-3xl sm:text-lg text-center font-bold text-white-A700">
                     <Translate contentKey="rate.insurable" />
                   </Text>
@@ -104,7 +120,7 @@ const RatesPage: React.FC = () => {
                   <Text className="text-3xl sm:text-lg text-center font-bold text-white-A700">
                     5 <Translate contentKey="rate.yearVariable" />
                   </Text>
-                  <Text className="text-6xl sm:text-2xl text-center font-bold text-white-A700">P-0.15%</Text>
+                  <Text className="text-6xl sm:text-2xl text-center font-bold text-white-A700">{rate.fiveYearVariableConventional}</Text>
                   <Text className="text-3xl sm:text-lg text-center font-bold text-white-A700">
                     <Translate contentKey="rate.conventional" />
                   </Text>

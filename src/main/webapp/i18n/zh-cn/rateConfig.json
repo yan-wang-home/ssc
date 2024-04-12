@@ -1,0 +1,44 @@
+{
+  "mortgageHubApp": {
+    "rateConfig": {
+      "home": {
+        "title": "利率设置",
+        "refreshListLabel": "刷新",
+        "createLabel": "创建新利率设置",
+        "createOrEditLabel": "创建或编辑利率设置",
+        "search": "查找利率设置",
+        "notFound": "没找到利率设置",
+        "fixedRate": "固定利率",
+        "variableRate": "浮动利率"
+      },
+      "created": "利率设置 {{ param }} 创建成功",
+      "updated": "利率设置 {{ param }} 更新成功",
+      "deleted": "利率设置 {{ param }} 删除成功",
+      "delete": {
+        "question": "你确定要删除利率设置{{ id }}吗？"
+      },
+      "detail": {
+        "title": "Rate Config"
+      },
+      "id": "ID",
+      "oneYearFixedInsured": "One Year Fixed Insured",
+      "twoYearFixedInsured": "Two Year Fixed Insured",
+      "threeYearFixedInsured": "Three Year Fixed Insured",
+      "fourYearFixedInsured": "Four Year Fixed Insured",
+      "fiveYearFixedInsured": "Five Year Fixed Insured",
+      "oneYearFixedInsurable": "One Year Fixed Insurable",
+      "twoYearFixedInsurable": "Two Year Fixed Insurable",
+      "threeYearFixedInsurable": "Three Year Fixed Insurable",
+      "fourYearFixedInsurable": "Four Year Fixed Insurable",
+      "fiveYearFixedInsurable": "Five Year Fixed Insurable",
+      "oneYearFixedConventional": "One Year Fixed Conventional",
+      "twoYearFixedConventional": "Two Year Fixed Conventional",
+      "threeYearFixedConventional": "Three Year Fixed Conventional",
+      "fourYearFixedConventional": "Four Year Fixed Conventional",
+      "fiveYearFixedConventional": "Five Year Fixed Conventional",
+      "fiveYearVariableInsured": "Five Year Variable Insured",
+      "fiveYearVariableInsurable": "Five Year Variable Insurable",
+      "fiveYearVariableConventional": "Five Year Variable Conventional"
+    }
+  }
+}

@@ -55,18 +55,20 @@ const SearchResultPage: React.FC = () => {
             <div className="flex md:flex-1 flex-col items-start justify-start md:ml-[0] ml-[25px] md:mt-0 mt-12 rounded-md w-[60%] md:w-full">
               {users.map((user, i) => (
                 <div id={user.login} key={`user-${i}`}>
-                  <Text className="sm:text-[34px] md:text-[40px] text-[44px] text-blue-900" size="txtChivoBold44WhiteA700">
-                    Application {user.id} Progress: {user.applicationStatus}
+                  <Text className="sm:text-[34px] md:text-[40px] text-[44px] text-blue-900 pl-24" size="txtChivoBold44WhiteA700">
+                    Application: {user.id}
                   </Text>
-                  <div className="flex flex-col items-center justify-start mt-8 rounded-md w-full">
-                    {isSubmitted(user) && <Img src="content/images/aboutus-top.png" alt="Avatar" className="object-cover w-full h-full" />}
+                  <div className="flex flex-col rounded-md w-full">
+                    {isSubmitted(user) && (
+                      <Img src="content/images/pro-sumbitted.png" alt="Avatar" className="object-cover w-full h-full" />
+                    )}
                     {isApprovedWithCondition(user) && (
-                      <Img src="content/images/aboutus-top.png" alt="Avatar" className="object-cover w-full h-full" />
+                      <Img src="content/images/pro-approved.png" alt="Avatar" className="object-cover w-full h-full" />
                     )}
                     {isBrokerComplete(user) && (
-                      <Img src="content/images/aboutus-top.png" alt="Avatar" className="object-cover w-full h-full" />
+                      <Img src="content/images/pro-Cpmplted.png" alt="Avatar" className="object-cover w-full h-full" />
                     )}
-                    {isFunded(user) && <Img src="content/images/aboutus-top.png" alt="Avatar" className="object-cover w-full h-full" />}
+                    {isFunded(user) && <Img src="content/images/pro-funded.png" alt="Avatar" className="object-cover w-full h-full" />}
                   </div>
                 </div>
               ))}

@@ -1,0 +1,44 @@
+{
+  "mortgageHubApp": {
+    "rateConfig": {
+      "home": {
+        "title": "Rate Configs",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Rate Config",
+        "createOrEditLabel": "Create or edit a Rate Config",
+        "search": "Search for Rate Config",
+        "notFound": "No Rate Configs found",
+        "fixedRate": "Fixed Rate",
+        "variableRate": "Variable Rate"
+      },
+      "created": "A new Rate Config is created with identifier {{ param }}",
+      "updated": "A Rate Config is updated with identifier {{ param }}",
+      "deleted": "A Rate Config is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Rate Config {{ id }}?"
+      },
+      "detail": {
+        "title": "Rate Config"
+      },
+      "id": "ID",
+      "oneYearFixedInsured": "One Year Fixed Insured",
+      "twoYearFixedInsured": "Two Year Fixed Insured",
+      "threeYearFixedInsured": "Three Year Fixed Insured",
+      "fourYearFixedInsured": "Four Year Fixed Insured",
+      "fiveYearFixedInsured": "Five Year Fixed Insured",
+      "oneYearFixedInsurable": "One Year Fixed Insurable",
+      "twoYearFixedInsurable": "Two Year Fixed Insurable",
+      "threeYearFixedInsurable": "Three Year Fixed Insurable",
+      "fourYearFixedInsurable": "Four Year Fixed Insurable",
+      "fiveYearFixedInsurable": "Five Year Fixed Insurable",
+      "oneYearFixedConventional": "One Year Fixed Conventional",
+      "twoYearFixedConventional": "Two Year Fixed Conventional",
+      "threeYearFixedConventional": "Three Year Fixed Conventional",
+      "fourYearFixedConventional": "Four Year Fixed Conventional",
+      "fiveYearFixedConventional": "Five Year Fixed Conventional",
+      "fiveYearVariableInsured": "Five Year Variable Insured",
+      "fiveYearVariableInsurable": "Five Year Variable Insurable",
+      "fiveYearVariableConventional": "Five Year Variable Conventional"
+    }
+  }
+}
