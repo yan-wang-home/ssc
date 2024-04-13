@@ -1,0 +1,17 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" th:lang="${#locale.language}" lang="en">
+  <head>
+    <title th:text="#{email.applicationstatus.title}">Smart Solutions Capital application status change</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="icon" th:href="@{|${baseUrl}/favicon.ico|}" />
+  </head>
+  <body>
+    <p th:text="#{email.applicationstatus.greeting(${user.login})}">Dear</p>
+    <p th:text="#{email.applicationstatus.text1(${user.id}, ${user.applicationStatus})}">Your application status has been updated to</p>
+    <p>
+      <span th:text="#{email.applicationstatus.text2}">Regards, </span>
+      <br />
+      <em th:text="#{email.signature}">Smart Solutions Capital.</em>
+    </p>
+  </body>
+</html>

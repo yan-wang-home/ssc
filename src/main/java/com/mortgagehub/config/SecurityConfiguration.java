@@ -7,6 +7,7 @@ import com.mortgagehub.security.AuthoritiesConstants;
 import com.mortgagehub.web.filter.SpaWebFilter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.ReactiveAuthenticationManager;
 import org.springframework.security.authentication.UserDetailsRepositoryReactiveAuthenticationManager;
 import org.springframework.security.config.Customizer;
@@ -82,6 +83,10 @@ public class SecurityConfiguration {
                     .pathMatchers("/api/account/reset-password/init").permitAll()
                     .pathMatchers("/api/account/reset-password/finish").permitAll()
                     .pathMatchers("/api/admin/**").hasAuthority(AuthoritiesConstants.ADMIN)
+                    .pathMatchers(HttpMethod.POST, "/api/contact-forms/**").permitAll()
+                    .pathMatchers(HttpMethod.GET, "/api/contact-forms/**").permitAll()
+                    .pathMatchers(HttpMethod.GET, "/api/rate-configs/**").permitAll()
+                    .pathMatchers(HttpMethod.GET, "/api/users/_search/**").permitAll()
                     .pathMatchers("/api/**").authenticated()
                     .pathMatchers("/services/**").authenticated()
                     .pathMatchers("/v3/api-docs/**").hasAuthority(AuthoritiesConstants.ADMIN)

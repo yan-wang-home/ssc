@@ -3,45 +3,45 @@ import { createAsyncThunk, isFulfilled, isPending } from '@reduxjs/toolkit';
 import { ASC } from 'app/shared/util/pagination.constants';
 import { cleanEntity } from 'app/shared/util/entity-utils';
 import { IQueryParams, createEntitySlice, EntityState, serializeAxiosError } from 'app/shared/reducers/reducer.utils';
-import { IRateConfig, defaultValue } from 'app/shared/model/rate-config.model';
+import { IContactForm, defaultValue } from 'app/shared/model/contact-form.model';
 
-const initialState: EntityState<IRateConfig> = {
+const initialState: EntityState<IContactForm> = {
   loading: false,
   errorMessage: null,
-  entities: [] as ReadonlyArray<IRateConfig>,
-  entity: defaultValue as IRateConfig,
+  entities: [],
+  entity: defaultValue,
   updating: false,
   updateSuccess: false,
 };
 
-const apiUrl = 'api/rate-configs';
-const apiSearchUrl = 'api/rate-configs/_search';
+const apiUrl = 'api/contact-forms';
+const apiSearchUrl = 'api/contact-forms/_search';
 
 // Actions
 
-export const searchEntities = createAsyncThunk('rateConfig/search_entity', async ({ query, page, size, sort }: IQueryParams) => {
+export const searchEntities = createAsyncThunk('contactForm/search_entity', async ({ query, page, size, sort }: IQueryParams) => {
   const requestUrl = `${apiSearchUrl}?query=${query}`;
-  return axios.get<IRateConfig[]>(requestUrl);
+  return axios.get<IContactForm[]>(requestUrl);
 });
 
-export const getEntities = createAsyncThunk('rateConfig/fetch_entity_list', async ({ sort }: IQueryParams) => {
+export const getEntities = createAsyncThunk('contactForm/fetch_entity_list', async ({ sort }: IQueryParams) => {
   const requestUrl = `${apiUrl}?${sort ? `sort=${sort}&` : ''}cacheBuster=${new Date().getTime()}`;
-  return axios.get<IRateConfig[]>(requestUrl);
+  return axios.get<IContactForm[]>(requestUrl);
 });
 
 export const getEntity = createAsyncThunk(
-  'rateConfig/fetch_entity',
+  'contactForm/fetch_entity',
   async (id: string | number) => {
     const requestUrl = `${apiUrl}/${id}`;
-    return axios.get<IRateConfig>(requestUrl);
+    return axios.get<IContactForm>(requestUrl);
   },
   { serializeError: serializeAxiosError },
 );
 
 export const createEntity = createAsyncThunk(
-  'rateConfig/create_entity',
-  async (entity: IRateConfig, thunkAPI) => {
-    const result = await axios.post<IRateConfig>(apiUrl, cleanEntity(entity));
+  'contactForm/create_entity',
+  async (entity: IContactForm, thunkAPI) => {
+    const result = await axios.post<IContactForm>(apiUrl, cleanEntity(entity));
     thunkAPI.dispatch(getEntities({}));
     return result;
   },
@@ -49,9 +49,9 @@ export const createEntity = createAsyncThunk(
 );
 
 export const updateEntity = createAsyncThunk(
-  'rateConfig/update_entity',
-  async (entity: IRateConfig, thunkAPI) => {
-    const result = await axios.put<IRateConfig>(`${apiUrl}/${entity.id}`, cleanEntity(entity));
+  'contactForm/update_entity',
+  async (entity: IContactForm, thunkAPI) => {
+    const result = await axios.put<IContactForm>(`${apiUrl}/${entity.id}`, cleanEntity(entity));
     thunkAPI.dispatch(getEntities({}));
     return result;
   },
@@ -59,9 +59,9 @@ export const updateEntity = createAsyncThunk(
 );
 
 export const partialUpdateEntity = createAsyncThunk(
-  'rateConfig/partial_update_entity',
-  async (entity: IRateConfig, thunkAPI) => {
-    const result = await axios.patch<IRateConfig>(`${apiUrl}/${entity.id}`, cleanEntity(entity));
+  'contactForm/partial_update_entity',
+  async (entity: IContactForm, thunkAPI) => {
+    const result = await axios.patch<IContactForm>(`${apiUrl}/${entity.id}`, cleanEntity(entity));
     thunkAPI.dispatch(getEntities({}));
     return result;
   },
@@ -69,10 +69,10 @@ export const partialUpdateEntity = createAsyncThunk(
 );
 
 export const deleteEntity = createAsyncThunk(
-  'rateConfig/delete_entity',
+  'contactForm/delete_entity',
   async (id: string | number, thunkAPI) => {
     const requestUrl = `${apiUrl}/${id}`;
-    const result = await axios.delete<IRateConfig>(requestUrl);
+    const result = await axios.delete<IContactForm>(requestUrl);
     thunkAPI.dispatch(getEntities({}));
     return result;
   },
@@ -81,8 +81,8 @@ export const deleteEntity = createAsyncThunk(
 
 // slice
 
-export const RateConfigSlice = createEntitySlice({
-  name: 'rateConfig',
+export const ContactFormSlice = createEntitySlice({
+  name: 'contactForm',
   initialState,
   extraReducers(builder) {
     builder
@@ -130,7 +130,7 @@ export const RateConfigSlice = createEntitySlice({
   },
 });
 
-export const { reset } = RateConfigSlice.actions;
+export const { reset } = ContactFormSlice.actions;
 
 // Reducer
-export default RateConfigSlice.reducer;
+export default ContactFormSlice.reducer;

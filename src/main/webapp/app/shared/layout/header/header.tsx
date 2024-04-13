@@ -47,7 +47,7 @@ const Header = (props: IHeaderProps) => {
     <div id="app-header">
       {/* {renderDevRibbon()} */}
       <LoadingBar className="loading-bar" />
-      <Navbar data-cy="navbar" dark expand="md" fixed="top" className="bg-primary">
+      <Navbar data-cy="navbar" dark expand="md" fixed="top" className="bg-primary flex flex-row">
         <NavbarToggler aria-label="Menu" onClick={toggleMenu} />
         <Brand />
         <Collapse isOpen={menuOpen} navbar>
@@ -59,6 +59,7 @@ const Header = (props: IHeaderProps) => {
             <AccountMenu isAuthenticated={props.isAuthenticated} />
           </Nav>
         </Collapse>
+        <div></div>
       </Navbar>
     </div>
   );

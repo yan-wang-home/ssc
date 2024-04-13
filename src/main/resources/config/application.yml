@@ -161,7 +161,7 @@ jhipster:
   #   allow-credentials: true
   #   max-age: 1800
   mail:
-    from: yan.aron.wang119@gmail.com
+    from: info@ssc.finance
   api-docs:
     default-include-pattern: /api/**
     management-include-pattern: /management/**

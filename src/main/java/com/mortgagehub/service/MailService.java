@@ -1,10 +1,12 @@
 package com.mortgagehub.service;
 
+import com.mortgagehub.domain.ContactForm;
 import com.mortgagehub.domain.User;
 import jakarta.mail.MessagingException;
 import jakarta.mail.internet.MimeMessage;
 import java.nio.charset.StandardCharsets;
 import java.util.Locale;
+import org.checkerframework.checker.units.qual.A;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,6 +35,8 @@ public class MailService {
 
     private static final String BASE_URL = "baseUrl";
 
+    private static final String CONTACT_FORM = "contactForm";
+
     private final JHipsterProperties jHipsterProperties;
 
     private final JavaMailSender javaMailSender;
@@ -59,6 +63,11 @@ public class MailService {
 
     @Async
     public void sendEmail(String to, String subject, String content, boolean isMultipart, boolean isHtml) {
+        sendEmail(jHipsterProperties.getMail().getFrom(), to, subject, content, isMultipart, isHtml);
+    }
+
+    @Async
+    public void sendEmail(String from, String to, String subject, String content, boolean isMultipart, boolean isHtml) {
         log.debug(
             "Send email[multipart '{}' and html '{}'] to '{}' with subject '{}' and content={}",
             isMultipart,
@@ -73,7 +82,7 @@ public class MailService {
         try {
             MimeMessageHelper message = new MimeMessageHelper(mimeMessage, isMultipart, StandardCharsets.UTF_8.name());
             message.setTo(to);
-            message.setFrom(jHipsterProperties.getMail().getFrom());
+            message.setFrom(from);
             message.setSubject(subject);
             message.setText(content, isHtml);
             javaMailSender.send(mimeMessage);
@@ -117,8 +126,33 @@ public class MailService {
     }
 
     @Async
+    public void sendContactFormEmail(ContactForm contactForm) {
+        if (contactForm.getEmail() == null) {
+            log.debug("Email doesn't exist for Contact Form '{}'", contactForm.getId());
+            return;
+        }
+
+        String subject = "Contact Request - " + getDisplaySubject(contactForm.getSubject());
+
+        self.sendEmail(contactForm.getEmail(), jHipsterProperties.getMail().getFrom(), subject, contactForm.getMessage(), false, true);
+    }
+
+    @Async
     public void sendPasswordResetMail(User user) {
         log.debug("Sending password reset email to '{}'", user.getEmail());
         self.sendEmailFromTemplate(user, "mail/passwordResetEmail", "email.reset.title");
+    }
+
+    private String getDisplaySubject(String subjectCode) {
+        switch (subjectCode) {
+            case "purchase":
+                return "Purchasing a home";
+            case "refinance":
+                return "Refinance";
+            case "renewal":
+                return "Renewal";
+            default:
+                return "";
+        }
     }
 }

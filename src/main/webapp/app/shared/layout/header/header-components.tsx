@@ -12,7 +12,7 @@ export const BrandIcon = props => (
 );
 
 export const Brand = () => (
-  <NavbarBrand tag={Link} to="/" className="brand-logo">
+  <NavbarBrand tag={Link} to="/" className="brand-logo sm:justify-center">
     <BrandIcon />
     <span className="brand-title">
       <Translate contentKey="global.title">Smart Solutions Capital</Translate>

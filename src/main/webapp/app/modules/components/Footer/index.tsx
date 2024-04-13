@@ -143,9 +143,9 @@ const Footer: React.FC<FooterProps> = props => {
                     />
                   </div>
                   <div className="flex flex-col gap-0 items-center ml-[18px]">
-                    <text className="font-Inter text-[18px] sm:text-center font-medium text-blue-900">
+                    <Text className="font-Inter text-[18px] sm:text-center font-medium text-blue-900">
                       Unit 3 - 175 West Beaver Creek Road, Richmond Hill, ON
-                    </text>
+                    </Text>
                   </div>
                 </div>
               </div>

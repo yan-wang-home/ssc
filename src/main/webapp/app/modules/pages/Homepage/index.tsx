@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { generatePath } from 'react-router-dom';
 
 import { Link, useNavigate } from 'react-router-dom';
@@ -8,6 +8,11 @@ import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import { Card, Carousel, Checkbox, FloatingLabel, Label, Modal, TextInput, ToggleSwitch } from 'flowbite-react';
 import { Translate, translate } from 'react-jhipster';
+import { createEntity, updateEntity } from 'app/entities/contact-form/contact-form.reducer';
+import { useAppDispatch, useAppSelector } from 'app/config/store';
+import { IContactForm } from 'app/shared/model/contact-form.model';
+import { set } from 'lodash';
+import { toast } from 'react-toastify';
 
 const HomepagePage: React.FC = () => {
   const navigate = useNavigate();
@@ -17,7 +22,9 @@ const HomepagePage: React.FC = () => {
 
   const [email, setEmail] = useState('');
   const [searchQuery, setSearchQuery] = useState('');
+  const [contactForm, setContactForm] = useState<IContactForm>({ subject: 'purchase' } as IContactForm);
   const [subscribe, setSubscribe] = useState(false);
+  const dispatch = useAppDispatch();
 
   const searchPlaceholder = <Translate contentKey="homepage.searchTitle" />;
 
@@ -37,6 +44,28 @@ const HomepagePage: React.FC = () => {
 
   const generateQuery = (userInput: string): string => {
     return userInput.split('.').join('%dot%');
+  };
+
+  const updateSuccess = useAppSelector(state => state.contactForm.updateSuccess);
+
+  useEffect(() => {
+    if (updateSuccess) {
+      toast.success(translate('homepage.sentContactForm'));
+    }
+  }, [updateSuccess]);
+
+  const sendContactForm = () => {
+    dispatch(createEntity(contactForm));
+    onCloseModal();
+  };
+
+  const handleChange = event => {
+    const { id, value } = typeof event === 'boolean' ? { id: 'subscribe', value: event } : event.target;
+    setContactForm(prevFormData => ({ ...prevFormData, [id]: value }));
+  };
+
+  const isSentContactFormDisabled = () => {
+    return contactForm.email === undefined || contactForm.subject === undefined;
   };
 
   return (
@@ -254,6 +283,8 @@ const HomepagePage: React.FC = () => {
                             className="shadow-sm bg-blue-100 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
                             placeholder="Enter a valid email address"
                             required
+                            value={contactForm.email}
+                            onChange={handleChange}
                           />
                         </div>
                         <div className="sm:col-span-2">
@@ -265,6 +296,8 @@ const HomepagePage: React.FC = () => {
                             className="block p-3 w-full text-sm text-gray-900 bg-blue-100 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
                             placeholder="Let us know how we can help you"
                             required
+                            value={contactForm.subject}
+                            onChange={handleChange}
                           >
                             <option value="purchase">
                               <Translate contentKey="homepage.fillFormModal.subject1" />
@@ -284,12 +317,17 @@ const HomepagePage: React.FC = () => {
                           <textarea
                             id="message"
                             rows={6}
+                            required
                             className="block p-2.5 w-full text-sm text-gray-900 bg-blue-100 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                             placeholder="Enter your message"
+                            value={contactForm.message}
+                            onChange={handleChange}
                           ></textarea>
                         </div>
                         <button
                           type="button"
+                          onClick={sendContactForm}
+                          disabled={isSentContactFormDisabled()}
                           className="mt-8 flex items-center justify-center text-sm w-full rounded px-4 py-2.5 font-semibold bg-sky-800 text-white hover:bg-[#222]"
                         >
                           <svg
@@ -311,7 +349,7 @@ const HomepagePage: React.FC = () => {
                         </button>
                         <div className="flex gap-x-4 sm:col-span-2">
                           <div className="flex h-[38px] w-[38px] items-center justify-center">
-                            <ToggleSwitch checked={subscribe} label="" onChange={setSubscribe} />
+                            <ToggleSwitch id="subscribe" checked={contactForm.subscribe} label="" onChange={handleChange} />
                           </div>
                           <div>
                             <label className="text-sm leading-6 text-gray-600" id="switch-1-label">

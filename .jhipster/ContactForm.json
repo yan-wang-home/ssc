@@ -1,0 +1,31 @@
+{
+  "annotations": {
+    "changelogDate": "20240412183204"
+  },
+  "dto": "no",
+  "fields": [
+    {
+      "fieldName": "email",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "subject",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "message",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "subscribe",
+      "fieldType": "Boolean"
+    }
+  ],
+  "name": "ContactForm",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceClass"
+}

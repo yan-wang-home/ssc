@@ -63,7 +63,7 @@ export const Admin = () => {
                         contentKey="home.logged.message"
                         interpolate={{ username: account.login, applicationStatus: account.applicationStatus }}
                       >
-                        You are logged in as user {account.login} and Your Application Status: {account.applicationStatus}.
+                        You are logged in as user {account.login}.
                       </Translate>
                     </Alert>
                   </div>

@@ -8,7 +8,8 @@
       "entities": {
         "main": "数据",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)",
-        "rateConfig": "利率设置"
+        "rateConfig": "利率",
+        "contactForm": "联系请求"
       },
       "account": {
         "main": "账号",

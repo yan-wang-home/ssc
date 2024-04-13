@@ -1,0 +1,28 @@
+{
+  "mortgageHubApp": {
+    "contactForm": {
+      "home": {
+        "title": "ContactForms",
+        "refreshListLabel": "Actualiser la liste",
+        "createLabel": "Créer un nouveau Contact Form",
+        "createOrEditLabel": "Créer ou éditer un Contact Form",
+        "search": "Recherche pour Contact Form",
+        "notFound": "Aucun Contact Form trouvé"
+      },
+      "created": "Un nouveau Contact Form a été créé avec l'identifiant {{ param }}",
+      "updated": "Le Contact Form avec l'identifiant {{ param }} a été mis à jour",
+      "deleted": "Le Contact Form avec l'identifiant {{ param }} a été supprimé",
+      "delete": {
+        "question": "Êtes-vous certain de vouloir supprimer le Contact Form {{ id }} ?"
+      },
+      "detail": {
+        "title": "Contact Form"
+      },
+      "id": "ID",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "subscribe": "Subscribe"
+    }
+  }
+}

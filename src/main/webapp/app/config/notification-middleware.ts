@@ -27,7 +27,7 @@ export default () => next => action => {
           alertParams = decodeURIComponent(v.replace(/\+/g, ' '));
         }
       });
-    if (alert) {
+    if (alert && alert !== 'mortgageHubApp.contactForm.created') {
       const alertParam = alertParams;
       toast.success(translate(alert, { param: alertParam }));
     }

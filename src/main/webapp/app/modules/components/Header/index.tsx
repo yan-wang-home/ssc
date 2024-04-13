@@ -42,7 +42,7 @@ const Header: React.FC<HeaderProps> = props => {
                   <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
                 </svg>
               </Disclosure.Button>
-              <a className="text-3xl font-bold leading-none" href="#">
+              <div className="text-3xl font-bold leading-none">
                 <div
                   id="company-logo"
                   className="h-14 flex flex-row gap-2 items-center lg:justify-items-start md:justify-items-center sm:justify-items-center transform hover:scale-110 hover:border-white transition-transform duration-3000 ease-in-out"
@@ -56,7 +56,7 @@ const Header: React.FC<HeaderProps> = props => {
                     </Text>
                   </Link>
                 </div>
-              </a>
+              </div>
               <ul className="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:items-center lg:w-auto lg:space-x-6">
                 <li>
                   <Link
@@ -163,9 +163,9 @@ const Header: React.FC<HeaderProps> = props => {
                   </Link>
                 </li>
               </ul>
-              <a className="inline-block py-2">
+              <div className="inline-block py-2">
                 <LocaleMenu currentLocale={currentLocale} onClick={handleLocaleChange} />
-              </a>
+              </div>
             </nav>
             <Disclosure.Panel className="lg:hidden">
               {({ close }) => (

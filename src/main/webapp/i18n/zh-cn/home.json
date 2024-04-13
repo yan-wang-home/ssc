@@ -1,9 +1,9 @@
 {
   "home": {
     "title": "欢迎来到聪达资本",
-    "subtitle": "这里是首页",
+    "subtitle": "这里是用户页面",
     "logged": {
-      "message": "您目前是以 \"{{username}}\" 账号登录, 您的申请状态: \"{{applicationStatus}}\"."
+      "message": "您目前是以 \"{{username}}\" 账号登录."
     },
     "question": "如果您有任何有关 JHipster 的问题, 可以查阅下列资源:",
     "link": {
