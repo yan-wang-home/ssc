@@ -17,7 +17,7 @@ const RatesPage: React.FC = () => {
   }, []);
 
   const getRate = () => {
-    dispatch(getEntity('6618b06701ab5e309e20d410'));
+    dispatch(getEntity('most-recent-rate'));
   };
 
   const rate = useAppSelector(state => state.rateConfig.entity) as IRateConfig;

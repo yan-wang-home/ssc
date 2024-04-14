@@ -54,8 +54,8 @@ public class InitialSetupMigration {
     }
 
     private void addUsers(Authority userAuthority, Authority adminAuthority) {
-        User user = createUser(userAuthority);
-        template.save(user);
+        //        User user = createUser(userAuthority);
+        //        template.save(user);
         User admin = createAdmin(adminAuthority, userAuthority);
         template.save(admin);
     }
@@ -63,7 +63,7 @@ public class InitialSetupMigration {
     private void addDefaultRateConfig() {
         RateConfig rateConfig = createRateConfig();
 
-        rateConfig.setId("6618b06701ab5e309e20d410");
+        rateConfig.setId("most-recent-rate");
 
         rateConfig.setTwoYearFixedInsured("7.14%");
         rateConfig.setTwoYearFixedInsurable("7.14%");

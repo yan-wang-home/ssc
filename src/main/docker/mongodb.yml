@@ -8,7 +8,7 @@ services:
     ports:
       - 127.0.0.1:27017:27017
     volumes:
-      - ~/volumes/jhipster/MortgageHub/mongodb/:/data/db/
+      - ~/volumes/ssc/mongodb/:/data/db/
     healthcheck:
       test: ['CMD', 'echo', '''db.runCommand("ping").ok''', '|', 'mongo', 'localhost:27017/test', '--quiet']
       interval: 5s
