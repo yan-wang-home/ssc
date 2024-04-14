@@ -47,7 +47,7 @@ const ProductsPage: React.FC = () => {
                       href="/products_firsttimehomebuyer"
                       className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                     >
-                      Read more
+                      <Translate contentKey="product.readMore" />
                       <svg
                         className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
                         aria-hidden="true"
@@ -85,7 +85,7 @@ const ProductsPage: React.FC = () => {
                       href="/products_newtocanada"
                       className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                     >
-                      Read more
+                      <Translate contentKey="product.readMore" />
                       <svg
                         className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
                         aria-hidden="true"
@@ -129,7 +129,7 @@ const ProductsPage: React.FC = () => {
                       href="/products_businessforself"
                       className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                     >
-                      Read more
+                      <Translate contentKey="product.readMore" />
                       <svg
                         className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
                         aria-hidden="true"
@@ -167,7 +167,7 @@ const ProductsPage: React.FC = () => {
                       href="/products_refinanceforreno"
                       className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                     >
-                      Read more
+                      <Translate contentKey="product.readMore" />
                       <svg
                         className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
                         aria-hidden="true"
@@ -205,7 +205,7 @@ const ProductsPage: React.FC = () => {
                       href="/products_purchaseimprovement"
                       className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                     >
-                      Read more
+                      <Translate contentKey="product.readMore" />
                       <svg
                         className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
                         aria-hidden="true"
@@ -243,7 +243,7 @@ const ProductsPage: React.FC = () => {
                       href="/products_constructionloan"
                       className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                     >
-                      Read more
+                      <Translate contentKey="product.readMore" />
                       <svg
                         className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
                         aria-hidden="true"
@@ -287,7 +287,7 @@ const ProductsPage: React.FC = () => {
                       href="/products_equitytakeout"
                       className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                     >
-                      Read more
+                      <Translate contentKey="product.readMore" />
                       <svg
                         className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
                         aria-hidden="true"
@@ -325,7 +325,7 @@ const ProductsPage: React.FC = () => {
                       href="/products_buyrentalproperty"
                       className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                     >
-                      Read more
+                      <Translate contentKey="product.readMore" />
                       <svg
                         className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
                         aria-hidden="true"
@@ -363,7 +363,7 @@ const ProductsPage: React.FC = () => {
                       href="/products_debtsconsolidation"
                       className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                     >
-                      Read more
+                      <Translate contentKey="product.readMore" />
                       <svg
                         className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
                         aria-hidden="true"
@@ -401,7 +401,7 @@ const ProductsPage: React.FC = () => {
                       href="/products_switchtransfer"
                       className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                     >
-                      Read more
+                      <Translate contentKey="product.readMore" />
                       <svg
                         className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
                         aria-hidden="true"
@@ -445,7 +445,7 @@ const ProductsPage: React.FC = () => {
                       href="/products_mortgagerenew"
                       className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                     >
-                      Read more
+                      <Translate contentKey="product.readMore" />
                       <svg
                         className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
                         aria-hidden="true"
@@ -483,7 +483,7 @@ const ProductsPage: React.FC = () => {
                       href="/products_commercialloan"
                       className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                     >
-                      Read more
+                      <Translate contentKey="product.readMore" />
                       <svg
                         className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
                         aria-hidden="true"
@@ -521,7 +521,7 @@ const ProductsPage: React.FC = () => {
                       href="/products_reversemortgage"
                       className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                     >
-                      Read more
+                      <Translate contentKey="product.readMore" />
                       <svg
                         className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
                         aria-hidden="true"
@@ -559,7 +559,7 @@ const ProductsPage: React.FC = () => {
                       href="/products_homeequitylineofcredit"
                       className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                     >
-                      Read more
+                      <Translate contentKey="product.readMore" />
                       <svg
                         className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
                         aria-hidden="true"
