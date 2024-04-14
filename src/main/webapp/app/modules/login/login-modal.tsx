@@ -99,7 +99,7 @@ const LoginModal = (props: ILoginModalProps) => {
           <Button color="secondary" onClick={handleClose} tabIndex={1}>
             <Translate contentKey="entity.action.cancel">Cancel</Translate>
           </Button>{' '}
-          <Button color="primary" type="submit" data-cy="submit">
+          <Button color="primary" data-cy="submit">
             <Translate contentKey="login.form.button">Sign in</Translate>
           </Button>
         </ModalFooter>

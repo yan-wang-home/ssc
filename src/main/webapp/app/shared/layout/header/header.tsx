@@ -45,7 +45,6 @@ const Header = (props: IHeaderProps) => {
 
   return (
     <div id="app-header">
-      {/* {renderDevRibbon()} */}
       <LoadingBar className="loading-bar" />
       <Navbar data-cy="navbar" dark expand="md" fixed="top" className="bg-primary flex flex-row">
         <NavbarToggler aria-label="Menu" onClick={toggleMenu} />
@@ -55,8 +54,8 @@ const Header = (props: IHeaderProps) => {
             <Home />
             {props.isAuthenticated && <EntitiesMenu />}
             {props.isAuthenticated && props.isAdmin && <AdminMenu showOpenAPI={props.isOpenAPIEnabled} />}
-            <LocaleMenu currentLocale={props.currentLocale} onClick={handleLocaleChange} />
             <AccountMenu isAuthenticated={props.isAuthenticated} />
+            <LocaleMenu currentLocale={props.currentLocale} onClick={handleLocaleChange} />
           </Nav>
         </Collapse>
         <div></div>

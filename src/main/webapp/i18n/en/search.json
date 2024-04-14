@@ -1,0 +1,9 @@
+{
+  "search": {
+    "goBack": "Go Back",
+    "notFound": {
+      "title": "SEARCH APPLICATION NOT FOUND",
+      "subTitle": "Please try again or contact our agent"
+    }
+  }
+}

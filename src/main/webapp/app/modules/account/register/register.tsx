@@ -102,7 +102,7 @@ export const RegisterPage = () => {
               }}
               data-cy="secondPassword"
             />
-            <Button id="register-submit" color="primary" type="submit" data-cy="submit">
+            <Button id="register-submit" color="primary" data-cy="submit">
               <Translate contentKey="register.form.button">Register</Translate>
             </Button>
           </ValidatedForm>

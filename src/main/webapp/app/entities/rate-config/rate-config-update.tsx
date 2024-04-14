@@ -89,12 +89,11 @@ export const RateConfigUpdate = () => {
                   validate={{ required: true }}
                 />
               ) : null}
-              <h2 className="underline decoration-2">
+              <h2 className="underline decoration-2 pt-4">
                 <Translate contentKey="mortgageHubApp.rateConfig.home.fixedRate"></Translate>
               </h2>
               <br />
               <ValidatedField
-                className="pt-4"
                 label={translate('mortgageHubApp.rateConfig.oneYearFixedInsured')}
                 id="rate-config-oneYearFixedInsured"
                 name="oneYearFixedInsured"
@@ -236,7 +235,7 @@ export const RateConfigUpdate = () => {
                 </span>
               </Button>
               &nbsp;
-              <Button color="primary" id="save-entity" data-cy="entityCreateSaveButton" type="submit" disabled={updating}>
+              <Button color="primary" id="save-entity" data-cy="entityCreateSaveButton" disabled={updating}>
                 <FontAwesomeIcon icon="save" />
                 &nbsp;
                 <Translate contentKey="entity.action.save">Save</Translate>

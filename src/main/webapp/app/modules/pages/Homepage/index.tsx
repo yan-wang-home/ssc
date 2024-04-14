@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { generatePath } from 'react-router-dom';
 
 import { Link, useNavigate } from 'react-router-dom';
@@ -11,7 +11,6 @@ import { Translate, translate } from 'react-jhipster';
 import { createEntity, updateEntity } from 'app/entities/contact-form/contact-form.reducer';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 import { IContactForm } from 'app/shared/model/contact-form.model';
-import { set } from 'lodash';
 import { toast } from 'react-toastify';
 
 const HomepagePage: React.FC = () => {
@@ -20,17 +19,12 @@ const HomepagePage: React.FC = () => {
   const [openContactUsModal, setOpenContactUsModal] = useState(false);
   const [openFillFormModal, setOpenFillFormModal] = useState(false);
 
-  const [email, setEmail] = useState('');
   const [searchQuery, setSearchQuery] = useState('');
   const [contactForm, setContactForm] = useState<IContactForm>({ subject: 'purchase' } as IContactForm);
-  const [subscribe, setSubscribe] = useState(false);
   const dispatch = useAppDispatch();
-
-  const searchPlaceholder = <Translate contentKey="homepage.searchTitle" />;
 
   function onCloseModal() {
     setOpenFillFormModal(false);
-    setEmail('');
   }
 
   const performSearch = () => {

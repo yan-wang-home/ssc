@@ -14,6 +14,7 @@ import { getSession } from 'app/shared/reducers/authentication';
 import { getProfile } from 'app/shared/reducers/application-profile';
 import { hasAnyAuthority } from 'app/shared/auth/private-route';
 import { AUTHORITIES } from 'app/config/constants';
+import Login from 'app/modules/login/login';
 
 export const Admin = () => {
   const dispatch = useAppDispatch();
@@ -53,11 +54,11 @@ export const Admin = () => {
                 <h1 className="display-4">
                   <Translate contentKey="home.title">Welcome To Smart Solutions Capital</Translate>
                 </h1>
-                <p className="lead">
-                  <Translate contentKey="home.subtitle">This is your homepage</Translate>
-                </p>
                 {account?.login ? (
                   <div>
+                    <p className="lead">
+                      <Translate contentKey="home.subtitle">This is your homepage</Translate>
+                    </p>
                     <Alert color="success">
                       <Translate
                         contentKey="home.logged.message"
@@ -69,25 +70,28 @@ export const Admin = () => {
                   </div>
                 ) : (
                   <div>
-                    {/* <Alert color="warning"> */}
-                    {/*   <Translate contentKey="global.messages.info.authenticated.prefix">If you want to </Translate> */}
-
-                    {/*   <Link to="/login" className="alert-link"> */}
-                    {/*     <Translate contentKey="global.messages.info.authenticated.link"> sign in</Translate> */}
-                    {/*   </Link> */}
-                    {/*   <Translate contentKey="global.messages.info.authenticated.suffix"> */}
-                    {/*     , you can try the default accounts: */}
-                    {/*     <br />- Administrator (login=&quot;admin&quot; and password=&quot;admin&quot;) */}
-                    {/*     <br />- User (login=&quot;user&quot; and password=&quot;user&quot;). */}
-                    {/*   </Translate> */}
-                    {/* </Alert> */}
-
+                    <Login />
                     <Alert color="warning">
-                      <Translate contentKey="global.messages.info.register.noaccount">You do not have an account yet?</Translate>&nbsp;
-                      <Link to="/account/register" className="alert-link">
-                        <Translate contentKey="global.messages.info.register.link">Register a new account</Translate>
+                      {/* <Translate contentKey="global.messages.info.authenticated.prefix">If you want to </Translate> */}
+
+                      <Translate contentKey="global.messages.info.prefix-login" />
+                      <Link to="/login" className="alert-link">
+                        <Translate contentKey="global.messages.info.authenticated.link"> sign in</Translate>
                       </Link>
+                      <Translate contentKey="global.messages.info.suffix-login" />
+                      {/* <Translate contentKey="global.messages.info.authenticated.suffix"> */}
+                      {/*   , you can try the default accounts: */}
+                      {/*   <br />- Administrator (login=&quot;admin&quot; and password=&quot;admin&quot;) */}
+                      {/*   <br />- User (login=&quot;user&quot; and password=&quot;user&quot;). */}
+                      {/* </Translate> */}
                     </Alert>
+
+                    {/* <Alert color="warning"> */}
+                    {/*   <Translate contentKey="global.messages.info.register.noaccount">You do not have an account yet?</Translate>&nbsp; */}
+                    {/*   <Link to="/account/register" className="alert-link"> */}
+                    {/*     <Translate contentKey="global.messages.info.register.link">Register a new account</Translate> */}
+                    {/*   </Link> */}
+                    {/* </Alert> */}
                   </div>
                 )}
               </Col>

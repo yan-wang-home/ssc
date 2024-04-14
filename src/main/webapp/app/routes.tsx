@@ -78,7 +78,7 @@ const AppRoutes = () => {
         <Route path="privacypolicy" element={<PrivacyPolicy />} />
         <Route path="comingsoon" element={<ComingSoon />} />
         <Route path="whatnew" element={<WhatNew />} />
-        {/* <Route path="admin" element={<AdminView />} /> */}
+        <Route path="admin" element={<AdminView />} />
         <Route path="login" element={<Login />} />
         <Route path="logout" element={<Logout />} />
         {/* <Route path="/contact" element={<Contact />} /> */}
@@ -103,7 +103,7 @@ const AppRoutes = () => {
           path="admin/*"
           element={
             <PrivateRoute hasAnyAuthorities={[AUTHORITIES.ADMIN]}>
-              <AdminView />
+              <Admin />
             </PrivateRoute>
           }
         />

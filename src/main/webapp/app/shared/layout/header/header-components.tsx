@@ -24,7 +24,7 @@ export const Brand = () => (
 export const Home = () => (
   <NavItem>
     <NavLink tag={Link} to="/" className="d-flex align-items-center">
-      {/* <FontAwesomeIcon icon="home" /> */}
+      <FontAwesomeIcon icon="home" />
       <span>
         <Translate contentKey="global.menu.home">Home</Translate>
       </span>

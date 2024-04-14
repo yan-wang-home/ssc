@@ -89,7 +89,7 @@ export const SettingsPage = () => {
                 </option>
               ))}
             </ValidatedField>
-            <Button color="primary" type="submit" data-cy="submit">
+            <Button color="primary" data-cy="submit">
               <Translate contentKey="settings.form.button">Save</Translate>
             </Button>
           </ValidatedForm>

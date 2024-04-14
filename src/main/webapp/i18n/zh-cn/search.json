@@ -1,0 +1,9 @@
+{
+  "search": {
+    "goBack": "返回",
+    "notFound": {
+      "title": "搜索申请号找不到",
+      "subTitle": "请重试或联系我们的工作人员"
+    }
+  }
+}

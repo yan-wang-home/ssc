@@ -66,6 +66,8 @@
     },
     "messages": {
       "info": {
+        "prefix-login": "Please ",
+        "suffix-login": " to your user page",
         "authenticated": {
           "prefix": "If you want to ",
           "link": "Login",

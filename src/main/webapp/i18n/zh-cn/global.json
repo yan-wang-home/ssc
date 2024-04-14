@@ -8,7 +8,7 @@
       "entities": {
         "main": "数据",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)",
-        "rateConfig": "利率",
+        "rateConfig": "利率设置",
         "contactForm": "联系请求"
       },
       "account": {
@@ -66,6 +66,8 @@
     },
     "messages": {
       "info": {
+        "prefix-login": "请 ",
+        "suffix-login": " 到您的用户页面",
         "authenticated": {
           "prefix": "如果您要",
           "link": "登录",

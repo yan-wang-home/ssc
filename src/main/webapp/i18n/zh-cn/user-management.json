@@ -1,7 +1,7 @@
 {
   "userManagement": {
     "home": {
-      "title": "用户",
+      "title": "用户管理",
       "refreshListLabel": "Refresh list",
       "createLabel": "创建新用户",
       "createOrEditLabel": "创建或编辑用户"
@@ -21,6 +21,7 @@
     "email": "邮箱",
     "activated": "已激活",
     "deactivated": "失效",
+    "notFound": "找不到你搜索的用户",
     "profiles": "角色",
     "langKey": "语言",
     "applicationStatus": "申请状态",

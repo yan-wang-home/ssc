@@ -95,9 +95,11 @@ export const RateConfig = () => {
   return (
     <div className="pt-20 px-4">
       <h2 id="rate-config-heading" data-cy="RateConfigHeading">
-        <Translate contentKey="mortgageHubApp.rateConfig.home.title">Rate Configs</Translate>
-        <div className="d-flex justify-content-end">
-          <Button className="me-2" color="info" onClick={handleSyncList} disabled={loading}>
+        <div className="text-blue-900 font-bold text-2xl pb-3">
+          <Translate contentKey="mortgageHubApp.rateConfig.home.title">Rate Configs</Translate>
+        </div>
+        <div className="d-flex justify-content-end p-3">
+          <Button className="me-2 text-blue-900" color="info" onClick={handleSyncList} disabled={loading}>
             <FontAwesomeIcon icon="sync" spin={loading} />{' '}
             <Translate contentKey="mortgageHubApp.rateConfig.home.refreshListLabel">Refresh List</Translate>
           </Button>
@@ -260,6 +262,7 @@ export const RateConfig = () => {
                         color="danger"
                         size="sm"
                         data-cy="entityDeleteButton"
+                        className="me-2 text-red-500"
                       >
                         <FontAwesomeIcon icon="trash" />{' '}
                         <span className="d-none d-md-inline">

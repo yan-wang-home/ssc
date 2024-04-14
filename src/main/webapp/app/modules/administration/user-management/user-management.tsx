@@ -42,6 +42,10 @@ export const UserManagement = () => {
   }, [pagination.activePage, pagination.order, pagination.sort]);
 
   useEffect(() => {
+    startSearching();
+  }, [search]);
+
+  useEffect(() => {
     const params = new URLSearchParams(pageLocation.search);
     const page = params.get('page');
     const sortParam = params.get(SORT);
@@ -96,13 +100,12 @@ export const UserManagement = () => {
     }
   };
 
-  const startSearching = e => {
+  const startSearching = () => {
     if (search !== undefined && search !== '') {
       dispatch(queryUsers(search));
     } else {
       getUsersFromProps();
     }
-    e.preventDefault();
   };
 
   const clear = () => {
@@ -111,11 +114,13 @@ export const UserManagement = () => {
   };
 
   return (
-    <div className="pt-8">
+    <div>
       <h2 id="user-management-page-heading" data-cy="userManagementPageHeading">
-        <Translate contentKey="userManagement.home.title">Users</Translate>
-        <div className="d-flex justify-content-end">
-          <Button className="me-2" color="info" onClick={handleSyncList} disabled={loading}>
+        <div className="text-blue-900 font-bold text-2xl p-3">
+          <Translate contentKey="userManagement.home.title">Users</Translate>
+        </div>
+        <div className="d-flex justify-content-end pb-3">
+          <Button className="me-2 text-blue-900" color="info" onClick={handleSyncList} disabled={loading}>
             <FontAwesomeIcon icon="sync" spin={loading} />{' '}
             <Translate contentKey="userManagement.home.refreshListLabel">Refresh List</Translate>
           </Button>
@@ -132,7 +137,7 @@ export const UserManagement = () => {
               <InputGroup>
                 <Input
                   className="p-0 placeholder:text-bluegray-200 text-base text-left w-screen"
-                  wrapClassName="w-11/12 border"
+                  wrapClassName="lg:w-11/12 md:w-9/12 sm:w-9/12 border"
                   type="text"
                   name="search"
                   defaultValue={search}
@@ -223,11 +228,11 @@ export const UserManagement = () => {
               </td>
               <td>
                 {user.activated ? (
-                  <Button color="success" onClick={toggleActive(user)}>
+                  <Button className="me-2 text-green-500" color="success" onClick={toggleActive(user)}>
                     <Translate contentKey="userManagement.activated">Activated</Translate>
                   </Button>
                 ) : (
-                  <Button color="danger" onClick={toggleActive(user)}>
+                  <Button className="me-2 text-red-500" color="danger" onClick={toggleActive(user)}>
                     <Translate contentKey="userManagement.deactivated">Deactivated</Translate>
                   </Button>
                 )}
@@ -274,7 +279,11 @@ export const UserManagement = () => {
           </div>
         </div>
       ) : (
-        ''
+        !loading && (
+          <div className="alert alert-warning">
+            <Translate contentKey="userManagement.notFound" />
+          </div>
+        )
       )}
     </div>
   );

@@ -178,7 +178,7 @@ export const UserManagementUpdate = () => {
                 </span>
               </Button>
               &nbsp;
-              <Button color="primary" type="submit" disabled={isInvalid || updating}>
+              <Button color="primary" disabled={isInvalid || updating}>
                 <FontAwesomeIcon icon="save" />
                 &nbsp;
                 <Translate contentKey="entity.action.save">Save</Translate>

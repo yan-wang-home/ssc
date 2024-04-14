@@ -56,7 +56,9 @@ export const ContactForm = () => {
     dispatch(getEntities({}));
   };
 
-  const handleSearch = event => setSearch(event.target.value);
+  const handleSearch = event => {
+    setSearch(event.target.value);
+  };
 
   const sortEntities = () => {
     getAllEntities();
@@ -95,9 +97,11 @@ export const ContactForm = () => {
   return (
     <div className="pt-20 px-4">
       <h2 id="contact-form-heading" data-cy="ContactFormHeading">
-        <Translate contentKey="mortgageHubApp.contactForm.home.title">Contact Forms</Translate>
-        <div className="d-flex justify-content-end">
-          <Button className="me-2" color="info" onClick={handleSyncList} disabled={loading}>
+        <div className="text-blue-900 font-bold text-2xl pb-3">
+          <Translate contentKey="mortgageHubApp.contactForm.home.title">Contact Forms</Translate>
+        </div>
+        <div className="d-flex justify-content-end p-3">
+          <Button className="me-2 text-blue-900" color="info" onClick={handleSyncList} disabled={loading}>
             <FontAwesomeIcon icon="sync" spin={loading} />{' '}
             <Translate contentKey="mortgageHubApp.contactForm.home.refreshListLabel">Refresh List</Translate>
           </Button>
@@ -190,6 +194,7 @@ export const ContactForm = () => {
                         color="danger"
                         size="sm"
                         data-cy="entityDeleteButton"
+                        className="me-2 text-red-500"
                       >
                         <FontAwesomeIcon icon="trash" />{' '}
                         <span className="d-none d-md-inline">
