@@ -16,6 +16,7 @@ import { hasAnyAuthority } from 'app/shared/auth/private-route';
 import ErrorBoundary from 'app/shared/error/error-boundary';
 import { AUTHORITIES } from 'app/config/constants';
 import AppRoutes from 'app/routes';
+import ScrollToTop from 'app/ScrollToTop';
 
 const baseHref = document.querySelector('base').getAttribute('href').replace(/\/$/, '');
 
@@ -37,6 +38,7 @@ export const App = () => {
   const paddingTop = '60px';
   return (
     <BrowserRouter basename={baseHref}>
+      <ScrollToTop />
       <AppRoutes />
 
       {/* <div className="app-container" style={{ paddingTop }}> */}

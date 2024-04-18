@@ -20,58 +20,67 @@ const ContactUs: React.FC = () => {
                 </div>
                 <div className="flex flex-col items-center">
                   <div className="flex items-center justify-center rounded-[75%]">
-                    <img
-                      alt="location icon"
-                      loading="lazy"
-                      width="50"
-                      decoding="async"
-                      data-nimg="1"
-                      className="color:transparent"
-                      src="content/images/location.svg"
-                    ></img>
+                    <a href="https://maps.app.goo.gl/cnNufP8GubnZm5UKA">
+                      <img
+                        alt="location icon"
+                        loading="lazy"
+                        width="50"
+                        decoding="async"
+                        data-nimg="1"
+                        className="color:transparent"
+                        src="content/images/location.svg"
+                      />
+                    </a>
                   </div>
                   <div className="flex flex-col gap-0 items-center">
-                    <a className="font-Inter text-xl text-center font-medium text-blue-900">
+                    <a
+                      href="https://maps.app.goo.gl/cnNufP8GubnZm5UKA"
+                      className="font-Inter text-xl text-center font-medium text-blue-900"
+                    >
                       Unit 3 - 175 West Beaver Creek Road, Richmond Hill, ON
                     </a>
                   </div>
                 </div>
                 <div className="flex flex-col items-center">
                   <div className="flex items-center justify-center rounded-[75%]">
-                    <img
-                      alt="phone icon"
-                      loading="lazy"
-                      width="50"
-                      decoding="async"
-                      data-nimg="1"
-                      className="color:transparent"
-                      src="content/images/phone.svg"
-                    ></img>
+                    <a href="tel:+6479713755">
+                      <img
+                        alt="phone icon"
+                        loading="lazy"
+                        width="50"
+                        decoding="async"
+                        data-nimg="1"
+                        className="color:transparent"
+                        src="content/images/phone.svg"
+                      />
+                    </a>
                   </div>
                   <div>
-                    <a href="tel:+911800123444" className="font-Inter text-xl font-medium text-blue-900">
+                    <a href="tel:+6479713755" className="font-Inter text-xl font-medium text-blue-900">
                       <Translate contentKey="footer.office" />: 647-9713755
                     </a>
                     <br />
-                    <a href="tel:+911800123444" className="font-Inter text-xl font-medium text-blue-900">
-                      <Translate contentKey="footer.fax" />: 647-9713755
-                    </a>
+                    {/* <a href="tel:+6479713755" className="font-Inter text-xl font-medium text-blue-900"> */}
+                    {/*   <Translate contentKey="footer.fax" />: 647-9713755 */}
+                    {/* </a> */}
                   </div>
                 </div>
                 <div className="flex flex-col items-center">
                   <div className="flex items-center justify-center rounded-[75%]">
-                    <img
-                      alt="mail icon"
-                      loading="lazy"
-                      width="50"
-                      decoding="async"
-                      data-nimg="1"
-                      className="color:transparent"
-                      src="content/images/mail.svg"
-                    ></img>
+                    <a href="mailto:info@ssc.finance">
+                      <img
+                        alt="mail icon"
+                        loading="lazy"
+                        width="50"
+                        decoding="async"
+                        data-nimg="1"
+                        className="color:transparent"
+                        src="content/images/mail.svg"
+                      />
+                    </a>
                   </div>
                   <div>
-                    <a href="mailto:help@smartsolutionscapital.com" className="font-Inter text-xl font-medium text-blue-900">
+                    <a href="mailto:info@ssc.finance" className="font-Inter text-xl font-medium text-blue-900">
                       info@ssc.finance
                     </a>
                   </div>

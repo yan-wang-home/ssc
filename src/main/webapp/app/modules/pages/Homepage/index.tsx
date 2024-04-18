@@ -221,7 +221,7 @@ const HomepagePage: React.FC = () => {
                   <Translate contentKey="homepage.contactUsTitle3" />
                 </Text>
               </div>
-              <div className="absolute top-1/2 pt-10 items-center">
+              <div className="absolute top-1/2 lg:pt-10 md:pt-5 sm:pt-5 items-center">
                 <button
                   // onClick={() => setOpenContactUsModal(true)}
                   onClick={() => navigate('/contactus')}
@@ -239,7 +239,7 @@ const HomepagePage: React.FC = () => {
                   <Translate contentKey="homepage.fillFormTitle1" /> <br /> <Translate contentKey="homepage.fillFormTitle2" />
                 </Text>
               </div>
-              <div className="absolute top-1/2 pt-10 items-center">
+              <div className="absolute top-1/2 lg:pt-10 md:pt-5 sm:pt-5 items-center">
                 <button
                   onClick={() => setOpenFillFormModal(true)}
                   className="block w-full select-none rounded-lg bg-blue-800 sm:mt-0 mt-5 py-3.5 px-7 text-center align-middle font-sans text-lg font-bold uppercase text-white shadow-md shadow-gray-900/10 transition-all hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
