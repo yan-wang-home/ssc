@@ -6,6 +6,7 @@
     "insurable": "Insurable",
     "conventional": "Conventional",
     "yearFix": "Year Fix",
-    "yearVariable": "Year Variable"
+    "yearVariable": "Year Variable",
+    "tableSpace": "            "
   }
 }

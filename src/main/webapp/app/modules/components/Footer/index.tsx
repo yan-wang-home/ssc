@@ -90,7 +90,7 @@ const Footer: React.FC<FooterProps> = props => {
             </div>
             <div className="flex flex-col sm:items-center w-full relative">
               <div className="flex sm:flex-col flex-col lg:items-start sm:items-center gap-2 justify-center sm:mt-10 sm:gap-3">
-                <div className="flex items-center ">
+                <div className="flex lg:flex-row md:flex-col sm:flex-col items-center">
                   <div className="flex h-[38px] w-[38px] items-center justify-center rounded-[75%]">
                     <img
                       alt="phone icon"
@@ -106,13 +106,13 @@ const Footer: React.FC<FooterProps> = props => {
                     <a href="tel:+911800123444" className="font-Inter text-[18px] font-medium text-blue-900">
                       <Translate contentKey="footer.office" />: 647-9713755
                     </a>
-                    <br />
-                    <a href="tel:+911800123444" className="font-Inter text-[18px] font-medium text-blue-900">
-                      <Translate contentKey="footer.fax" />: 647-9713755
-                    </a>
+                    {/* <br /> */}
+                    {/* <a href="tel:+911800123444" className="font-Inter text-[18px] font-medium text-blue-900"> */}
+                    {/*   <Translate contentKey="footer.fax" />: 647-9713755 */}
+                    {/* </a> */}
                   </div>
                 </div>
-                <div className="flex">
+                <div className="flex lg:flex-row md:flex-col sm:flex-col items-center">
                   <div className="flex h-[38px] w-[38px] items-center justify-center rounded-[75%]">
                     <img
                       alt="mail icon"
@@ -130,7 +130,7 @@ const Footer: React.FC<FooterProps> = props => {
                     </a>
                   </div>
                 </div>
-                <div className="flex">
+                <div className="flex lg:flex-row md:flex-col sm:flex-col items-center">
                   <div className="flex w-[38px] items-center justify-center rounded-[75%]">
                     <img
                       alt="location icon"

@@ -8,9 +8,10 @@ const variants = {
     teal_400: 'bg-teal-400 text-white-A700',
     blue_900: 'bg-blue-900 text-white-A700',
     red_600: 'bg-red-600 text-white-A700',
+    red_800: 'bg-red-800 text-white-A700',
   },
 } as const;
-const sizes = { xs: 'p-[15px]', sm: 'p-[21px] sm:px-5', md: 'w-1/3 h-12 px-6 ' } as const;
+const sizes = { xs: 'p-[15px]', sm: 'p-[21px] sm:px-5', md: 'w-1/3 h-12 px-6', lg: 'p-[30px] sm:px-5' } as const;
 
 export type ButtonProps = Omit<React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>, 'onClick'> &
   Partial<{

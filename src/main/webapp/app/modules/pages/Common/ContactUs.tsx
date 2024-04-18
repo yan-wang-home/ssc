@@ -12,7 +12,7 @@ const ContactUs: React.FC = () => {
         <div className="flex flex-col items-center justify-start w-full">
           <div className="grid lg:grid-cols-2 sm:grid-cols-1 gap-16 items-center relative overflow-hidden p-10 w-full mx-auto bg-white text-[#333] font-[sans-serif] before:absolute before:right-0 before:w-[300px] lg:before:bg-blue-400 before:h-full max-md:before:hidden">
             <div>
-              <div className="flex sm:flex-col flex-col lg:items-center sm:items-center justify-center sm:mt-10 gap-5 sm:gap-3 space-y-4 mt-8 w-full">
+              <div className="flex sm:flex-col flex-col lg:items-center sm:items-center justify-center lg:mt-8 md:mt-3 sm:mt-3 lg:gap-5 md:gap-3 sm:gap-3 space-y-4 w-full">
                 <div className="items-start">
                   <h2 className="text-3xl text-blue-900 font-extrabold underline decoration-2">
                     <Translate contentKey="contactus.title" />
@@ -101,7 +101,7 @@ const ContactUs: React.FC = () => {
               ></iframe>
             </div>
           </div>
-          <Footer className="bg-gray-200 flex items-center justify-center mt-[120px] w-full" />
+          <Footer className="bg-gray-200 flex items-center justify-center lg:mt-[120px] w-full" />
         </div>
       </div>
     </>

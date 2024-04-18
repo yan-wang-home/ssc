@@ -581,7 +581,7 @@ const ProductsPage: React.FC = () => {
               </div>
             </div>
           </div>
-          <Footer className="bg-gray-200 flex items-center justify-center mt-[120px] md:px-5 w-full" />
+          <Footer className="bg-gray-200 flex items-center justify-center lg:mt-[120px] md:mt-5 sm:mt-5 md:px-5 w-full" />
         </div>
       </div>
     </>

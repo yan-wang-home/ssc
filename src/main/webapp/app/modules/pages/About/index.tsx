@@ -86,7 +86,7 @@ const AboutPage: React.FC = () => {
               </div>
             </div>
           </div>
-          <Footer className="bg-gray-200 flex items-center justify-center mt-[120px] w-full" />
+          <Footer className="bg-gray-200 flex items-center justify-center lg:mt-[120px] w-full" />
         </div>
       </div>
     </>

@@ -8,7 +8,7 @@ import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import { Card, Carousel, Checkbox, FloatingLabel, Label, Modal, TextInput, ToggleSwitch } from 'flowbite-react';
 import { Translate, translate } from 'react-jhipster';
-import { createEntity, updateEntity } from 'app/entities/contact-form/contact-form.reducer';
+import { createEntity } from 'app/entities/contact-form/contact-form.reducer';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 import { IContactForm } from 'app/shared/model/contact-form.model';
 import { toast } from 'react-toastify';
@@ -70,12 +70,12 @@ const HomepagePage: React.FC = () => {
           <Img src="content/images/landing_page.jpeg" alt="Background" className="w-full h-screen sm:h-[700px] object-cover" />
           {/* Home Page Main Picture */}
           <div className="absolute top-1/2 transform -translate-y-1/2 text-white p-8 w-full">
-            <Text className="text-4xl font-bold text-blue-900 mb-4 lg:text-left sm:text-center sm:backdrop-blur-sm">
+            <Text className="lg:text-4xl md:text-2xl sm:text-2xl font-bold text-blue-900 mb-4 lg:text-left sm:text-center sm:backdrop-blur-sm">
               <Translate contentKey="homepage.title1" />
               <br />
               <Translate contentKey="homepage.title2" />
             </Text>
-            <Text className="text-2xl text-blue-900 sm:text-center mt-4 sm:backdrop-blur-sm">
+            <Text className="lg:text-2xl md:text-xl sm:text-xl text-blue-900 sm:text-center mt-4 sm:backdrop-blur-sm">
               <Translate contentKey="homepage.searchTitle" />
             </Text>
             <div className="bg-gray-50 border border-solid border-teal-400 flex sm:flex-col flex-row mt-2 gap-[22px] items-center justify-end p-1.5 rounded-md w-2/5 sm:w-full">
@@ -108,10 +108,10 @@ const HomepagePage: React.FC = () => {
         <div className="flex flex-col items-center justify-start w-full">
           <div className="flex flex-col gap-12 items-center justify-start max-w-[1112px] mt-[130px] sm:mt-8 mx-auto md:px-5 w-full">
             <div className="flex flex-col gap-0 items-center justify-start max-w-[1112px] w-full">
-              <Text className="leading-[54.00px] sm:text-[34px] md:text-[40px] text-[50px] text-center text-blue-900 w-[90%]">
+              <Text className="leading-[54.00px] lg:text-[50px] md:text-2xl sm:text-2xl text-center text-blue-900 w-[90%]">
                 <Translate contentKey="homepage.stepTitle" />
               </Text>
-              <Text className="leading-[54.00px] text-[20px] text-center text-blue-900 w-[90%]">
+              <Text className="leading-[54.00px] lg:text-[20px] md:text-sm sm:text-sm text-center text-blue-900 w-[90%]">
                 <Translate contentKey="homepage.stepSubTitle" />
               </Text>
             </div>
@@ -212,7 +212,7 @@ const HomepagePage: React.FC = () => {
           </div>
 
           {/* Get in touch & Fill in form */}
-          <div className="flex lg:flex-row sm:flex-col items-center justify-start w-full mt-[130px] mx-auto">
+          <div className="flex lg:flex-row sm:flex-col items-center justify-start w-full lg:mt-[130px] md:mt-14 sm:mt-14 mx-auto">
             <div className="flex sm:flex-col lg:flex-row items-center justify-center w-full relative">
               <Img src="content/images/get_in_touch.jpg" alt="Background" className="w-full object-cover" />
               <div className="absolute top-1/2 transform -translate-y-1/2 text-white p-8">

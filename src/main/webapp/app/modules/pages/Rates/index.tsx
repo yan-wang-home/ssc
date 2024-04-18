@@ -26,7 +26,7 @@ const RatesPage: React.FC = () => {
     <>
       <div className="bg-gray-100 flex flex-col font-chivo sm:gap-10 gap-10 items-center justify-start mx-auto w-full">
         <Header className="flex items-center justify-center sm:px-5 w-full" />
-        <div className="flex flex-col items-center justify-start w-full sm:px-5">
+        <div className="flex flex-col items-center justify-start w-full ">
           <div className="lg:w-9/12 sm:w-full">
             {/* Top */}
             <div className="flex flex-col gap-12 items-center justify-start mx-auto w-full px-8">
@@ -37,7 +37,10 @@ const RatesPage: React.FC = () => {
                 >
                   <Translate contentKey="rate.title" />
                 </Text>
-                <Text className="text-[20px] text-justify mt-2 text-gray-500 w-full" size="txtChivoRegular18Bluegray600">
+                <Text
+                  className="lg:text-[20px] md:text-[18px] sm:text-[18px] text-center mt-2 text-gray-500 w-full"
+                  size="txtChivoRegular18Bluegray600"
+                >
                   <Translate contentKey="rate.subTitle" />
                 </Text>
               </div>
@@ -45,52 +48,89 @@ const RatesPage: React.FC = () => {
 
             {/* Fix Rate */}
             <div className="flex flex-col lg:gap-6 md:gap-2 sm:gap-2 items-center lg:px-5 sm:px-2 w-full pt-10 sm:pt-5">
-              <div className="flex flex-row rounded-lg shadow-2xl bg-white-A700 h-10 w-full">
-                <Text className="text-3xl sm:text-lg text-center text-blue-900 w-full mt-3" size="txtChivoRegular18Bluegray600"></Text>
-                <Text className="text-3xl sm:text-lg text-center text-blue-900 w-full" size="txtChivoRegular18Bluegray600">
-                  2 <Translate contentKey="rate.yearFix" />
-                </Text>
-                <Text className="text-3xl sm:text-lg text-center text-blue-900 w-full" size="txtChivoRegular18Bluegray600">
-                  3 <Translate contentKey="rate.yearFix" />
-                </Text>
-                <Text className="text-3xl sm:text-lg text-center text-blue-900 w-full" size="txtChivoRegular18Bluegray600">
-                  4 <Translate contentKey="rate.yearFix" />
-                </Text>
-                <Text className="text-3xl sm:text-lg text-center text-blue-900 w-full" size="txtChivoRegular18Bluegray600">
-                  5 <Translate contentKey="rate.yearFix" />
-                </Text>
+              <div className="flex flex-row rounded-lg shadow-2xl bg-white-A700 h-10 w-full lg:gap-6 md:gap-2 sm:gap-2">
+                <div className="flex flex-col h-full w-full justify-center">
+                  <Text
+                    className="lg:text-3xl md:text-sm sm:text-sm text-center text-blue-900 w-full mt-3"
+                    size="txtChivoRegular18Bluegray600"
+                  ></Text>
+                </div>
+                <div className="flex flex-col h-full w-full justify-center">
+                  <Text className="lg:text-3xl md:text-sm sm:text-sm text-center text-blue-900 w-full" size="txtChivoRegular18Bluegray600">
+                    2 <Translate contentKey="rate.yearFix" />
+                  </Text>
+                </div>
+                <div className="flex flex-col h-full w-full justify-center">
+                  <Text className="lg:text-3xl md:text-sm sm:text-sm text-center text-blue-900 w-full" size="txtChivoRegular18Bluegray600">
+                    3 <Translate contentKey="rate.yearFix" />
+                  </Text>
+                </div>
+                <div className="flex flex-col h-full w-full justify-center">
+                  <Text className="lg:text-3xl md:text-sm sm:text-sm text-center text-blue-900 w-full" size="txtChivoRegular18Bluegray600">
+                    4 <Translate contentKey="rate.yearFix" />
+                  </Text>
+                </div>
+                <div className="flex flex-col h-full w-full justify-center">
+                  <Text className="lg:text-3xl md:text-sm sm:text-sm text-center text-blue-900 w-full" size="txtChivoRegular18Bluegray600">
+                    5 <Translate contentKey="rate.yearFix" />
+                  </Text>
+                </div>
               </div>
               <div className="flex flex-row w-full lg:gap-6 md:gap-2 sm:gap-2 h-[300px]">
                 <div className="flex flex-col rounded-lg shadow-2xl bg-white-A700 h-full w-full justify-evenly">
-                  <Text className="text-3xl sm:text-lg font-bold text-blue-700 text-right sm:text-center lg:pr-5 sm:pr2">
+                  <Text className="lg:text-3xl md:text-xs sm:text-xs font-bold text-blue-700 text-right sm:text-center lg:pr-5 sm:pr2">
                     <Translate contentKey="rate.insured" />
                   </Text>
-                  <Text className="text-3xl sm:text-lg font-bold text-blue-700 text-right sm:text-center lg:pr-5 sm:pr2">
+                  <Text className="lg:text-3xl md:text-xs sm:text-xs font-bold text-blue-700 text-right sm:text-center lg:pr-5 sm:pr2">
                     <Translate contentKey="rate.insurable" />
                   </Text>
-                  <Text className="text-3xl sm:text-lg font-bold text-blue-700 text-right sm:text-center lg:pr-5 sm:pr2">
+                  <Text className="lg:text-3xl md:text-xs sm:text-xs font-bold text-blue-700 text-right sm:text-center lg:pr-5 sm:pr2">
                     <Translate contentKey="rate.conventional" />
                   </Text>
                 </div>
                 <div className="flex flex-col rounded-lg shadow-2xl bg-[#3756A8] h-full w-full justify-evenly">
-                  <Text className="text-3xl sm:text-lg text-center font-bold text-white-A700">{rate.twoYearFixedInsured}</Text>
-                  <Text className="text-3xl sm:text-lg text-center font-bold text-white-A700">{rate.twoYearFixedInsurable}</Text>
-                  <Text className="text-3xl sm:text-lg text-center font-bold text-white-A700">{rate.twoYearFixedConventional}</Text>
+                  <Text className="lg:text-3xl md:text-lg sm:text-lg text-center font-bold text-white-A700">
+                    {rate.twoYearFixedInsured}
+                  </Text>
+                  <Text className="lg:text-3xl md:text-lg sm:text-lg text-center font-bold text-white-A700">
+                    {rate.twoYearFixedInsurable}
+                  </Text>
+                  <Text className="lg:text-3xl md:text-lg sm:text-lg text-center font-bold text-white-A700">
+                    {rate.twoYearFixedConventional}
+                  </Text>
                 </div>
                 <div className="flex flex-col rounded-lg shadow-2xl bg-[#3756A8] h-full w-full justify-evenly">
-                  <Text className="text-3xl sm:text-lg text-center font-bold text-white-A700">{rate.threeYearFixedInsurable}</Text>
-                  <Text className="text-3xl sm:text-lg text-center font-bold text-white-A700">{rate.threeYearFixedInsurable}</Text>
-                  <Text className="text-3xl sm:text-lg text-center font-bold text-white-A700">{rate.threeYearFixedConventional}</Text>
+                  <Text className="lg:text-3xl md:text-lg sm:text-lg text-center font-bold text-white-A700">
+                    {rate.threeYearFixedInsurable}
+                  </Text>
+                  <Text className="lg:text-3xl md:text-lg sm:text-lg text-center font-bold text-white-A700">
+                    {rate.threeYearFixedInsurable}
+                  </Text>
+                  <Text className="lg:text-3xl md:text-lg sm:text-lg text-center font-bold text-white-A700">
+                    {rate.threeYearFixedConventional}
+                  </Text>
                 </div>
                 <div className="flex flex-col rounded-lg shadow-2xl bg-[#3756A8] h-full w-full justify-evenly">
-                  <Text className="text-3xl sm:text-lg text-center font-bold text-white-A700">{rate.fourYearFixedInsured}</Text>
-                  <Text className="text-3xl sm:text-lg text-center font-bold text-white-A700">{rate.fourYearFixedInsurable}</Text>
-                  <Text className="text-3xl sm:text-lg text-center font-bold text-white-A700">{rate.fourYearFixedConventional}</Text>
+                  <Text className="lg:text-3xl md:text-lg sm:text-lg text-center font-bold text-white-A700">
+                    {rate.fourYearFixedInsured}
+                  </Text>
+                  <Text className="lg:text-3xl md:text-lg sm:text-lg text-center font-bold text-white-A700">
+                    {rate.fourYearFixedInsurable}
+                  </Text>
+                  <Text className="lg:text-3xl md:text-lg sm:text-lg text-center font-bold text-white-A700">
+                    {rate.fourYearFixedConventional}
+                  </Text>
                 </div>
                 <div className="flex flex-col rounded-lg shadow-2xl bg-[#3756A8] h-full w-full justify-evenly">
-                  <Text className="text-3xl sm:text-lg text-center font-bold text-white-A700">{rate.fiveYearFixedInsured}</Text>
-                  <Text className="text-3xl sm:text-lg text-center font-bold text-white-A700">{rate.fiveYearFixedInsurable}</Text>
-                  <Text className="text-3xl sm:text-lg text-center font-bold text-white-A700">{rate.fiveYearFixedConventional}</Text>
+                  <Text className="lg:text-3xl md:text-lg sm:text-lg text-center font-bold text-white-A700">
+                    {rate.fiveYearFixedInsured}
+                  </Text>
+                  <Text className="lg:text-3xl md:text-lg sm:text-lg text-center font-bold text-white-A700">
+                    {rate.fiveYearFixedInsurable}
+                  </Text>
+                  <Text className="lg:text-3xl md:text-lg sm:text-lg text-center font-bold text-white-A700">
+                    {rate.fiveYearFixedConventional}
+                  </Text>
                 </div>
               </div>
             </div>

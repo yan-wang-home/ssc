@@ -3,7 +3,7 @@ import React from 'react';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import { Translate } from 'react-jhipster';
-import { Button, Img, Input, Text } from 'app/modules/components';
+import { Img, Input, Text } from 'app/modules/components';
 
 const ComingSoon: React.FC = () => {
   return (
@@ -14,10 +14,10 @@ const ComingSoon: React.FC = () => {
           <Img src="content/images/comingsoon.png" alt="Background" className="w-full h-screen sm:h-[700px] object-fill" />
           {/* Home Page Main Picture */}
           <div className="absolute top-1/2 transform -translate-y-1/2 text-white w-full">
-            <Text className="text-8xl font-bold text-blue-900 mb-4 lg:text-center sm:text-center sm:backdrop-blur-sm animate-pulse">
+            <Text className="lg:text-8xl md:text-4xl sm:text-4xl font-bold text-blue-900 mb-4 lg:text-center sm:text-center sm:backdrop-blur-sm animate-pulse">
               <Translate contentKey="comingsoon.title" />
             </Text>
-            <Text className="text-2xl text-blue-900 text-center mt-4 sm:backdrop-blur-sm">
+            <Text className="lg:text-2xl md:text-lg sm:text-lg text-blue-900 text-center mt-4 sm:backdrop-blur-sm">
               <Translate contentKey="comingsoon.subTitle" />
             </Text>
           </div>

@@ -51,7 +51,7 @@ const Header: React.FC<HeaderProps> = props => {
                     <Img className="h-[65px] md:h-[56px] sm:h-[45px]" src="content/images/logo.png" alt="Group448" />
                   </Link>
                   <Link to="/" className="pl-2 alert-link items-center">
-                    <Text className="lg:text-[25px] md:text-[20px] sm:text-[15px] text-sky-800" size="txtCinzelDecorativeBold16">
+                    <Text className="lg:text-[25px] md:text-[20px] sm:text-[20px] text-sky-800" size="txtCinzelDecorativeBold16">
                       <Translate contentKey="header.title" />
                     </Text>
                   </Link>
@@ -163,40 +163,46 @@ const Header: React.FC<HeaderProps> = props => {
                   </Link>
                 </li>
               </ul>
-              <div className="inline-block py-2">
+              <div className="lg:flex md:hidden sm:hidden inline-block py-2">
                 <LocaleMenu currentLocale={currentLocale} onClick={handleLocaleChange} />
               </div>
+              <div className="lg:hidden"></div>
             </nav>
             <Disclosure.Panel className="lg:hidden">
               {({ close }) => (
                 <div className="navbar-menu relative z-50">
                   <div className="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
                   <nav className="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto">
-                    <div className="flex items-center">
-                      <div
-                        id="company-logo"
-                        className="flex flex-row gap-2 items-end lg:justify-items-start md:justify-items-center sm:justify-items-center"
-                      >
-                        <Link to="#" className="alert-link">
-                          <Img className="h-[50px] w-[50px]" src="content/images/logo.png" alt="Group448" />
-                        </Link>
-                        <Link to="#" className="pl-2 alert-link items-center">
-                          <Text className="mb-[12px] text-[22px] text-sky-800" size="txtCinzelDecorativeBold16">
-                            <Translate contentKey="header.title" />
-                          </Text>
-                        </Link>
-                      </div>
-                      <button className="navbar-close absolute right-4" onClick={() => close()}>
-                        <svg
-                          className="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500"
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
+                    <div className="flex flex-col">
+                      <div className="flex items-center gap-2">
+                        <div
+                          id="company-logo"
+                          className="flex flex-row gap-2 items-end lg:justify-items-start md:justify-items-center sm:justify-items-center"
                         >
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
-                        </svg>
-                      </button>
+                          <Link to="/" className="alert-link">
+                            <Img className="h-[50px] w-[50px]" src="content/images/logo.png" alt="Group448" />
+                          </Link>
+                          <Link to="/" className="pl-2 alert-link items-center">
+                            <Text className="mb-[10px] text-[19px] text-sky-800" size="txtCinzelDecorativeBold16">
+                              <Translate contentKey="header.title" />
+                            </Text>
+                          </Link>
+                        </div>
+                        <button className="navbar-close absolute right-3" onClick={() => close()}>
+                          <svg
+                            className="h-6 w-6 text-gray-400 cursor-pointer hover:text-gray-500"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
+                          </svg>
+                        </button>
+                      </div>
+                      <div className="flex justify-end py-2">
+                        <LocaleMenu currentLocale={currentLocale} onClick={handleLocaleChange} />
+                      </div>
                     </div>
                     <hr className="h-0.5 border-t-0 bg-blue-800 dark:bg-blue-800 mt-3 w-full" />
                     <div>
