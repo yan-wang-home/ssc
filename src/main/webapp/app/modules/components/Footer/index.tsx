@@ -10,12 +10,12 @@ const Footer: React.FC<FooterProps> = props => {
   return (
     <>
       <footer className={props.className}>
-        <div className="flex flex-col sm:gap-10 gap-1 items-center justify-evenly mb-6 mt-[35px] w-[78%]">
+        <div className="flex flex-col sm:gap-10 gap-1 items-center justify-evenly mb-6 mt-[35px] lg:w-[78%] md:w-[88%] sm:w-[95%]">
           <div className="flex lg:flex-row sm:flex-col items-center justify-start w-full mx-auto">
             <div className="flex flex-col lg:items-start sm:items-center justify-center w-full relative">
               <div className="flex flex-row items-center lg:w-full">
                 <Link to="/" className="alert-link">
-                  <Img className="h-[50px] w-[50px]" src="content/images/logo.png" alt="Group448 One" />
+                  <Img className="w-[50px]" src="content/images/logo.png" alt="Group448 One" />
                 </Link>
                 <Link to="/" className="alert-link">
                   <Text className="ml-2 text-xl text-blue-900" size="txtCinzelDecorativeBold16Cyan300">

@@ -56,10 +56,15 @@ const SearchResultPage: React.FC = () => {
           <div className="flex md:flex-col flex-row md:gap-10 gap-[75px] items-start justify-center max-w-[1350px] mt-[100px] mx-auto pb-[39px] lg:pl-[39px] md:px-5 rounded-md w-full">
             {users.length === 0 && (
               <div className="flex flex-col items-center justify-start w-full">
-                <Img src="content/images/not-found.png" alt="Background" className="w-full h-screen sm:h-[700px] object-fill" />
+                <div className="hidden lg:flex">
+                  <Img src="content/images/not-found.png" alt="Background" className="w-full h-screen sm:h-[700px] object-fill" />
+                </div>
+                <div className="hidden md:flex sm:flex">
+                  <Img src="content/images/not-found-short.png" alt="Background" className="w-full h-screen sm:h-[700px] object-fill" />
+                </div>
                 {/* Home Page Main Picture */}
-                <div className="absolute lg:top-1/2 md:top-1/5 sm:top-1/3 transform -translate-y-1/2 text-white w-full">
-                  <Text className="lg:text-3xl md:text-2xl sm:text-xl font-bold text-blue-900 mb-2 lg:text-center sm:text-center sm:backdrop-blur-sm animate-pulse">
+                <div className="absolute lg:top-1/2 md:top-2/3 sm:top-1/3 transform -translate-y-1/2 text-white w-full">
+                  <Text className="lg:text-3xl md:text-2xl sm:text-xl font-bold text-blue-900 mb-2 text-center sm:backdrop-blur-sm animate-pulse">
                     <Translate contentKey="search.notFound.title" />
                   </Text>
                   <Text className="lg:text-2xl md:text-xl sm:text-lg text-blue-900 text-center mb-4 sm:backdrop-blur-sm">

@@ -32,11 +32,11 @@ const AboutPage: React.FC = () => {
               >
                 <Translate contentKey="about.section1.title" />
               </Text>
-              <div className="flex lg:flex-row md:flex-col sm:flex-col lg:w-11/12 sm:w-full pt-10 lg:gap-24 md:gap-8 sm:gap-8">
-                <div className="flex flex-col lg:w-1/4 sm:w-full items-center">
+              <div className="flex lg:flex-row md:flex-row sm:flex-col lg:w-11/12 sm:w-full pt-10 lg:gap-24 md:gap-8 sm:gap-8">
+                <div className="flex flex-col lg:w-1/4 md:w-1/2 sm:w-full items-center">
                   <Img className="w-full" src="content/images/aboutus-connie.png" />
                 </div>
-                <div className="flex flex-col lg:w-3/4 sm:w-full lg:gap-4 sm:gap-2">
+                <div className="flex flex-col lg:w-3/4 md:w-1/2 sm:w-full lg:gap-4 sm:gap-2">
                   <div className="underline decoration-2">
                     <Text className="text-blue-900 lg:text-4xl md:text-2xl sm:text-2xl">
                       <Translate contentKey="about.section1.subTitle" />
@@ -57,11 +57,11 @@ const AboutPage: React.FC = () => {
                 <Translate contentKey="about.section1.note" />
               </Text>
               {/* Section 2 */}
-              <div className="flex lg:flex-row md:flex-col sm:flex-col bg-gray-300 w-full lg:gap-16 mt-5">
-                <div className="flex flex-col lg:w-1/3 md:w-full sm:w-full items-center lg:hidden">
+              <div className="flex lg:flex-row md:flex-row sm:flex-col bg-gray-300 w-full lg:gap-16 mt-5">
+                <div className="flex flex-col lg:w-1/3 md:w-full sm:w-full items-center lg:hidden md:hidden">
                   <Img className="w-full" src="content/images/aboutus-img1.png" />
                 </div>
-                <div className="flex flex-col lg:gap-4 sm:gap-2 lg:w-1/3 sm:w-full lg:p-5 md:p-3 sm:p-3 lg:mt-16 lg:ml-10">
+                <div className="flex flex-col lg:gap-4 sm:gap-2 md:w-1/3 lg:w-1/3 sm:w-full lg:p-5 md:p-3 sm:p-3 lg:mt-16 lg:ml-10">
                   <Text className="text-blue-900 lg:text-3xl md:text-2xl sm:text-2xl">
                     <Translate contentKey="about.section2.subSection1.title" />
                   </Text>
@@ -72,7 +72,7 @@ const AboutPage: React.FC = () => {
                     <Translate contentKey="about.section2.subSection1.content2" />
                   </Text>
                 </div>
-                <div className="flex flex-col lg:gap-4 sm:gap-2 lg:w-1/3 sm:w-full lg:p-5 md:p-3 sm:p-3 lg:mt-16 text-justify">
+                <div className="flex flex-col lg:gap-4 sm:gap-2 md:w-1/3 lg:w-1/3 sm:w-full lg:p-5 md:p-3 sm:p-3 lg:mt-16 text-justify">
                   <Text className="text-blue-900 lg:text-3xl md:text-2xl sm:text-2xl">
                     <Translate contentKey="about.section2.subSection2.title" />
                   </Text>
@@ -83,7 +83,7 @@ const AboutPage: React.FC = () => {
                     <Translate contentKey="about.section2.subSection2.content2" />
                   </Text>
                 </div>
-                <div className="hidden lg:flex flex-col lg:w-1/3 md:w-full sm:w-full items-center">
+                <div className="hidden lg:flex md:flex flex-col lg:w-1/3 md:w-1/3 sm:w-full items-center">
                   <Img className="w-full" src="content/images/aboutus-img1.png" />
                 </div>
               </div>

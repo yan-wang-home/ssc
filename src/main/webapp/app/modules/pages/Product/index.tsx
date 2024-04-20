@@ -15,7 +15,7 @@ const ProductsPage: React.FC = () => {
           <div className="flex flex-col gap-12 items-center justify-start mx-auto w-full px-10">
             <div className="flex flex-col gap-0 items-center justify-start mb-3">
               <Text
-                className="leading-[54.00px] sm:text-[34px] md:text-[40px] text-[50px] text-center text-blue-900 w-[80%] sm:w-full"
+                className="leading-[54.00px] sm:text-[34px] md:text-[40px] lg:text-[50px] text-center text-blue-900 w-[80%] sm:w-full"
                 size="txtChivoBold44"
               >
                 <Translate contentKey="product.title" />

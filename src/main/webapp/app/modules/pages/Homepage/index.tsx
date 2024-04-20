@@ -70,15 +70,15 @@ const HomepagePage: React.FC = () => {
           <Img src="content/images/landing_page.jpeg" alt="Background" className="w-full h-screen sm:h-[700px] object-cover" />
           {/* Home Page Main Picture */}
           <div className="absolute top-1/2 transform -translate-y-1/2 text-white p-8 w-full">
-            <Text className="lg:text-4xl md:text-2xl sm:text-2xl font-bold text-blue-900 mb-4 lg:text-left sm:text-center sm:backdrop-blur-sm">
+            <Text className="lg:text-4xl md:text-3xl sm:text-xl font-bold text-blue-900 mb-4 lg:text-left md:text-left sm:text-center sm:backdrop-blur-sm">
               <Translate contentKey="homepage.title1" />
               <br />
               <Translate contentKey="homepage.title2" />
             </Text>
-            <Text className="lg:text-2xl md:text-xl sm:text-xl text-blue-900 sm:text-center mt-4 sm:backdrop-blur-sm">
+            <Text className="lg:text-2xl md:text-xl sm:text-lg text-blue-900 lg:text-left md:text-left sm:text-center mt-4 sm:backdrop-blur-sm">
               <Translate contentKey="homepage.searchTitle" />
             </Text>
-            <div className="bg-gray-50 border border-solid border-teal-400 flex sm:flex-col flex-row mt-2 gap-[22px] items-center justify-end p-1.5 rounded-md w-2/5 sm:w-full">
+            <div className="bg-gray-50 border border-solid border-teal-400 flex sm:flex-col flex-row mt-2 gap-[22px] items-center justify-end p-1.5 rounded-md lg:w-2/5 md:w-3/5 sm:w-full">
               <Input
                 name="box"
                 placeholder={translate('homepage.searchPlaceholder')}
@@ -106,12 +106,12 @@ const HomepagePage: React.FC = () => {
 
         {/* 3 Steps */}
         <div className="flex flex-col items-center justify-start w-full">
-          <div className="flex flex-col gap-12 items-center justify-start max-w-[1112px] mt-[130px] sm:mt-8 mx-auto md:px-5 w-full">
+          <div className="flex flex-col gap-12 items-center justify-start max-w-[1112px] lg:mt-[130px] md:mt-[80px] sm:mt-8 mx-auto md:px-5 w-full">
             <div className="flex flex-col gap-0 items-center justify-start max-w-[1112px] w-full">
-              <Text className="leading-[54.00px] lg:text-[50px] md:text-2xl sm:text-2xl text-center text-blue-900 w-[90%]">
+              <Text className="leading-[54.00px] lg:text-[50px] md:text-3xl sm:text-2xl text-center text-blue-900 w-[90%]">
                 <Translate contentKey="homepage.stepTitle" />
               </Text>
-              <Text className="leading-[54.00px] lg:text-[20px] md:text-sm sm:text-sm text-center text-blue-900 w-[90%]">
+              <Text className="lg:leading-[54.00px] lg:text-[20px] md:text-lg sm:text-sm text-center text-blue-900 w-[90%]">
                 <Translate contentKey="homepage.stepSubTitle" />
               </Text>
             </div>
@@ -167,15 +167,15 @@ const HomepagePage: React.FC = () => {
                 </Card>
               </div>
             </div>
-            <div className="lg:hidden mx-auto w-[85%] h-full">
-              <Carousel pauseOnHover>
-                <Card className="w-full shadow-2xl rounded-2xl relative">
+            <div className="lg:hidden mx-auto md:w-[70%] sm:w-[85%] sm:h-full">
+              <Carousel draggable pauseOnHover>
+                <Card className="w-full md:h-[600px] sm:h-[400px] shadow-2xl rounded-2xl relative">
                   <h5 className="absolute top-5 left-5 text-2xl font-bold tracking-tight text-gray-600 dark:text-white">
                     <Translate contentKey="homepage.step1" />
                   </h5>
                   <div className="flex items-center justify-center">
                     <Img
-                      className="w-[200px]"
+                      className="md:w-[250px] sm:w-[200px]"
                       // src="content/images/edit-file-svgrepo-com.svg"
                       src="content/images/edit.svg"
                       alt="call"
@@ -185,23 +185,23 @@ const HomepagePage: React.FC = () => {
                     <Translate contentKey="homepage.step1Action" />
                   </p>
                 </Card>
-                <Card className="w-full shadow-2xl rounded-2xl relative">
+                <Card className="w-full md:h-[600px] sm:h-[400px] shadow-2xl rounded-2xl relative">
                   <h5 className="absolute top-5 left-5 text-2xl font-bold tracking-tight text-gray-600 dark:text-white">
                     <Translate contentKey="homepage.step2" />
                   </h5>
                   <div className="flex items-center justify-center">
-                    <Img className="w-[200px]" src="content/images/chat.svg" alt="call" />
+                    <Img className="md:w-[250px] sm:w-[200px]" src="content/images/chat.svg" alt="call" />
                   </div>
                   <p className="font-normal text-gray-700 dark:text-gray-400 text-xl text-center">
                     <Translate contentKey="homepage.step2Action" />
                   </p>
                 </Card>
-                <Card className="w-full shadow-2xl rounded-2xl relative">
+                <Card className="w-full md:h-[600px] sm:h-[400px] shadow-2xl rounded-2xl relative">
                   <h5 className="absolute top-5 left-5 text-2xl font-bold tracking-tight text-gray-600 dark:text-white">
                     <Translate contentKey="homepage.step3" />
                   </h5>
                   <div className="flex items-center justify-center">
-                    <Img className="w-[200px]" src="content/images/coffee.svg" alt="call" />
+                    <Img className="md:w-[250px] sm:w-[200px]" src="content/images/coffee.svg" alt="call" />
                   </div>
                   <p className="font-normal text-gray-700 dark:text-gray-400 text-xl text-center">
                     <Translate contentKey="homepage.step3Action" />
@@ -212,11 +212,11 @@ const HomepagePage: React.FC = () => {
           </div>
 
           {/* Get in touch & Fill in form */}
-          <div className="flex lg:flex-row sm:flex-col items-center justify-start w-full lg:mt-[130px] md:mt-14 sm:mt-14 mx-auto">
+          <div className="flex lg:flex-row md:flex-col sm:flex-col items-center justify-start w-full lg:mt-[130px] md:mt-20 sm:mt-14 mx-auto">
             <div className="flex sm:flex-col lg:flex-row items-center justify-center w-full relative">
               <Img src="content/images/get_in_touch.jpg" alt="Background" className="w-full object-cover" />
               <div className="absolute top-1/2 transform -translate-y-1/2 text-white p-8">
-                <Text className="lg:text-5xl md:text-3xl sm:text-2xl text-center font-bold text-white-A700">
+                <Text className="lg:text-5xl md:text-3xl sm:text-xl text-center font-bold text-white-A700">
                   <Translate contentKey="homepage.contactUsTitle1" /> <br /> <Translate contentKey="homepage.contactUsTitle2" /> <br />{' '}
                   <Translate contentKey="homepage.contactUsTitle3" />
                 </Text>
@@ -232,10 +232,10 @@ const HomepagePage: React.FC = () => {
                 </button>
               </div>
             </div>
-            <div className="flex sm:flex-col lg:flex-row items-center justify-center w-full relative">
+            <div className="flex sm:flex-col md:flex-col lg:flex-row items-center justify-center w-full relative">
               <Img src="content/images/fill-form.jpg" alt="Background" className="w-full object-cover" />
               <div className="absolute top-1/2 transform -translate-y-1/2 text-white p-8">
-                <Text className="lg:text-5xl md:text-3xl sm:text-2xl text-center font-bold text-white-A700">
+                <Text className="lg:text-5xl md:text-3xl sm:text-xl text-center font-bold text-white-A700">
                   <Translate contentKey="homepage.fillFormTitle1" /> <br /> <Translate contentKey="homepage.fillFormTitle2" />
                 </Text>
               </div>
@@ -251,19 +251,19 @@ const HomepagePage: React.FC = () => {
                   <Modal.Header />
                   <Modal.Body>
                     <div className="bg-white-A700 flex flex-col font-chivo gap-[0px] items-center justify-start mx-auto w-full">
-                      <div className="pt-2 pb-2 flex flex-row gap-2 items-end justify-center transform hover:scale-110 hover:border-white transition-transform duration-3000 ease-in-out">
+                      <div className="pt-2 pb-2 flex flex-row gap-2 items-center justify-center transform hover:scale-110 hover:border-white transition-transform duration-3000 ease-in-out">
                         <Link to="/" className="alert-link">
-                          <Img className="h-[60px] w-[60px]" src="content/images/logo.png" alt="Group448" />
+                          <Img className="lg:w-[60px] md:w-[50px] sm:w-[40px]" src="content/images/logo.png" alt="Group448" />
                         </Link>
-                        <Link to="/" className="pl-2 alert-link">
-                          <Text className="mb-[12px] text-[25px] text-sky-800" size="txtCinzelDecorativeBold16">
+                        <Link to="/" className="pl-2 alert-link text-center">
+                          <Text className="lg:text-[25px] md:text-[20px] sm:text-[18px] text-sky-800" size="txtCinzelDecorativeBold16">
                             <Translate contentKey="global.title">
                               <Translate contentKey="homepage.fillFormModal.title" />
                             </Translate>
                           </Text>
                         </Link>
                       </div>
-                      <p className="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 text-lg sm:text-xl">
+                      <p className="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 lg:text-xl md:text-lg sm:text-sm">
                         <Translate contentKey="homepage.fillFormModal.subTitle" />
                       </p>
                       <form action="#" className="space-y-5">
