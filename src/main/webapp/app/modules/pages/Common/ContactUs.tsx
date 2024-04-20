@@ -99,6 +99,8 @@ const ContactUs: React.FC = () => {
               </div>
             </div>
             <div className="relative h-[550px] max-md:min-h-[350px]">
+              {/* <iframe width="600" height="450" style="border:0" loading="lazy" allowFullScreen */}
+              {/*         src="https://www.google.com/maps/embed/v1/place?q=place_id:EkIxNzUgV2VzdCBCZWF2ZXIgQ3JlZWsgUmQgdW5pdCAzLCBSaWNobW9uZCBIaWxsLCBPTiBMNEIgM00xLCBDYW5hZGEiIhogChYKFAoSCW98CI5JKyuIEbm6Ce974hKPEgZ1bml0IDM&key=..."></iframe> */}
               <iframe
                 src="http://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2877.214502440468!2d-79.39470638785994!3d43.851382539469384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b2b39d32a5c13%3A0x2084d46d74ccc126!2s175%20West%20Beaver%20Creek%20Rd%20%233%2C%20Richmond%20Hill%2C%20ON%20L4B%201H4!5e0!3m2!1sen!2sca!4v1713587594398!5m2!1sen!2sca"
                 className="left-0 top-0 h-full w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg"
