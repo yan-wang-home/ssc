@@ -16,6 +16,8 @@ export const PasswordResetFinishPage = () => {
 
   const [password, setPassword] = useState('');
 
+  const [success, setSuccess] = useState(false);
+
   useEffect(
     () => () => {
       dispatch(reset());
@@ -60,6 +62,12 @@ export const PasswordResetFinishPage = () => {
         <Button color="success" data-cy="submit">
           <Translate contentKey="reset.finish.form.button">Validate new password</Translate>
         </Button>
+
+        {success && (
+          <div className="alert alert-success">
+            <Translate contentKey="userManagement.passwordChangeSuccess" />
+          </div>
+        )}
       </ValidatedForm>
     );
   };
@@ -69,6 +77,7 @@ export const PasswordResetFinishPage = () => {
   useEffect(() => {
     if (successMessage) {
       toast.success(translate(successMessage));
+      setSuccess(true);
     }
   }, [successMessage]);
 

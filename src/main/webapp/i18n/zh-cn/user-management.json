@@ -22,6 +22,7 @@
     "activated": "已激活",
     "deactivated": "失效",
     "notFound": "找不到你搜索的用户",
+    "passwordChangeSuccess": "密码更改成功",
     "profiles": "角色",
     "langKey": "语言",
     "applicationStatus": "申请状态",

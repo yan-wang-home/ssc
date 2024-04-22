@@ -81,7 +81,6 @@ public class User extends AbstractAuditingEntity<String> implements Serializable
 
     @Size(max = 20)
     @Field("reset_key")
-    @JsonIgnore
     private String resetKey;
 
     @Field("reset_date")

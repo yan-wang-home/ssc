@@ -5,12 +5,13 @@ import { Translate, TextFormat, JhiPagination, JhiItemCount, getPaginationState,
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSort, faSortUp, faSortDown } from '@fortawesome/free-solid-svg-icons';
 
-import { APP_DATE_FORMAT } from 'app/config/constants';
+import { APP_DATE_FORMAT, AUTHORITIES } from 'app/config/constants';
 import { ASC, DESC, ITEMS_PER_PAGE, SORT } from 'app/shared/util/pagination.constants';
 import { overridePaginationStateWithQueryParams } from 'app/shared/util/entity-utils';
 import { getUsersAsAdmin, queryUsers, updateUser } from './user-management.reducer';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 import { Input } from 'app/modules/components';
+import { IUser } from 'app/shared/model/user.model';
 
 export const UserManagement = () => {
   const dispatch = useAppDispatch();
@@ -111,6 +112,14 @@ export const UserManagement = () => {
   const clear = () => {
     setSearch('');
     getUsersFromProps();
+  };
+
+  const isSuperAdmin = (user: IUser): boolean => {
+    return user.login === 'admin' || user.login === 'ssc-super-admin';
+  };
+
+  const isAdmin = (user: IUser): boolean => {
+    return user.authorities.some(auth => auth === AUTHORITIES.ADMIN);
   };
 
   return (
@@ -245,13 +254,25 @@ export const UserManagement = () => {
                       <Translate contentKey="entity.action.view">View</Translate>
                     </span>
                   </Button>
-                  <Button tag={Link} to={`${user.login}/edit`} color="primary" size="sm">
+                  <Button
+                    tag={Link}
+                    to={`${user.login}/edit`}
+                    color="primary"
+                    size="sm"
+                    disabled={account.login !== user.login && isAdmin(user) && !isSuperAdmin(account)}
+                  >
                     <FontAwesomeIcon icon="pencil-alt" />{' '}
                     <span className="d-none d-md-inline">
                       <Translate contentKey="entity.action.edit">Edit</Translate>
                     </span>
                   </Button>
-                  <Button tag={Link} to={`${user.login}/delete`} color="danger" size="sm" disabled={account.login === user.login}>
+                  <Button
+                    tag={Link}
+                    to={`${user.login}/delete`}
+                    color="danger"
+                    size="sm"
+                    disabled={account.login === user.login || !isSuperAdmin(account)}
+                  >
                     <FontAwesomeIcon icon="trash" />{' '}
                     <span className="d-none d-md-inline">
                       <Translate contentKey="entity.action.delete">Delete</Translate>

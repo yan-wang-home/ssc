@@ -1,6 +1,7 @@
 package com.mortgagehub.web.rest;
 
 import com.mortgagehub.config.Constants;
+import com.mortgagehub.domain.Authority;
 import com.mortgagehub.domain.User;
 import com.mortgagehub.repository.UserRepository;
 import com.mortgagehub.security.AuthoritiesConstants;
@@ -135,7 +136,16 @@ public class UserResource {
                 //                }
                 return userService.createUser(userDTO);
             })
-            .doOnSuccess(mailService::sendCreationEmail)
+            .doOnSuccess(user -> {
+                var adminAuthority = new Authority();
+                adminAuthority.setName(AuthoritiesConstants.ADMIN);
+                if (user.getAuthorities().contains(adminAuthority)) {
+                    System.out.println("restKey: " + user.getResetKey());
+                    mailService.sendAdminCreationEmail(user);
+                } else {
+                    mailService.sendCreationEmail(user);
+                }
+            })
             .map(user -> {
                 try {
                     return ResponseEntity

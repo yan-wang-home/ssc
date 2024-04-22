@@ -23,6 +23,7 @@
     "activated": "Activated",
     "deactivated": "Deactivated",
     "notFound": "No Users found",
+    "passwordChangeSuccess": "Password Change Successful",
     "profiles": "Profiles",
     "langKey": "Language",
     "applicationStatus": "Application Status",

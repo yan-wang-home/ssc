@@ -120,6 +120,12 @@ public class MailService {
     }
 
     @Async
+    public void sendAdminCreationEmail(User user) {
+        log.debug("Sending admin creation email to '{}'", user.getEmail());
+        self.sendEmailFromTemplate(user, "mail/adminCreationEmail", "email.activation.title");
+    }
+
+    @Async
     public void sendApplicationStatusChangeEmail(User user) {
         log.debug("Sending application status change email to '{}'", user.getEmail());
         self.sendEmailFromTemplate(user, "mail/applicationStatusChangeEmail", "email.applicationstatus.title");

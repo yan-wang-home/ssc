@@ -58,6 +58,8 @@ public class InitialSetupMigration {
         //        template.save(user);
         User admin = createAdmin(adminAuthority, userAuthority);
         template.save(admin);
+        User superAdmin = createSuperAdmin(adminAuthority, userAuthority);
+        template.save(superAdmin);
     }
 
     private void addDefaultRateConfig() {
@@ -105,9 +107,28 @@ public class InitialSetupMigration {
         return userUser;
     }
 
+    private User createSuperAdmin(Authority adminAuthority, Authority userAuthority) {
+        User adminUser = new User();
+        adminUser.setId("super-user");
+        adminUser.setLogin("ssc-super-admin");
+        adminUser.setPassword("$2a$10$gSAhZrxMllrbgj/kkK9UceBPpChGWJA7SYIb1Mqo.n5aNLq1/oRrC");
+        adminUser.setFirstName("admin");
+        adminUser.setLastName("Super Administrator");
+        adminUser.setEmail("admin@ssc.finance");
+        adminUser.setApplicationStatus(null);
+        adminUser.setApplications(Collections.emptyList());
+        adminUser.setActivated(true);
+        adminUser.setLangKey("en");
+        adminUser.setCreatedBy(Constants.SYSTEM);
+        adminUser.setCreatedDate(Instant.now());
+        adminUser.getAuthorities().add(adminAuthority);
+        adminUser.getAuthorities().add(userAuthority);
+        return adminUser;
+    }
+
     private User createAdmin(Authority adminAuthority, Authority userAuthority) {
         User adminUser = new User();
-        adminUser.setId("user-1");
+        adminUser.setId("admin-user");
         adminUser.setLogin("admin");
         adminUser.setPassword("$2a$10$gSAhZrxMllrbgj/kkK9UceBPpChGWJA7SYIb1Mqo.n5aNLq1/oRrC");
         adminUser.setFirstName("admin");
