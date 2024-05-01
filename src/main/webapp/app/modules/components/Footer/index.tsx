@@ -168,9 +168,9 @@ const Footer: React.FC<FooterProps> = props => {
                     <Translate contentKey="footer.contactus" />
                   </a>
                 </Text>
-                <Text className="mt-1 text-base text-blue-900" size="txtChivoRegular16Bluegray100">
-                  <Translate contentKey="footer.faq" />
-                </Text>
+                {/* <Text className="mt-1 text-base text-blue-900" size="txtChivoRegular16Bluegray100"> */}
+                {/*   <Translate contentKey="footer.faq" /> */}
+                {/* </Text> */}
                 <Text className="mt-1 text-base text-blue-900" size="txtChivoRegular16Bluegray100">
                   <a href="/privacypolicy">
                     <Translate contentKey="footer.privacypolicy" />
@@ -181,10 +181,10 @@ const Footer: React.FC<FooterProps> = props => {
                 <Text className="underline decoration-2 text-base text-blue-900 font-bold" size="txtChivoBold16WhiteA700">
                   <Translate contentKey="footer.about" />
                 </Text>
+                {/* <Text className="mt-6 text-base text-blue-900" size="txtChivoRegular16Bluegray100"> */}
+                {/*   <Translate contentKey="footer.ourstory" /> */}
+                {/* </Text> */}
                 <Text className="mt-6 text-base text-blue-900" size="txtChivoRegular16Bluegray100">
-                  <Translate contentKey="footer.ourstory" />
-                </Text>
-                <Text className="mt-1 text-base text-blue-900" size="txtChivoRegular16Bluegray100">
                   <a href="/about">
                     <Translate contentKey="footer.team" />
                   </a>

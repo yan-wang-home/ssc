@@ -182,3 +182,39 @@ ul li a {
   background: #6b6b6b;
   border-radius: 10px;
 }
+
+.calculator-lg-div {
+  width: 960px;
+  position: relative;
+  margin: auto;
+}
+
+.calculator-md-div {
+  width: 700px;
+  position: relative;
+  margin: auto;
+}
+
+.calculator-sm-div {
+  width: 330px;
+  position: relative;
+  margin: auto;
+}
+
+.calculator-iframe {
+  width: 100%;
+  background: #075269;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  display: block;
+  clear: both;
+  padding: 3px 0;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-family: arial;
+  text-decoration: none;
+  cursor: pointer;
+  margin-top: -26px;
+  position: relative;
+}

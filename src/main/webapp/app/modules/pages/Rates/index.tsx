@@ -101,7 +101,7 @@ const RatesPage: React.FC = () => {
                 </div>
                 <div className="flex flex-col rounded-lg shadow-2xl bg-[#3756A8] h-full w-full justify-evenly">
                   <Text className="lg:text-3xl md:text-xl sm:text-lg text-center font-bold text-white-A700">
-                    {rate.threeYearFixedInsurable}
+                    {rate.threeYearFixedInsured}
                   </Text>
                   <Text className="lg:text-3xl md:text-xl sm:text-lg text-center font-bold text-white-A700">
                     {rate.threeYearFixedInsurable}

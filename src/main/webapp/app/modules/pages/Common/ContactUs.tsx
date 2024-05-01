@@ -10,7 +10,7 @@ const ContactUs: React.FC = () => {
       <div className="bg-gray-100 flex flex-col font-chivo items-center justify-start mx-auto w-full">
         <Header className="flex items-center justify-center sm:px-5 w-full" />
         <div className="flex flex-col items-center justify-start w-full">
-          <div className="grid lg:grid-cols-2 sm:grid-cols-1 gap-16 items-center relative overflow-hidden p-10 w-full mx-auto bg-white text-[#333] font-[sans-serif] before:absolute before:right-0 before:w-[300px] lg:before:bg-blue-400 before:h-full max-md:before:hidden">
+          <div className="grid lg:grid-cols-2 sm:grid-cols-1 gap-16 items-center relative overflow-hidden lg:p-10 md:p-6 sm:p-3 w-full mx-auto bg-white text-[#333] font-[sans-serif] before:absolute before:right-0 before:w-[300px] lg:before:bg-blue-400 before:h-full max-md:before:hidden">
             <div>
               <div className="flex sm:flex-col flex-col items-center justify-center lg:mt-8 md:mt-3 sm:mt-3 lg:gap-5 md:gap-3 sm:gap-3 space-y-4 w-full">
                 <div className="items-start">
@@ -99,14 +99,18 @@ const ContactUs: React.FC = () => {
               </div>
             </div>
             <div className="relative h-[550px] max-md:min-h-[350px]">
-              {/* <iframe width="600" height="450" style="border:0" loading="lazy" allowFullScreen */}
-              {/*         src="https://www.google.com/maps/embed/v1/place?q=place_id:EkIxNzUgV2VzdCBCZWF2ZXIgQ3JlZWsgUmQgdW5pdCAzLCBSaWNobW9uZCBIaWxsLCBPTiBMNEIgM00xLCBDYW5hZGEiIhogChYKFAoSCW98CI5JKyuIEbm6Ce974hKPEgZ1bml0IDM&key=..."></iframe> */}
               <iframe
-                src="http://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2877.214502440468!2d-79.39470638785994!3d43.851382539469384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b2b39d32a5c13%3A0x2084d46d74ccc126!2s175%20West%20Beaver%20Creek%20Rd%20%233%2C%20Richmond%20Hill%2C%20ON%20L4B%201H4!5e0!3m2!1sen!2sca!4v1713587594398!5m2!1sen!2sca"
+                src="https://www.google.com/maps/embed/v1/place?q=place_id:EkIxNzUgV2VzdCBCZWF2ZXIgQ3JlZWsgUmQgdW5pdCAzLCBSaWNobW9uZCBIaWxsLCBPTiBMNEIgM00xLCBDYW5hZGEiIhogChYKFAoSCW98CI5JKyuIEbm6Ce974hKPEgZ1bml0IDM&key=AIzaSyApt6EyQQv3zPvgM6AoeOq95I3I5VlNidM"
                 className="left-0 top-0 h-full w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg"
                 loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
+                allowFullScreen
               />
+              {/* <iframe */}
+              {/*   src="http://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2877.214502440468!2d-79.39470638785994!3d43.851382539469384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b2b39d32a5c13%3A0x2084d46d74ccc126!2s175%20West%20Beaver%20Creek%20Rd%20%233%2C%20Richmond%20Hill%2C%20ON%20L4B%201H4!5e0!3m2!1sen!2sca!4v1713587594398!5m2!1sen!2sca" */}
+              {/*   className="left-0 top-0 h-full w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg" */}
+              {/*   loading="lazy" */}
+              {/*   referrerPolicy="no-referrer-when-downgrade" */}
+              {/* /> */}
             </div>
           </div>
           <Footer className="bg-gray-200 flex items-center justify-center lg:mt-[120px] w-full" />
