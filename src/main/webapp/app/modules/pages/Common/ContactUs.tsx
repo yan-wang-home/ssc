@@ -100,7 +100,7 @@ const ContactUs: React.FC = () => {
             </div>
             <div className="relative h-[550px] max-md:min-h-[350px]">
               <iframe
-                src="https://www.google.com/maps/embed/v1/place?q=place_id:EkIxNzUgV2VzdCBCZWF2ZXIgQ3JlZWsgUmQgdW5pdCAzLCBSaWNobW9uZCBIaWxsLCBPTiBMNEIgM00xLCBDYW5hZGEiIhogChYKFAoSCW98CI5JKyuIEbm6Ce974hKPEgZ1bml0IDM&key=AIzaSyApt6EyQQv3zPvgM6AoeOq95I3I5VlNidM"
+                src="http://www.google.com/maps/embed/v1/place?q=place_id:EkIxNzUgV2VzdCBCZWF2ZXIgQ3JlZWsgUmQgdW5pdCAzLCBSaWNobW9uZCBIaWxsLCBPTiBMNEIgM00xLCBDYW5hZGEiIhogChYKFAoSCW98CI5JKyuIEbm6Ce974hKPEgZ1bml0IDM&key=AIzaSyApt6EyQQv3zPvgM6AoeOq95I3I5VlNidM"
                 className="left-0 top-0 h-full w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg"
                 loading="lazy"
                 allowFullScreen

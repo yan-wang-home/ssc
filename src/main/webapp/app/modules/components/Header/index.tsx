@@ -106,30 +106,30 @@ const Header: React.FC<HeaderProps> = props => {
                     />
                   </svg>
                 </li>
-                {/* <li> */}
-                {/*   <Link */}
-                {/*     to="/calculators" */}
-                {/*     className="text-sky-800 text-xl alert-link transform hover:scale-110 hover:border-white transition-transform duration-3000 ease-in-out" */}
-                {/*   > */}
-                {/*     <Translate contentKey="header.calculators" /> */}
-                {/*   </Link> */}
-                {/* </li> */}
-                {/* <li className="text-gray-300"> */}
-                {/*   <svg */}
-                {/*     xmlns="http://www.w3.org/2000/svg" */}
-                {/*     fill="none" */}
-                {/*     stroke="currentColor" */}
-                {/*     className="w-4 h-4 current-fill" */}
-                {/*     viewBox="0 0 24 24" */}
-                {/*   > */}
-                {/*     <path */}
-                {/*       strokeLinecap="round" */}
-                {/*       strokeLinejoin="round" */}
-                {/*       strokeWidth="2" */}
-                {/*       d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" */}
-                {/*     /> */}
-                {/*   </svg> */}
-                {/* </li> */}
+                <li>
+                  <Link
+                    to="/calculators"
+                    className="text-sky-800 text-xl alert-link transform hover:scale-110 hover:border-white transition-transform duration-3000 ease-in-out"
+                  >
+                    <Translate contentKey="header.calculators" />
+                  </Link>
+                </li>
+                <li className="text-gray-300">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    stroke="currentColor"
+                    className="w-4 h-4 current-fill"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
+                    />
+                  </svg>
+                </li>
                 <li>
                   <Link
                     to="/comingsoon"
@@ -247,14 +247,14 @@ const Header: React.FC<HeaderProps> = props => {
                             <Translate contentKey="header.rates" />
                           </Link>
                         </li>
-                        {/* <li className="mb-1"> */}
-                        {/*   <Link */}
-                        {/*     to="/calculators" */}
-                        {/*     className="block p-4 hover:bg-gray-100 hover:text-blue-600 rounded text-sky-800 md:text-2xl sm:text-xl alert-link transform hover:scale-110 hover:border-white transition-transform duration-3000 ease-in-out" */}
-                        {/*   > */}
-                        {/*     <Translate contentKey="header.calculators" /> */}
-                        {/*   </Link> */}
-                        {/* </li> */}
+                        <li className="mb-1">
+                          <Link
+                            to="/calculators"
+                            className="block p-4 hover:bg-gray-100 hover:text-blue-600 rounded text-sky-800 md:text-2xl sm:text-xl alert-link transform hover:scale-110 hover:border-white transition-transform duration-3000 ease-in-out"
+                          >
+                            <Translate contentKey="header.calculators" />
+                          </Link>
+                        </li>
                         <li className="mb-1">
                           <Link
                             to="/comingsoon"

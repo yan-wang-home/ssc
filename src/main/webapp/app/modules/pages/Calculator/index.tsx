@@ -31,7 +31,7 @@ const CalculatorsPage: React.FC = () => {
                 <div className="calculator-lg-div">
                   <iframe
                     className="w-full"
-                    src="https://www.mortgagecalculator.net/embeddable/v2/?size=1"
+                    src="http://www.mortgagecalculator.net/embeddable/v2/?size=1"
                     frameBorder={2}
                     scrolling="yes"
                     height="330px"
@@ -42,7 +42,7 @@ const CalculatorsPage: React.FC = () => {
                 <div className="calculator-md-div">
                   <iframe
                     className="w-full"
-                    src="https://www.mortgagecalculator.net/embeddable/v2/?size=2"
+                    src="http://www.mortgagecalculator.net/embeddable/v2/?size=2"
                     width="100%"
                     frameBorder={2}
                     scrolling="yes"
@@ -54,7 +54,7 @@ const CalculatorsPage: React.FC = () => {
                 <div className="calculator-sm-div">
                   <iframe
                     className="w-full"
-                    src="https://www.mortgagecalculator.net/embeddable/v2/?size=5"
+                    src="http://www.mortgagecalculator.net/embeddable/v2/?size=5"
                     width="100%"
                     frameBorder={2}
                     scrolling="yes"
