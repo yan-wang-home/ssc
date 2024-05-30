@@ -23,9 +23,12 @@ const Footer: React.FC<FooterProps> = props => {
                   </Text>
                 </Link>
               </div>
+              <div className="mt-[18px] flex flex-col lg:justify-items-center sm:items-center md:items-center lg:w-full">
+                <Img className="w-3/5" src="content/images/NorthWood.jpg" alt="Group448 One" />
+              </div>
               <div className="flex flex-col lg:w-full">
                 <div className="mt-[18px] flex gap-4">
-                  <a className="hover:scale-110" target="_blank" href="https://www.facebook.com/" rel="noreferrer">
+                  <a className="hover:scale-110" target="_blank" /*href="https://www.facebook.com/"*/ rel="noreferrer">
                     <img
                       alt="facebook icon"
                       loading="lazy"
@@ -37,7 +40,7 @@ const Footer: React.FC<FooterProps> = props => {
                       src="content/images/facebook.svg"
                     />
                   </a>
-                  <a className="hover:scale-110" target="_blank" href="https://www.linkedin.com/" rel="noreferrer">
+                  <a className="hover:scale-110" target="_blank" /*href="https://www.linkedin.com/"*/ rel="noreferrer">
                     <img
                       alt="linkdin icon"
                       loading="lazy"
@@ -49,7 +52,7 @@ const Footer: React.FC<FooterProps> = props => {
                       src="content/images/linkdin.svg"
                     />
                   </a>
-                  <a className="hover:scale-110" target="_blank" href="https://www.instagram.com/" rel="noreferrer">
+                  <a className="hover:scale-110" target="_blank" /*href="https://www.instagram.com/"*/ rel="noreferrer">
                     <img
                       alt="instagram icon"
                       loading="lazy"
@@ -61,7 +64,7 @@ const Footer: React.FC<FooterProps> = props => {
                       src="content/images/instagram.svg"
                     />
                   </a>
-                  <a className="hover:scale-110" target="_blank" href="https://twitter.com/" rel="noreferrer">
+                  <a className="hover:scale-110" target="_blank" /*href="https://twitter.com/"*/ rel="noreferrer">
                     <img
                       alt="twitter icon"
                       loading="lazy"
@@ -73,7 +76,7 @@ const Footer: React.FC<FooterProps> = props => {
                       src="content/images/twitter.svg"
                     />
                   </a>
-                  <a className="hover:scale-110" target="_blank" href="https://www.youtube.com/" rel="noreferrer">
+                  <a className="hover:scale-110" target="_blank" /*href="https://www.youtube.com/"*/ rel="noreferrer">
                     <img
                       alt="youtube icon"
                       loading="lazy"

@@ -33,8 +33,11 @@ const AboutPage: React.FC = () => {
                 <Translate contentKey="about.section1.title" />
               </Text>
               <div className="flex lg:flex-row md:flex-row sm:flex-col lg:w-11/12 sm:w-full pt-10 lg:gap-24 md:gap-8 sm:gap-8">
-                <div className="flex flex-col lg:w-1/4 md:w-1/2 sm:w-full items-center">
+                <div className="flex flex-col lg:w-1/4 md:w-1/2 sm:w-full items-center text-center">
                   <Img className="w-full" src="content/images/aboutus-connie.png" />
+                  <Text className="text-blue-900 lg:text-xl md:text-lg sm:text-lg">
+                    <Translate contentKey="about.section1.agent" />
+                  </Text>
                 </div>
                 <div className="flex flex-col lg:w-3/4 md:w-1/2 sm:w-full lg:gap-4 sm:gap-2">
                   <div className="underline decoration-2">

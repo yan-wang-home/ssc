@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Img } from 'app/modules/components';
 
 const langMap = new Map<string, string>([
-  ['en', 'content/images/flag-uk.svg'],
+  ['en', 'content/images/flag-ca.svg'],
   ['zh-cn', 'content/images/flag-china.svg'],
   ['fr', 'content/images/flag-france.svg'],
 ]);
