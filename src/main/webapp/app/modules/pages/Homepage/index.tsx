@@ -74,7 +74,7 @@ const HomepagePage: React.FC = () => {
             className="lg:hidden md:hidden w-full h-screen sm:h-[700px] object-cover"
           />
           {/* Home Page Main Picture */}
-          <div className="absolute lg:top-1/2 sm:bottom-14 md:top-1/2 transform -translate-y-1/2 text-white p-8 w-full">
+          <div className="absolute top-3/4 lg:top-1/2 md:top-1/2 transform -translate-y-1/2 text-white p-8 w-full">
             <Text className="lg:text-4xl md:text-3xl sm:text-xl font-bold text-blue-900 mb-4 lg:text-left md:text-left sm:text-center sm:backdrop-blur-sm">
               <Translate contentKey="homepage.title1" />
               <br />
