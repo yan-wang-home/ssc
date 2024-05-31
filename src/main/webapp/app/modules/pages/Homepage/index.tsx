@@ -67,7 +67,12 @@ const HomepagePage: React.FC = () => {
       <div className="bg-white-A700 flex flex-col font-chivo gap-[0px] /*items-center*/ justify-start mx-auto w-full">
         <Header className="flex items-center justify-center md:px-0 mx-auto w-full" />
         <div className="flex flex-col items-center justify-start w-full">
-          <Img src="content/images/landing_page.jpeg" alt="Background" className="w-full h-screen sm:h-[700px] object-cover" />
+          <Img src="content/images/landing_page.jpeg" alt="Background" className="sm:hidden w-full h-screen sm:h-[700px] object-cover" />
+          <Img
+            src="content/images/landing_small.png"
+            alt="Background"
+            className="lg:hidden md:hidden w-full h-screen sm:h-[700px] object-cover"
+          />
           {/* Home Page Main Picture */}
           <div className="absolute lg:top-1/2 sm:bottom-14 md:top-1/2 transform -translate-y-1/2 text-white p-8 w-full">
             <Text className="lg:text-4xl md:text-3xl sm:text-xl font-bold text-blue-900 mb-4 lg:text-left md:text-left sm:text-center sm:backdrop-blur-sm">

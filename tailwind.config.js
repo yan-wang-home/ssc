@@ -5,7 +5,7 @@ module.exports = {
   theme: {
     // screens: { md: { max: "1050px" }, sm: { max: "550px" } },
     extend: {
-      screens: { sm: { min: '1px', max: '850px' }, md: { min: '851px', max: '1299px' }, lg: '1300px' },
+      screens: { sm: { min: '1px', max: '767px' }, md: { min: '768px', max: '1299px' }, lg: '1300px' },
       colors: {
         gray: {
           50: '#edffff',
