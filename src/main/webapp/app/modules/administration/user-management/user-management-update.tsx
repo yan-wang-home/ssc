@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { locales, languages } from 'app/config/translation';
 import { getUser, getRoles, updateUser, createUser, reset } from './user-management.reducer';
 import { useAppDispatch, useAppSelector, applicationStatuses, applicationStatusList } from 'app/config/store';
+import { IUser } from 'app/shared/model/user.model';
 
 export const UserManagementUpdate = () => {
   const dispatch = useAppDispatch();
@@ -42,10 +43,15 @@ export const UserManagementUpdate = () => {
   };
 
   const isInvalid = false;
+  const account = useAppSelector(state => state.authentication.account);
   const user = useAppSelector(state => state.userManagement.user);
   const loading = useAppSelector(state => state.userManagement.loading);
   const updating = useAppSelector(state => state.userManagement.updating);
   const authorities = useAppSelector(state => state.userManagement.authorities);
+
+  const isSuperAdmin = (user: IUser): boolean => {
+    return user.login === 'admin' || user.login === 'ssc-super-admin';
+  };
 
   return (
     <div className="p-4">
@@ -76,6 +82,7 @@ export const UserManagementUpdate = () => {
               <ValidatedField
                 type="text"
                 name="login"
+                disabled={!isSuperAdmin(account)}
                 label={translate('userManagement.login')}
                 validate={{
                   required: {
@@ -162,7 +169,13 @@ export const UserManagementUpdate = () => {
                   </option>
                 ))}
               </ValidatedField>
-              <ValidatedField type="select" name="authorities" multiple label={translate('userManagement.profiles')}>
+              <ValidatedField
+                disabled={!isSuperAdmin(account)}
+                type="select"
+                name="authorities"
+                multiple
+                label={translate('userManagement.profiles')}
+              >
                 {authorities.map(role => (
                   <option value={role} key={role}>
                     {role}
