@@ -3,8 +3,10 @@ import React from 'react';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import { Translate } from 'react-jhipster';
+import { APIProvider, Map, Marker } from '@vis.gl/react-google-maps';
 
 const ContactUs: React.FC = () => {
+  const position = { lat: 43.84752488828167, lng: -79.38650206890091 };
   return (
     <>
       <div className="bg-gray-100 flex flex-col font-chivo items-center justify-start mx-auto w-full">
@@ -99,18 +101,11 @@ const ContactUs: React.FC = () => {
               </div>
             </div>
             <div className="relative h-[550px] max-md:min-h-[350px]">
-              <iframe
-                className="left-0 top-0 h-full w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg"
-                loading="lazy"
-                allowFullScreen
-                src="https://www.google.com/maps/embed/v1/place?q=place_id:EkIxNzUgV2VzdCBCZWF2ZXIgQ3JlZWsgUmQgdW5pdCAzLCBSaWNobW9uZCBIaWxsLCBPTiBMNEIgM00xLCBDYW5hZGEiIhogChYKFAoSCW98CI5JKyuIEbm6Ce974hKPEgZ1bml0IDM&key=AIzaSyApt6EyQQv3zPvgM6AoeOq95I3I5VlNidM"
-              ></iframe>
-              {/* <iframe */}
-              {/*   src="http://www.google.com/maps/embed/v1/place?q=place_id:EkIxNzUgV2VzdCBCZWF2ZXIgQ3JlZWsgUmQgdW5pdCAzLCBSaWNobW9uZCBIaWxsLCBPTiBMNEIgM00xLCBDYW5hZGEiIhogChYKFAoSCW98CI5JKyuIEbm6Ce974hKPEgZ1bml0IDM&key=AIzaSyApt6EyQQv3zPvgM6AoeOq95I3I5VlNidM" */}
-              {/*   className="left-0 top-0 h-full w-full rounded-t-lg lg:rounded-tr-none lg:rounded-bl-lg" */}
-              {/*   loading="lazy" */}
-              {/*   allowFullScreen */}
-              {/* /> */}
+              <APIProvider apiKey={'AIzaSyApt6EyQQv3zPvgM6AoeOq95I3I5VlNidM'}>
+                <Map defaultCenter={position} defaultZoom={14}>
+                  <Marker position={position} />
+                </Map>
+              </APIProvider>
             </div>
           </div>
           <Footer className="bg-gray-200 flex items-center justify-center lg:mt-[120px] w-full" />
