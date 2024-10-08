@@ -4,6 +4,7 @@ import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import { Translate } from 'react-jhipster';
 import { APIProvider, Map, Marker } from '@vis.gl/react-google-maps';
+import {Img, Text} from "app/modules/components";
 
 const ContactUs: React.FC = () => {
   const position = { lat: 43.84752488828167, lng: -79.38650206890091 };

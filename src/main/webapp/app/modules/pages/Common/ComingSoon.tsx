@@ -3,7 +3,7 @@ import React from 'react';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import { Translate } from 'react-jhipster';
-import { Img, Input, Text } from 'app/modules/components';
+import { Img, Text } from 'app/modules/components';
 
 const ComingSoon: React.FC = () => {
   return (

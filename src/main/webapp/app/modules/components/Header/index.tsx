@@ -9,6 +9,7 @@ import { hasAnyAuthority } from 'app/shared/auth/private-route';
 import { AUTHORITIES } from 'app/config/constants';
 import { setLocale } from 'app/shared/reducers/locale';
 import { Disclosure, Menu, Transition } from '@headlessui/react';
+import { Dropdown } from 'flowbite-react';
 
 type HeaderProps = React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> & Partial<{}>;
 
@@ -132,7 +133,7 @@ const Header: React.FC<HeaderProps> = props => {
                 {/* </li> */}
                 <li>
                   <Link
-                    to="/comingsoon"
+                    to="/event"
                     className="text-sky-800 text-xl alert-link transform hover:scale-110 hover:border-white transition-transform duration-3000 ease-in-out"
                   >
                     <Translate contentKey="header.events" />
@@ -185,7 +186,32 @@ const Header: React.FC<HeaderProps> = props => {
                   >
                     <Translate contentKey="header.aboutus" />
                   </Link>
-                </li>
+                {/*   <Dropdown href="/about" */}
+                {/*     label={ */}
+                {/*       <div className="text-sky-800 text-xl alert-link transform hover:scale-110 hover:border-white transition-transform duration-3000 ease-in-out"> */}
+                {/*         <Translate contentKey="header.aboutus" /> */}
+                {/*       </div> */}
+                {/*     } */}
+                {/*     inline */}
+                {/*   > */}
+                {/*       <Dropdown.Item> */}
+                {/*         <Link */}
+                {/*           to="/about" */}
+                {/*           className="text-sky-800 text-l alert-link transform hover:scale-110 hover:border-white transition-transform duration-3000 ease-in-out" */}
+                {/*         > */}
+                {/*           <Translate contentKey="header.aboutus" /> */}
+                {/*         </Link> */}
+                {/*       </Dropdown.Item> */}
+                {/*       <Dropdown.Item> */}
+                {/*         <Link */}
+                {/*           to="/about" */}
+                {/*           className="text-sky-800 text-l alert-link transform hover:scale-110 hover:border-white transition-transform duration-3000 ease-in-out" */}
+                {/*         > */}
+                {/*           <Translate contentKey="header.aboutus" /> */}
+                {/*         </Link> */}
+                {/*       </Dropdown.Item> */}
+                {/*     </Dropdown> */}
+                {/* </li> */}
               </ul>
               <div className="hidden lg:flex lg:inline-block py-2">
                 <LocaleMenu currentLocale={currentLocale} onClick={handleLocaleChange} />

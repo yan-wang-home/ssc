@@ -9,6 +9,8 @@ const CalculatorsPage: React.FC = () => {
     <>
       <Helmet>
         <script src="https://widget.mortgagecalculator.ca/js?key=355edb63-cd20-4b75-9fd6-ff94df47edfa"></script>
+        <title>Mortgage Calculator</title>
+        <meta name="description" content="SSC Mortgage Calculator" />
       </Helmet>
       <div className="bg-gray-100 flex flex-col font-chivo sm:gap-10 gap-10 items-center justify-start mx-auto w-full">
         <Header className="flex items-center justify-center sm:px-5 w-full" />

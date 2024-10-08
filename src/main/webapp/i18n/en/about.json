@@ -11,6 +11,10 @@
       "note": "We are a top-tier team comprised of multiple professional loan specialists dedicated to meeting the diverse loan needs of our valued clients. Our core values revolve around providing customers with the best financial solutions, ensuring they can achieve their financial goals.",
       "agent": "Mortgage Agent Level 1 - M24001208"
     },
+    "aboutCompany": {
+      "title": "About SSC",
+      "content1": "In the ever-changing financial market, a reliable loan partner is crucial. Smart Solutions Capital, as one of Canada’s leading loan service companies, helps clients steadily achieve their personal and business financial goals through a professional team, market insights, and personalized services. We Focused on providing customized loan services, covering personal home loans, business loans, construction financing, debt restructuring, and reverse mortgages. Whether you are a homebuyer, investor, or in need of complex financing solutions, Smart Solutions Capital offers you a one-stop solution."
+    },
     "section2": {
       "subSection1": {
         "title": "Why Choose Us:",
@@ -21,6 +25,24 @@
         "title": "Our Commitment:",
         "content1": "■ We commit to providing personalized loan solutions for each client, tailoring loan plans based on their specific situations and objectives. Our goal is to assist clients in achieving their financial aspirations and offer exceptional support and guidance throughout the loan process.",
         "content2": "■ If you are seeking a reliable loan partner, please get in touch with us. We look forward to working with you to attain financial success together."
+      }
+    },
+    "section3": {
+      "subSection1": {
+        "title": "OUR SERVICE",
+        "content1": "Personal Home Loans: Flexible loan options to help you easily own your dream home.",
+        "content2": "Commercial Loan: Customized financing solutions for business expansion, mergers, and operational optimization.",
+        "content3": "Construction Loans: Flexible financing for construction and renovations to ensure smooth project progress.",
+        "content4": "Debts Consolidation: Optimize debt structure, reduce repayment pressure, and achieve financial freedom.",
+        "content5": "Reverse Mortgages: Provide cash flow for retirees to enjoy a worry-free life."
+      },
+      "subSection2": {
+        "title": "CORE ADVANTAGES",
+        "content1": "Customized Solutions: Designing the optimal loan solutions based on customer needs.",
+        "content2": "Transparent with No Hidden Fees: Ensuring that the loan process and fees are open and transparent.",
+        "content3": "Real-Time Market Transparency: Customers can view loan progress and market interest rate changes at any time, enabling informed decision-making.",
+        "content4": "One-on-One Service: Dedicated support throughout the entire process, from consultation to loan disbursement.",
+        "content5": "Long-Term Partnership: Helping you meet current needs and achieve long-term financial health."
       }
     }
   }

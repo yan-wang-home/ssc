@@ -32,6 +32,7 @@ import Products_ReverseMortgage from 'app/modules/pages/Product/ReverseMortgage'
 import Products_HomeEquityLineOfCredit from 'app/modules/pages/Product/HomeEquityLineOfCredit';
 import Rates from 'app/modules/pages/Rates';
 import Search from 'app/modules/pages/Search';
+import Event from 'app/modules/pages/Event';
 import WhatNew from 'app/modules/pages/WhatNew';
 import AdminView from 'app/modules/home/admin';
 import PrivacyPolicy from 'app/modules/pages/Homepage/PrivacyPolicy';
@@ -78,6 +79,7 @@ const AppRoutes = () => {
         <Route path="about" element={<About />} />
         <Route path="contactus" element={<ContactUs />} />
         <Route path="privacypolicy" element={<PrivacyPolicy />} />
+        <Route path="event" element={<Event />} />
         <Route path="comingsoon" element={<ComingSoon />} />
         <Route path="whatnew" element={<WhatNew />} />
         <Route path="admin" element={<AdminView />} />

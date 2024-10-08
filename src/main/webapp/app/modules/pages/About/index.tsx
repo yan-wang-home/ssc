@@ -56,16 +56,76 @@ const AboutPage: React.FC = () => {
                   </Text>
                 </div>
               </div>
-              <Text className="lg:text-2xl md:text-xl sm:text-xl text-center text-blue-900 w-full pt-10">
+              <Text className="lg:text-2xl md:text-xl sm:text-xl text-center text-blue-900 w-full pt-10 lg:px-5">
                 <Translate contentKey="about.section1.note" />
               </Text>
               {/* Section 2 */}
-              <div className="flex lg:flex-row md:flex-row sm:flex-col bg-gray-300 w-full lg:gap-16 mt-5">
+              <div className="flex flex-col gap-0 items-center justify-start bg-gray-300 w-full lg:gap-8 mt-5">
+                <Text
+                  className="lg:text-4xl md:text-2xl sm:text-2xl underline text-center text-blue-900 sm:w-full pt-8"
+                  size="txtChivoBold44"
+                >
+                  <Translate contentKey="about.aboutCompany.title" />
+                </Text>
+                <Text
+                  className="text-2xl md:text-xl sm:text-lg text-center text-blue-900 sm:w-full p-8"
+                  size="txtChivoBold44"
+                >
+                  <Translate contentKey="about.aboutCompany.content1" />
+                </Text>
+              </div>
+              <div className="flex lg:flex-row md:flex-row sm:flex-col bg-gray-300 w-full lg:gap-8">
+                <div className="flex flex-col lg:w-1/3 md:w-1/3 sm:w-full items-center">
+                  <Img className="w-full h-full" src="content/images/aboutus-img2.jpeg" />
+                </div>
+                <div className="flex flex-col lg:gap-4 sm:gap-2 md:w-1/3 lg:w-1/3 sm:w-full lg:p-5 md:p-3 sm:p-3 lg:mt-4 lg:ml-10">
+                  <Text className="text-blue-900 font-bold underline lg:text-3xl md:text-2xl sm:text-2xl">
+                    <Translate contentKey="about.section3.subSection1.title" />
+                  </Text>
+                  <Text className="text-blue-900 lg:text-2xl md:text-lg sm:text-lg">
+                    <Translate contentKey="about.section3.subSection1.content1" />
+                  </Text>
+                  <Text className="text-blue-900 lg:text-2xl md:text-lg sm:text-lg">
+                    <Translate contentKey="about.section3.subSection1.content2" />
+                  </Text>
+                  <Text className="text-blue-900 lg:text-2xl md:text-lg sm:text-lg">
+                    <Translate contentKey="about.section3.subSection1.content3" />
+                  </Text>
+                  <Text className="text-blue-900 lg:text-2xl md:text-lg sm:text-lg">
+                    <Translate contentKey="about.section3.subSection1.content4" />
+                  </Text>
+                  <Text className="text-blue-900 lg:text-2xl md:text-lg sm:text-lg">
+                    <Translate contentKey="about.section3.subSection1.content5" />
+                  </Text>
+                </div>
+                <div className="flex flex-col lg:gap-4 sm:gap-2 md:w-1/3 lg:w-1/3 sm:w-full lg:p-5 md:p-3 sm:p-3 lg:mt-4 mb-5 text-justify">
+                  <Text className="text-blue-900 font-bold underline lg:text-3xl md:text-2xl sm:text-2xl">
+                    <Translate contentKey="about.section3.subSection2.title" />
+                  </Text>
+                  <Text className="text-blue-900 lg:text-2xl md:text-lg sm:text-lg">
+                    <Translate contentKey="about.section3.subSection2.content1" />
+                  </Text>
+                  <Text className="text-blue-900 lg:text-2xl md:text-lg sm:text-lg">
+                    <Translate contentKey="about.section3.subSection2.content2" />
+                  </Text>
+                  <Text className="text-blue-900 lg:text-2xl md:text-lg sm:text-lg">
+                    <Translate contentKey="about.section3.subSection2.content3" />
+                  </Text>
+                  <Text className="text-blue-900 lg:text-2xl md:text-lg sm:text-lg">
+                    <Translate contentKey="about.section3.subSection2.content4" />
+                  </Text>
+                  <Text className="text-blue-900 lg:text-2xl md:text-lg sm:text-lg">
+                    <Translate contentKey="about.section3.subSection2.content5" />
+                  </Text>
+                </div>
+              </div>
+              {/* Section 3 */}
+              <div className="flex lg:flex-row md:flex-row sm:flex-col bg-gray-300 w-full lg:gap-16">
                 <div className="flex flex-col lg:w-1/3 md:w-full sm:w-full items-center lg:hidden md:hidden">
                   <Img className="w-full" src="content/images/aboutus-img1.png" />
                 </div>
-                <div className="flex flex-col lg:gap-4 sm:gap-2 md:w-1/3 lg:w-1/3 sm:w-full lg:p-5 md:p-3 sm:p-3 lg:mt-16 lg:ml-10">
-                  <Text className="text-blue-900 lg:text-3xl md:text-2xl sm:text-2xl">
+                <div className="flex flex-col lg:gap-4 sm:gap-2 md:w-1/3 lg:w-1/3 sm:w-full lg:p-5 md:p-3 sm:p-3 lg:mt-4 lg:ml-10">
+                  <Text className="text-blue-900 font-bold underline lg:text-3xl md:text-2xl sm:text-2xl">
                     <Translate contentKey="about.section2.subSection1.title" />
                   </Text>
                   <Text className="text-blue-900 lg:text-2xl md:text-lg sm:text-lg">
@@ -75,8 +135,8 @@ const AboutPage: React.FC = () => {
                     <Translate contentKey="about.section2.subSection1.content2" />
                   </Text>
                 </div>
-                <div className="flex flex-col lg:gap-4 sm:gap-2 md:w-1/3 lg:w-1/3 sm:w-full lg:p-5 md:p-3 sm:p-3 lg:mt-16 text-justify">
-                  <Text className="text-blue-900 lg:text-3xl md:text-2xl sm:text-2xl">
+                <div className="flex flex-col lg:gap-4 sm:gap-2 md:w-1/3 lg:w-1/3 sm:w-full lg:p-5 md:p-3 sm:p-3 lg:mt-4 text-justify">
+                  <Text className="text-blue-900 font-bold underline lg:text-3xl md:text-2xl sm:text-2xl">
                     <Translate contentKey="about.section2.subSection2.title" />
                   </Text>
                   <Text className="text-blue-900 lg:text-2xl md:text-lg sm:text-lg">
