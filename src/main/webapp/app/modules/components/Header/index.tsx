@@ -283,7 +283,7 @@ const Header: React.FC<HeaderProps> = props => {
                         {/* </li> */}
                         <li className="mb-1">
                           <Link
-                            to="/comingsoon"
+                            to="/event"
                             className="block p-4 hover:bg-gray-100 hover:text-blue-600 rounded text-sky-800 md:text-2xl sm:text-xl alert-link transform hover:scale-110 hover:border-white transition-transform duration-3000 ease-in-out"
                           >
                             <Translate contentKey="header.events" />
