@@ -12,7 +12,7 @@ const AboutPage: React.FC = () => {
       <Seo
         title="About Us | Smart Solutions Capital | 聪达资本 | SSC"
         description="Learn more about Smart Solutions Capital (SSC) | 聪达资本, Our core values revolve around providing customers with the best financial solutions, ensuring they can achieve their financial goals."
-        keywords="Smart Solutions Capital, SSC, 聪达资本, About Us, Mission, Values, Financial Solutions"
+        keywords="Smart Solutions Capital, SSC, 聪达资本, About Us, Mission, Values, Connie Xie, Connie Xie Toronto, 谢聪, 谢聪多伦多"
         url="https://ssc.finance/about"
       />
       <div className="bg-gray-100 flex flex-col font-chivo items-center justify-start mx-auto w-full">
