@@ -12,6 +12,7 @@ import { createEntity } from 'app/entities/contact-form/contact-form.reducer';
 import { useAppDispatch, useAppSelector } from 'app/config/store';
 import { IContactForm } from 'app/shared/model/contact-form.model';
 import { toast } from 'react-toastify';
+import Seo from 'app/modules/pages/Seo';
 
 const HomepagePage: React.FC = () => {
   const navigate = useNavigate();
@@ -64,6 +65,12 @@ const HomepagePage: React.FC = () => {
 
   return (
     <>
+      <Seo
+        title="Smart Solutions Capital | 聪达资本 | SSC | ssc"
+        description="Smart Solutions Capital (SSC) | 聪达资本 has a mortgage just for you."
+        url="https://ssc.finance/"
+        image="https://ssc.finance/content/images/landing_page.jpeg"
+      />
       <div className="bg-white-A700 flex flex-col font-chivo gap-[0px] /*items-center*/ justify-start mx-auto w-full">
         <Header className="flex items-center justify-center md:px-0 mx-auto w-full" />
         <div className="flex flex-col items-center justify-start w-full">

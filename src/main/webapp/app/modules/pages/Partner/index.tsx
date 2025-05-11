@@ -4,10 +4,17 @@ import { Img, Text } from '../../components';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import { Translate } from 'react-jhipster';
+import Seo from 'app/modules/pages/Seo';
 
 const PartnersPage: React.FC = () => {
   return (
     <>
+      <Seo
+        title="Our Partners | Smart Solutions Capital | 聪达资本 | SSC"
+        description="Learn more about the strategic partnerships of Smart Solutions Capital (SSC). We work with trusted partners to deliver exceptional solutions."
+        keywords="Smart Solutions Capital, SSC, 聪达资本, Partners, Strategic Partnerships"
+        url="https://ssc.finance/partners"
+      />
       <div className="bg-white-A700 flex flex-col font-chivo sm:gap-10 md:gap-10 gap-[70px] items-center justify-start mx-auto w-full">
         <Header className="flex items-center justify-center md:px-5 w-full" />
         <div className="flex flex-col items-center justify-start w-full">

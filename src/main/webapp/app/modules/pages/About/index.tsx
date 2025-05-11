@@ -4,10 +4,17 @@ import { Img, Text } from '../../components';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import { Translate } from 'react-jhipster';
+import Seo from 'app/modules/pages/Seo';
 
 const AboutPage: React.FC = () => {
   return (
     <>
+      <Seo
+        title="About Us | Smart Solutions Capital | 聪达资本 | SSC"
+        description="Learn more about Smart Solutions Capital (SSC) | 聪达资本, Our core values revolve around providing customers with the best financial solutions, ensuring they can achieve their financial goals."
+        keywords="Smart Solutions Capital, SSC, 聪达资本, About Us, Mission, Values, Financial Solutions"
+        url="https://ssc.finance/about"
+      />
       <div className="bg-gray-100 flex flex-col font-chivo items-center justify-start mx-auto w-full">
         <Header className="flex items-center justify-center sm:px-5 w-full" />
         <div className="flex flex-col items-center justify-start w-full">

@@ -4,10 +4,17 @@ import { Text } from '../../components';
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import { Translate } from 'react-jhipster';
+import Seo from 'app/modules/pages/Seo';
 
 const ProductsPage: React.FC = () => {
   return (
     <>
+      <Seo
+        title="Products | Smart Solutions Capital | 聪达资本 | SSC"
+        description="Smart Solutions Capital (SSC) | 聪达资本 provide wide range of mortgage products tailor to suit various needs and financial situations"
+        keywords="Smart Solutions Capital, SSC, 聪达资本, Products"
+        url="https://ssc.finance/products"
+      />
       <div className="bg-white-A700 flex flex-col font-chivo sm:gap-10 md:gap-10 gap-[70px] items-center justify-start mx-auto w-full">
         <Header className="flex items-center justify-center md:px-5 w-full" />
         <div className="flex flex-col items-center justify-start w-full">

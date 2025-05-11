@@ -8,3 +8,7 @@ Disallow: /api/logs/
 Disallow: /api/users/
 Disallow: /management/
 Disallow: /v3/api-docs/
+
+Allow: /
+
+Sitemap: https://ssc.finance/sitemap.xml

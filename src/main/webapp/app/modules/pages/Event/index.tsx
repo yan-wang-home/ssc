@@ -4,10 +4,17 @@ import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import { Translate } from 'react-jhipster';
 import { Img, Text } from 'app/modules/components';
+import Seo from 'app/modules/pages/Seo';
 
 const Event: React.FC = () => {
   return (
     <>
+      <Seo
+        title="Upcoming Events | Smart Solutions Capital | 聪达资本 | SSC"
+        description="Stay up-to-date with the latest events and webinars hosted by Smart Solutions Capital (SSC). Join us and learn more about capital solutions."
+        keywords="Smart Solutions Capital, SSC, 聪达资本, Events"
+        url="https://ssc.finance/event"
+      />
       <div className="bg-gray-100 flex flex-col font-chivo items-center justify-start mx-auto w-full">
         <Header className="flex items-center justify-center sm:px-5 w-full" />
         <div className="flex flex-col items-center justify-start w-full">
