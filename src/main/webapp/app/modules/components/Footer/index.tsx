@@ -109,11 +109,11 @@ const Footer: React.FC<FooterProps> = props => {
                   </div>
                   <div className="ml-[18px] items-center">
                     <a href="tel:+6479713755" className="font-Inter text-[18px] font-medium text-blue-900">
-                      <Translate contentKey="footer.office" />: 647-9713755
+                      <Translate contentKey="footer.office" />: 416-6848853
                     </a>
                     {/* <br /> */}
                     {/* <a href="tel:+911800123444" className="font-Inter text-[18px] font-medium text-blue-900"> */}
-                    {/*   <Translate contentKey="footer.fax" />: 647-9713755 */}
+                    {/*   <Translate contentKey="footer.fax" />: 416-6848853 */}
                     {/* </a> */}
                   </div>
                 </div>

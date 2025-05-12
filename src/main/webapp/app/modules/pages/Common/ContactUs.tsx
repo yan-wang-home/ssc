@@ -58,11 +58,11 @@ const ContactUs: React.FC = () => {
                   </div>
                   <div>
                     <a href="tel:+6479713755" className="font-Inter lg:text-xl md:text-lg sm:text-lg font-medium text-blue-900">
-                      <Translate contentKey="footer.office" />: 647-9713755
+                      <Translate contentKey="footer.office" />: 416-6848853
                     </a>
                     <br />
                     {/* <a href="tel:+6479713755" className="font-Inter text-xl font-medium text-blue-900"> */}
-                    {/*   <Translate contentKey="footer.fax" />: 647-9713755 */}
+                    {/*   <Translate contentKey="footer.fax" />: 416-6848853 */}
                     {/* </a> */}
                   </div>
                 </div>
