@@ -68,7 +68,7 @@ const HomepagePage: React.FC = () => {
       <Seo
         title="Smart Solutions Capital | 聪达资本 | SSC | ssc"
         description="Smart Solutions Capital (SSC) | 聪达资本 has a mortgage just for you."
-        keywords="Smart Solutions Capital, SSC, 聪达资本, Connie Xie Toronto, 谢聪, 谢聪多伦多, 加拿大房屋贷款、CMHC贷款申请、房屋再融资、反向抵押贷款、多套物业贷款、华人贷款顾问多伦多，加拿大贷款中介，多伦多贷款公司，多伦多靠谱贷款经纪，多伦多商业贷款专家, Canada home mortgage，CMHC application，Mortgage refinancing in Canada，Reverse mortgage in Canada，Multi-property mortgage，Chinese mortgage advisor in Toronto，Mortgage broker in Canada，Toronto mortgage company，the best mortgage agent in Toronto, Commercial mortgage agent in Toronto"
+        keywords="Smart Solutions Capital, SSC, 聪达资本, Connie Xie Toronto, 谢聪, 谢聪多伦多, 加拿大房屋贷款, CMHC贷款申请, 房屋再融资, 反向抵押贷款, 多套物业贷款, 华人贷款顾问多伦多, 加拿大贷款中介, 多伦多贷款公司, 多伦多靠谱贷款经纪, 多伦多商业贷款专家, Canada home mortgage, CMHC application, Mortgage refinancing in Canada, Reverse mortgage in Canada, Multi-property mortgage, Chinese mortgage advisor in Toronto, Mortgage broker in Canada, Toronto mortgage company, the best mortgage agent in Toronto, Commercial mortgage agent in Toronto"
         url="https://ssc.finance/"
         image="https://ssc.finance/content/images/landing_page.jpeg"
       />
