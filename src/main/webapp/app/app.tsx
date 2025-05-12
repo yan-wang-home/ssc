@@ -21,6 +21,12 @@ import ScrollToTop from 'app/ScrollToTop';
 const baseHref = document.querySelector('base').getAttribute('href').replace(/\/$/, '');
 
 export const App = () => {
+  // Redirect if not hosted on allowed domain
+  const allowedHostnames = ['ssc.finance', 'www.ssc.finance'];
+  if (!allowedHostnames.includes(window.location.hostname)) {
+    window.location.href = 'https://ssc.finance/';
+  }
+
   const dispatch = useAppDispatch();
 
   useEffect(() => {
